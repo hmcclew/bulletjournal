@@ -17,7 +17,7 @@ public class WeekView implements JavaJournalView {
   }
 
   /**
-   * Loads a scene from a Whack-a-Mole GUI layout.
+   * Loads a scene from the Java Journal
    *
    * @return the layout
    */
