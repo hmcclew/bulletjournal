@@ -7,33 +7,6 @@ import javafx.scene.control.ToggleGroup;
 
 public class NewTaskController implements Controller {
 
-    @FXML
-    private TextField name;
-
-    @FXML
-    private TextField description;
-
-    @FXML
-    private RadioButton monday;
-
-    @FXML
-    private RadioButton tuesday;
-
-    @FXML
-    private RadioButton wednesday;
-
-    @FXML
-    private RadioButton thursday;
-
-    @FXML
-    private RadioButton friday;
-
-    @FXML
-    private RadioButton saturday;
-
-    @FXML
-    private RadioButton sunday;
-
     @Override
     public void run() throws IllegalStateException {
     }
