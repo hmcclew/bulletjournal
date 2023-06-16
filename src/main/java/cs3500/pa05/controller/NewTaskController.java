@@ -36,18 +36,5 @@ public class NewTaskController implements Controller {
 
     @Override
     public void run() throws IllegalStateException {
-        initButtons();
-    }
-
-    private void initButtons() {
-        ToggleGroup toggleGroup = new ToggleGroup();
-
-        monday.setToggleGroup(toggleGroup);
-        tuesday.setToggleGroup(toggleGroup);
-        wednesday.setToggleGroup(toggleGroup);
-        thursday.setToggleGroup(toggleGroup);
-        friday.setToggleGroup(toggleGroup);
-        saturday.setToggleGroup(toggleGroup);
-        sunday.setToggleGroup(toggleGroup);
     }
 }

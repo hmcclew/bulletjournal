@@ -34,7 +34,7 @@ public class JavaJournalController implements Controller {
     newEvent.setOnAction(event -> {
       try {
         Stage newEventStage = new Stage();
-        NewEventController controller = new NewEventController();
+        NewEventController controller = new NewEventController(newEventStage);
         NewEventView view = new NewEventView(controller);
         newEventStage.setTitle("Create New Event");
         newEventStage.setScene(view.load());
@@ -52,12 +52,13 @@ public class JavaJournalController implements Controller {
         Stage newTaskStage = new Stage();
         NewTaskController controller = new NewTaskController();
         NewTaskView view = new NewTaskView(controller);
-        newTaskStage.setTitle("Create New Event");
+        newTaskStage.setTitle("Create New Task");
         newTaskStage.setScene(view.load());
         controller.run();
         newTaskStage.show();
       } catch (IllegalStateException exc) {
         System.err.println("Unable to load GUI.");
+        exc.printStackTrace();
       }
     });
   }

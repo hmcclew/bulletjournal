@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Scene xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1">
     <AnchorPane prefHeight="596.0" prefWidth="876.0">
       <children>
          <Label fx:id="newTask" layoutX="353.0" layoutY="31.0" prefHeight="28.0" prefWidth="178.0" text="New Task">
