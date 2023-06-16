@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="week.fxml" />
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="newEvent.fxml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,6 +168,7 @@
       <workItem from="1686938225143" duration="2544000" />
       <workItem from="1686946167976" duration="122000" />
       <workItem from="1686946294526" duration="698000" />
+      <workItem from="1686946999125" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -197,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686946336742</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="newEvent.fxml">
+      <created>1686947019709</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686947019709</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +215,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="tasks.fxml" />
     <MESSAGE value="week.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="week.fxml" />
+    <MESSAGE value="newEvent.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="newEvent.fxml" />
   </component>
 </project>
