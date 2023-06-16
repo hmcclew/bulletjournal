@@ -1,6 +1,6 @@
 package cs3500.pa05.controller;
 
-import cs3500.pa05.model.JavaJournalModel;
+import cs3500.pa05.model.week.Week;
 import cs3500.pa05.view.NewEventView;
 import cs3500.pa05.view.NewNoteQuoteView;
 import cs3500.pa05.view.NewTaskView;
@@ -9,11 +9,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class JavaJournalController implements Controller {
 
-  private JavaJournalModel model;
+  private Week week = new Week();
 
   @FXML
   private Button newEvent;
@@ -44,7 +42,7 @@ public class JavaJournalController implements Controller {
     newNote.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        NewNoteQuoteController controller = new NewNoteQuoteController(stage);
+        NewNoteQuoteController controller = new NewNoteQuoteController(stage, week);
         NewNoteQuoteView view = new NewNoteQuoteView(controller);
         stage.setTitle("Add a New Note or Quote");
         stage.setScene(view.load());
