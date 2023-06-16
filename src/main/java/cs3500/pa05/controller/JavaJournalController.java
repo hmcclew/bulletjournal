@@ -3,6 +3,7 @@ package cs3500.pa05.controller;
 import cs3500.pa05.model.JavaJournalModel;
 import cs3500.pa05.model.week.Week;
 import cs3500.pa05.view.NewEventView;
+import cs3500.pa05.view.NewTaskView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -18,6 +19,9 @@ public class JavaJournalController implements Controller {
   @FXML
   private Button newEvent;
 
+  @FXML
+  private Button newTask;
+
 
   @Override
   public void run() throws IllegalStateException {
@@ -26,6 +30,7 @@ public class JavaJournalController implements Controller {
 
   private void initButtons() {
     initNewEvent();
+    initNewTask();
   }
 
   private void initNewEvent() {
@@ -39,41 +44,25 @@ public class JavaJournalController implements Controller {
         controller.run();
         newEventStage.show();
       } catch (IllegalStateException exc) {
-        System.err.println("Unable to load GUI." + exc.getMessage());
+        System.err.println("Unable to load GUI.");
       }
     });
   }
-  private void handleOpenFile() {
 
+  private void initNewTask() {
+    newTask.setOnAction(event -> {
+      try {
+        Stage newTaskStage = new Stage();
+        NewTaskController controller = new NewTaskController();
+        NewTaskView view = new NewTaskView(controller);
+        newTaskStage.setTitle("Create New Event");
+        newTaskStage.setScene(view.load());
+        controller.run();
+        newTaskStage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI.");
+      }
+    });
   }
 
-  private void handleSaveToFile() {
-
-  }
-
-  private void handleShowSideBar() {
-
-  }
-
-  private void handleMaximumAssignmentsExceeded() {
-
-  }
-  private void handleCreateAssignment() {
-
-  }
-
-  private void handleCompletedTask() {
-
-  }
-  private void initTask() {
-
-  }
-
-  private void initEvent() {
-
-  }
-
-  private void initWeek() {
-
-  }
 }
