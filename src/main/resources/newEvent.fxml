@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -8,8 +9,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1">
-    <AnchorPane prefHeight="821.0" prefWidth="875.0">
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="964.0" prefWidth="875.0">
         <children>
             <Label fx:id="newEvent" layoutX="386.0" layoutY="32.0" text="New Event">
                 <font>
@@ -44,7 +45,7 @@
                     <Font size="16.0" />
                 </font>
             </Label>
-            <Button fx:id="finish" layoutX="383.0" layoutY="786.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Finish" />
+            <Button fx:id="finish" layoutX="380.0" layoutY="899.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" text="Finish" />
          <RadioButton fx:id="thursday" layoutX="34.0" layoutY="427.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="99.0" text="Thursday" />
          <RadioButton fx:id="saturday" layoutX="35.0" layoutY="495.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="114.0" text="Saturday" />
          <RadioButton fx:id="tuesday" layoutX="35.0" layoutY="357.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="88.0" text="Tuesday" />
@@ -59,6 +60,12 @@
          <TextField fx:id="durationHoursContent" layoutX="31.0" layoutY="738.0" prefHeight="32.0" prefWidth="190.0" />
          <Label fx:id="durectionMinutes" layoutX="288.0" layoutY="712.0" prefHeight="19.0" prefWidth="72.0" text="Minutes" />
          <TextField fx:id="durectionMinutesContent" layoutX="288.0" layoutY="738.0" prefHeight="32.0" prefWidth="190.0" />
+         <Label fx:id="duration1" layoutX="29.0" layoutY="815.0" text="Select Category">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+         <DropdownButton layoutX="34.0" layoutY="853.0" />
         </children>
     </AnchorPane>
 </Scene>
