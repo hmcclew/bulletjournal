@@ -23,7 +23,7 @@ public class Event implements Assignment {
     this.duration = duration;
   }
   public String toString() {
-    return null;
+    return "iohgs";
   }
 
   @Override
