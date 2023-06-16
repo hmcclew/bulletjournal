@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="newEvent.fxml">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/newEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/newEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +87,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -172,7 +173,7 @@
       <workItem from="1686946294526" duration="698000" />
       <workItem from="1686946999125" duration="30000" />
       <workItem from="1686948144388" duration="1194000" />
-      <workItem from="1686950755671" duration="280000" />
+      <workItem from="1686950755671" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -258,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686951135713</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="newEvent.fxml">
+      <created>1686951312419</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686951312419</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
