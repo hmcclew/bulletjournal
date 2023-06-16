@@ -21,6 +21,6 @@
             </font>
          </Label>
          <Button fx:id="finish" layoutX="343.0" layoutY="215.0" mnemonicParsing="false" text="Finish" />
-         <TextField layoutX="40.0" layoutY="135.0" prefHeight="55.0" prefWidth="680.0" />
+         <TextField fx:id="newNoteContent" layoutX="40.0" layoutY="135.0" prefHeight="55.0" prefWidth="680.0" />
       </children></AnchorPane>
 </Scene>

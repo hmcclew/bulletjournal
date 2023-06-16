@@ -23,6 +23,7 @@ public class JavaJournalWeek implements Week {
   private List<String> categories;
   private List<Event> allEvents;
   private List<Task> allTasks;
+  private List<String> quotesAndNotes;
   public void addCategory() {
 
   }

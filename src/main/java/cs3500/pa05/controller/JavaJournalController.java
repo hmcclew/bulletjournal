@@ -2,6 +2,7 @@ package cs3500.pa05.controller;
 
 import cs3500.pa05.model.JavaJournalModel;
 import cs3500.pa05.view.NewEventView;
+import cs3500.pa05.view.NewNoteQuoteView;
 import cs3500.pa05.view.NewTaskView;
 import cs3500.pa05.view.SetMaximumView;
 import javafx.fxml.FXML;
@@ -23,6 +24,9 @@ public class JavaJournalController implements Controller {
   @FXML
   private Button setMaxEventsTasks;
 
+  @FXML
+  private Button newNote;
+
 
   @Override
   public void run() throws IllegalStateException {
@@ -33,6 +37,23 @@ public class JavaJournalController implements Controller {
     initNewEvent();
     initNewTask();
     initSetMax();
+    initNewNote();
+  }
+
+  private void initNewNote() {
+    newNote.setOnAction(event -> {
+      try {
+        Stage stage = new Stage();
+        NewNoteQuoteController controller = new NewNoteQuoteController(stage);
+        NewNoteQuoteView view = new NewNoteQuoteView(controller);
+        stage.setTitle("Add a New Note or Quote");
+        stage.setScene(view.load());
+        controller.run();
+        stage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI." + exc.getMessage());
+      }
+    });
   }
 
   private void initSetMax() {
