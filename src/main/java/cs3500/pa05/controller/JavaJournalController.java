@@ -1,13 +1,10 @@
 package cs3500.pa05.controller;
 
 import cs3500.pa05.model.JavaJournalModel;
-import cs3500.pa05.model.week.Week;
 import cs3500.pa05.view.NewEventView;
 import cs3500.pa05.view.NewTaskView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.SplitPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
