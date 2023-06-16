@@ -1,14 +1,32 @@
 package cs3500.pa05.view;
 
+import cs3500.pa05.controller.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+
+import java.io.IOException;
 
 public class WeekView implements JavaJournalView {
 
   FXMLLoader loader;
 
+  public WeekView(Controller controller) {
+    this.loader = new FXMLLoader();
+    this.loader.setLocation(getClass().getClassLoader().getResource("week.fxml"));
+    this.loader.setController(controller);
+  }
+
+  /**
+   * Loads a scene from a Whack-a-Mole GUI layout.
+   *
+   * @return the layout
+   */
   @Override
   public Scene load() throws IllegalStateException {
-    return null;
+    try {
+      return this.loader.load();
+    } catch (IOException exc) {
+      throw new IllegalStateException("Unable to load layout.");
+    }
   }
 }

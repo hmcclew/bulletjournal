@@ -2,6 +2,7 @@ package cs3500.pa05;
 
 import cs3500.pa05.controller.Controller;
 import cs3500.pa05.controller.JavaJournalController;
+import cs3500.pa05.view.WeekView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -27,14 +28,23 @@ public class Driver extends Application {
    * NOTE: This method is called on the JavaFX Application Thread.
    * </p>
    *
-   * @param primaryStage the primary stage for this application, onto which
+   * @param stage the primary stage for this application, onto which
    *                     the application scene can be set.
    *                     Applications may create other stages, if needed, but they will not be
    *                     primary stages.
    * @throws Exception if something goes wrong
    */
   @Override
-  public void start(Stage primaryStage) {
+  public void start(Stage stage) {
     Controller controller = new JavaJournalController();
+    WeekView view = new WeekView(controller);
+    try {
+      stage.setTitle("New Java Journal Week");
+      stage.setScene(view.load());
+      controller.run();
+      stage.show();
+    } catch (IllegalStateException exc) {
+      System.err.println("Unable to load GUI.");
+    }
   }
 }
