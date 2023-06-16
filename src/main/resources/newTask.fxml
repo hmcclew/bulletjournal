@@ -3,6 +3,7 @@
 <?import com.gluonhq.charm.glisten.control.DropdownButton?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
@@ -76,5 +77,6 @@
             </font>
          </Label>
          <DropdownButton layoutX="50.0" layoutY="621.0" />
+         <ChoiceBox layoutX="61.0" layoutY="617.0" prefWidth="150.0" />
       </children></AnchorPane>
 </Scene>
