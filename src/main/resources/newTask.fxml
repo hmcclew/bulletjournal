@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -8,8 +9,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1">
-    <AnchorPane prefHeight="596.0" prefWidth="876.0">
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="720.0" prefWidth="876.0">
       <children>
          <Label fx:id="newTask" layoutX="353.0" layoutY="31.0" prefHeight="28.0" prefWidth="178.0" text="New Task">
             <font>
@@ -33,7 +34,7 @@
          </RadioButton>
          <TextField fx:id="nameContent" layoutX="50.0" layoutY="147.0" prefHeight="26.0" prefWidth="784.0" />
          <TextField fx:id="descriptionContent" layoutX="50.0" layoutY="229.0" prefHeight="26.0" prefWidth="784.0" />
-         <Button fx:id="finish" layoutX="417.0" layoutY="549.0" mnemonicParsing="false" text="Finish" />
+         <Button fx:id="finish" layoutX="417.0" layoutY="672.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="Finish" />
          <RadioButton fx:id="tuesday" layoutX="53.0" layoutY="356.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="122.0" text="Tuesday">
             <font>
                <Font size="16.0" />
@@ -69,5 +70,11 @@
                <Font size="16.0" />
             </font>
          </Label>
+         <Label fx:id="description1" layoutX="58.0" layoutY="587.0" prefHeight="20.0" prefWidth="155.0" text="Select Category">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+         <DropdownButton layoutX="50.0" layoutY="621.0" />
       </children></AnchorPane>
 </Scene>
