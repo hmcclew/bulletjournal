@@ -46,7 +46,7 @@ public class JavaJournalController implements Controller {
         controller.run();
         newMaxStage.show();
       } catch (IllegalStateException exc) {
-        System.err.println("Unable to load GUI.");
+        System.err.println("Unable to load GUI." + exc.getMessage());
       }
     });
   }
