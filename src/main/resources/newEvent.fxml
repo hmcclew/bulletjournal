@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="871.0" prefWidth="875.0">
+    <AnchorPane prefHeight="821.0" prefWidth="875.0">
         <children>
             <Label fx:id="newEvent" layoutX="386.0" layoutY="32.0" text="New Event">
                 <font>
@@ -33,18 +33,17 @@
                     <Font size="16.0" />
                 </font>
             </Label>
-            <Label fx:id="startTime" layoutX="29.0" layoutY="590.0" text="Start Time">
+            <Label fx:id="startTime" layoutX="26.0" layoutY="572.0" text="Start Time">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Label>
-            <TextField fx:id="content" layoutX="31.0" layoutY="624.0" prefHeight="32.0" prefWidth="811.0" />
+            <TextField fx:id="content" layoutX="31.0" layoutY="624.0" prefHeight="32.0" prefWidth="190.0" />
             <Label fx:id="duration" layoutX="29.0" layoutY="679.0" text="Duration">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Label>
-            <TextField fx:id="content" layoutX="32.0" layoutY="721.0" prefHeight="32.0" prefWidth="811.0" />
             <Button fx:id="finish" layoutX="383.0" layoutY="786.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Finish" />
          <RadioButton fx:id="thursday" layoutX="34.0" layoutY="427.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="99.0" text="Thursday" />
          <RadioButton fx:id="saturday" layoutX="35.0" layoutY="495.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="114.0" text="Saturday" />
@@ -53,6 +52,13 @@
          <RadioButton fx:id="wednesday" layoutX="34.0" layoutY="393.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="106.0" text="Wednesday" />
          <RadioButton fx:id="monday" layoutX="35.0" layoutY="319.0" mnemonicParsing="false" text="Monday" />
          <RadioButton fx:id="sunday" layoutX="36.0" layoutY="525.0" mnemonicParsing="false" text="Sunday" />
+         <TextField fx:id="minutesContent" layoutX="288.0" layoutY="624.0" prefHeight="32.0" prefWidth="190.0" />
+         <Label fx:id="startTimeHours" layoutX="31.0" layoutY="604.0" prefHeight="19.0" prefWidth="36.0" text="Hours" />
+         <Label fx:id="startTimeMinutes" layoutX="291.0" layoutY="601.0" prefHeight="19.0" prefWidth="72.0" text="Minutes" />
+         <Label fx:id="durationHours" layoutX="32.0" layoutY="712.0" prefHeight="19.0" prefWidth="36.0" text="Hours" />
+         <TextField fx:id="durationHoursContent" layoutX="31.0" layoutY="738.0" prefHeight="32.0" prefWidth="190.0" />
+         <Label fx:id="durectionMinutes" layoutX="288.0" layoutY="712.0" prefHeight="19.0" prefWidth="72.0" text="Minutes" />
+         <TextField fx:id="durectionMinutesContent" layoutX="288.0" layoutY="738.0" prefHeight="32.0" prefWidth="190.0" />
         </children>
     </AnchorPane>
 </Scene>
