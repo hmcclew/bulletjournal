@@ -28,7 +28,7 @@ public class JavaJournalController implements Controller {
   private Button newNote;
 
   @FXML
-  private VBox noteContent;
+  private VBox notesContent;
 
 
   @Override
@@ -47,7 +47,7 @@ public class JavaJournalController implements Controller {
     newNote.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        NewNoteQuoteController controller = new NewNoteQuoteController(stage, week, noteContent);
+        NewNoteQuoteController controller = new NewNoteQuoteController(stage, week, notesContent);
         NewNoteQuoteView view = new NewNoteQuoteView(controller);
         stage.setTitle("Add a New Note or Quote");
         stage.setScene(view.load());
