@@ -11,60 +11,60 @@
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <AnchorPane prefHeight="596.0" prefWidth="876.0">
       <children>
-         <Label layoutX="353.0" layoutY="31.0" prefHeight="28.0" prefWidth="178.0" text="New Task">
+         <Label fx:id="newTask" layoutX="353.0" layoutY="31.0" prefHeight="28.0" prefWidth="178.0" text="New Task">
             <font>
                <Font name="Corbel Bold" size="34.0" />
             </font>
          </Label>
-         <Label layoutX="55.0" layoutY="116.0" prefHeight="17.0" prefWidth="82.0" text="Name">
+         <Label fx:id="name" layoutX="55.0" layoutY="116.0" prefHeight="17.0" prefWidth="82.0" text="Name">
             <font>
                <Font size="16.0" />
             </font>
          </Label>
-         <Label layoutX="56.0" layoutY="193.0" prefHeight="17.0" prefWidth="82.0" text="Description">
+         <Label fx:id="description" layoutX="56.0" layoutY="193.0" prefHeight="17.0" prefWidth="82.0" text="Description">
             <font>
                <Font size="16.0" />
             </font>
          </Label>
-         <RadioButton layoutX="52.0" layoutY="321.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="86.0" text="Monday">
+         <RadioButton fx:id="monday" layoutX="52.0" layoutY="321.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="86.0" text="Monday">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <TextField layoutX="50.0" layoutY="147.0" prefHeight="26.0" prefWidth="784.0" />
-         <TextField layoutX="50.0" layoutY="229.0" prefHeight="26.0" prefWidth="784.0" />
-         <Button layoutX="417.0" layoutY="549.0" mnemonicParsing="false" text="Finish" />
-         <RadioButton layoutX="53.0" layoutY="356.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="122.0" text="Tuesday">
+         <TextField fx:id="nameContent" layoutX="50.0" layoutY="147.0" prefHeight="26.0" prefWidth="784.0" />
+         <TextField fx:id="descriptionContent" layoutX="50.0" layoutY="229.0" prefHeight="26.0" prefWidth="784.0" />
+         <Button fx:id="finish" layoutX="417.0" layoutY="549.0" mnemonicParsing="false" text="Finish" />
+         <RadioButton fx:id="tuesday" layoutX="53.0" layoutY="356.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="122.0" text="Tuesday">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton layoutX="53.0" layoutY="393.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="118.0" text="Wednesday">
+         <RadioButton fx:id="wednesday" layoutX="53.0" layoutY="393.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="118.0" text="Wednesday">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton layoutX="54.0" layoutY="428.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="102.0" text="Thursday">
+         <RadioButton fx:id="thursday" layoutX="54.0" layoutY="428.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="102.0" text="Thursday">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton layoutX="55.0" layoutY="464.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="88.0" text="Friday">
+         <RadioButton fx:id="friday" layoutX="55.0" layoutY="464.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="88.0" text="Friday">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton layoutX="55.0" layoutY="501.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="107.0" text="Saturday">
+         <RadioButton fx:id="saturday" layoutX="55.0" layoutY="501.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="107.0" text="Saturday">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton layoutX="55.0" layoutY="541.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="99.0" text="Sunday">
+         <RadioButton fx:id="sunday" layoutX="55.0" layoutY="541.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="99.0" text="Sunday">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <Label layoutX="53.0" layoutY="277.0" prefHeight="20.0" prefWidth="144.0" text="Day of the Week">
+         <Label fx:id="dayOfTheWeek" layoutX="53.0" layoutY="277.0" prefHeight="20.0" prefWidth="144.0" text="Day of the Week">
             <font>
                <Font size="16.0" />
             </font>
