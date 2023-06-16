@@ -85,7 +85,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <Button fx:id="openFIle" layoutX="769.0" layoutY="22.0" mnemonicParsing="false" text="open file"/>
+            <Button fx:id="openFile" layoutX="769.0" layoutY="22.0" mnemonicParsing="false" text="open file"/>
             <Button fx:id="saveFile" layoutX="856.0" layoutY="22.0" mnemonicParsing="false" text="save file"/>
             <Button fx:id="newTask" layoutX="32.0" layoutY="535.0" mnemonicParsing="false" text="new task"/>
             <Button fx:id="newEvent" layoutX="123.0" layoutY="535.0" mnemonicParsing="false" text="new event"/>

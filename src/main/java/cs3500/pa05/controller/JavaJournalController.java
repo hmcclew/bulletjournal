@@ -7,6 +7,8 @@ import cs3500.pa05.view.NewTaskView;
 import cs3500.pa05.view.SetMaximumView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class JavaJournalController implements Controller {
@@ -25,6 +27,9 @@ public class JavaJournalController implements Controller {
   @FXML
   private Button newNote;
 
+  @FXML
+  private VBox noteContent;
+
 
   @Override
   public void run() throws IllegalStateException {
@@ -42,7 +47,7 @@ public class JavaJournalController implements Controller {
     newNote.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        NewNoteQuoteController controller = new NewNoteQuoteController(stage, week);
+        NewNoteQuoteController controller = new NewNoteQuoteController(stage, week, noteContent);
         NewNoteQuoteView view = new NewNoteQuoteView(controller);
         stage.setTitle("Add a New Note or Quote");
         stage.setScene(view.load());

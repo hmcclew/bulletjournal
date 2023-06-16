@@ -3,7 +3,9 @@ package cs3500.pa05.controller;
 import cs3500.pa05.model.week.Week;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class NewNoteQuoteController implements Controller {
@@ -20,9 +22,13 @@ public class NewNoteQuoteController implements Controller {
     @FXML
     private Button finish;
 
-    public NewNoteQuoteController(Stage stage, Week week) {
+    @FXML
+    private VBox noteBox;
+
+    public NewNoteQuoteController(Stage stage, Week week, VBox noteBox) {
         this.stage = stage;
         this.week = week;
+        this.noteBox = noteBox;
     }
     @Override
     public void run() throws IllegalStateException {
@@ -34,6 +40,8 @@ public class NewNoteQuoteController implements Controller {
             if (newNoteContent.getText() != "") {
                 noteText = newNoteContent.getText();
                 week.addNoteOrQuote(noteText);
+                Label label = new Label(noteText);
+                noteBox.getChildren().add(label);
             }
             stage.close();
         });

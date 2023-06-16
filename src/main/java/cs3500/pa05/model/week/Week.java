@@ -19,7 +19,7 @@ public class Week {
     private List<String> categories;
     private List<Event> allEvents;
     private List<Task> allTasks;
-    private List<String> quotesAndNotes;
+    public List<String> quotesAndNotes;
 
     public Week() {
         this.quotesAndNotes = new ArrayList<>();
