@@ -81,6 +81,11 @@ public class Week {
         updateDayWithEvent(e);
     }
 
+    public void addTask(Task t) {
+        allTasks.add(t);
+        updateDayWithTask(t);
+    }
+
     public Days determineDay(Assignment a) {
        return Days.valueOf(a.getDay());
     }
@@ -101,6 +106,25 @@ public class Week {
             saturday.addEvent(e);
         } else if (day.equals(Days.SUNDAY)) {
             sunday.addEvent(e);
+        }
+    }
+
+    private void updateDayWithTask(Task t) {
+        Days day = determineDay(t);
+        if (day.equals(Days.MONDAY)) {
+            monday.addTask(t);
+        } else if (day.equals(Days.TUESDAY)) {
+            tuesday.addTask(t);
+        } else if (day.equals(Days.WEDNESDAY)) {
+            wednesday.addTask(t);
+        } else if (day.equals(Days.THURSDAY)) {
+            thursday.addTask(t);
+        } else if (day.equals(Days.FRIDAY)) {
+            friday.addTask(t);
+        } else if (day.equals(Days.SATURDAY)) {
+            saturday.addTask(t);
+        } else if (day.equals(Days.SUNDAY)) {
+            sunday.addTask(t);
         }
     }
 

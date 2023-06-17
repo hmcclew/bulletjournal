@@ -13,7 +13,7 @@ public interface Day {
 
   void addEvent(Event e);
 
-  void addTask();
+  void addTask(Task t);
 
   String toJsonFormat();
 }

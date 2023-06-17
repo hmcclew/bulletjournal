@@ -199,7 +199,7 @@ public class JavaJournalController implements Controller {
     newTask.setOnAction(event -> {
       try {
         Stage newTaskStage = new Stage();
-        NewTaskController controller = new NewTaskController();
+        NewTaskController controller = new NewTaskController(newTaskStage, week, this);
         NewTaskView view = new NewTaskView(controller);
         newTaskStage.setTitle("Create New Task");
         newTaskStage.setScene(view.load());

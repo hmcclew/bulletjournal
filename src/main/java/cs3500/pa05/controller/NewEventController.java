@@ -134,7 +134,8 @@ public class NewEventController implements Controller {
     }
 
     private void determineDuration() {
-        duration = durationHoursContent.getText() + ":" + durationMinutesContent.getText();
+        duration = durationHoursContent.getText() + " hours and " + durationMinutesContent.getText()
+                + " minutes";
     }
 
     private void initCategory() {

@@ -14,6 +14,7 @@ public abstract class AbstractDay implements Day {
 
   public AbstractDay() {
     this.events = new ArrayList<>();
+    this.tasks = new ArrayList<>();
   }
   public List<Task> getTasks() {
     return this.tasks;
@@ -25,8 +26,8 @@ public abstract class AbstractDay implements Day {
   public void addEvent(Event e) {
     events.add(e);
   }
-  public void addTask() {
-
+  public void addTask(Task t) {
+    tasks.add(t);
   }
 
   public abstract String toJsonFormat();
