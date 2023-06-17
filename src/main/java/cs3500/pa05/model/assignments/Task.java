@@ -41,22 +41,22 @@ public class Task implements Assignment {
 
   @Override
   public String getDay() {
-    return null;
+    return this.day;
   }
 
   @Override
   public String getName() {
-    return null;
+    return this.name;
   }
 
   @Override
   public String getDescription() {
-    return null;
+    return this.description;
   }
 
   @Override
   public String getCategory() {
-    return null;
+    return this.category;
   }
 
   public boolean isComplete() {

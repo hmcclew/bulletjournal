@@ -6,26 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class NewEventController implements Controller {
-
-    private Week week;
+public class NewEventController extends AbstractNewAssignmentController implements Controller {
 
     private Stage stage;
-
-    @FXML
-    private RadioButton monday;
-    @FXML
-    private RadioButton tuesday;
-    @FXML
-    private RadioButton wednesday;
-    @FXML
-    private RadioButton thursday;
-    @FXML
-    private RadioButton friday;
-    @FXML
-    private RadioButton saturday;
-    @FXML
-    private RadioButton sunday;
     @FXML
     private Button finish;
     @FXML
@@ -42,12 +25,10 @@ public class NewEventController implements Controller {
     private TextField startTimeHoursContent;
     @FXML
     private TextField startTimeMinutesContent;
-    private String day;
-    private String name;
     private String description;
     private String startTime;
     private String duration;
-    private String category;
+    private String name;
     private Event e;
     private JavaJournalController controller;
 
@@ -64,13 +45,6 @@ public class NewEventController implements Controller {
         initCategories();
         initFinishButton();
         initCategory();
-    }
-
-    private void initCategories() {
-        for (String category : week.getCategories()) {
-            categoryChoices.getItems().add(category);
-        }
-        categoryChoices.setDisable(false);
     }
 
     private void initFinishButton() {
@@ -136,31 +110,6 @@ public class NewEventController implements Controller {
     private void determineDuration() {
         duration = durationHoursContent.getText() + " hours and " + durationMinutesContent.getText()
                 + " minutes";
-    }
-
-    private void initCategory() {
-        categoryChoices.setOnAction(event -> {
-            category = categoryChoices.getValue().toString();
-        });
-    }
-
-
-    private void initRadioButtons() {
-        ToggleGroup toggleGroup = new ToggleGroup();
-        monday.setToggleGroup(toggleGroup);
-        tuesday.setToggleGroup(toggleGroup);
-        wednesday.setToggleGroup(toggleGroup);
-        thursday.setToggleGroup(toggleGroup);
-        friday.setToggleGroup(toggleGroup);
-        saturday.setToggleGroup(toggleGroup);
-        sunday.setToggleGroup(toggleGroup);
-
-        toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
-                RadioButton selectedRadioButton = (RadioButton) newValue;
-                day = selectedRadioButton.getText();
-            }
-        });
     }
 
 }

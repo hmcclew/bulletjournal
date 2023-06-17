@@ -61,7 +61,11 @@ public class Week {
             if (task.isComplete()) {
                 numTasksCompleted++;
             }
-        } return Math.multiplyExact(numTasksCompleted / numTasks(), 100);
+        } if (numTasks() == 0) {
+            return 0;
+        } else {
+            return Math.multiplyExact(numTasksCompleted / numTasks(), 100);
+        }
     }
 
     public int numEvents() {

@@ -17,7 +17,7 @@
                <Font name="Corbel Bold" size="34.0" />
             </font>
          </Label>
-         <Label fx:id="name" layoutX="55.0" layoutY="116.0" prefHeight="17.0" prefWidth="82.0" text="Name">
+         <Label fx:id="name" layoutX="55.0" layoutY="116.0" prefHeight="17.0" prefWidth="300.0" text="Name">
             <font>
                <Font size="16.0" />
             </font>
@@ -27,7 +27,7 @@
                <Font size="16.0" />
             </font>
          </Label>
-         <RadioButton fx:id="monday" layoutX="52.0" layoutY="321.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="86.0" text="Monday">
+         <RadioButton fx:id="monday" layoutX="52.0" layoutY="321.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="300.0" text="MONDAY">
             <font>
                <Font size="16.0" />
             </font>
@@ -35,32 +35,32 @@
          <TextField fx:id="nameContent" layoutX="50.0" layoutY="147.0" prefHeight="26.0" prefWidth="784.0" />
          <TextField fx:id="descriptionContent" layoutX="50.0" layoutY="229.0" prefHeight="26.0" prefWidth="784.0" />
          <Button fx:id="finish" layoutX="417.0" layoutY="672.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="Finish" />
-         <RadioButton fx:id="tuesday" layoutX="53.0" layoutY="356.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="122.0" text="Tuesday">
+         <RadioButton fx:id="tuesday" layoutX="53.0" layoutY="356.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="300.0" text="TUESDAY">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton fx:id="wednesday" layoutX="53.0" layoutY="393.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="118.0" text="Wednesday">
+         <RadioButton fx:id="wednesday" layoutX="53.0" layoutY="393.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="300.0" text="WEDNESDAY">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton fx:id="thursday" layoutX="54.0" layoutY="428.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="102.0" text="Thursday">
+         <RadioButton fx:id="thursday" layoutX="54.0" layoutY="428.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="300.0" text="THURSDAY">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton fx:id="friday" layoutX="55.0" layoutY="464.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="88.0" text="Friday">
+         <RadioButton fx:id="friday" layoutX="55.0" layoutY="464.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="300.0" text="FRIDAY">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton fx:id="saturday" layoutX="55.0" layoutY="501.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="107.0" text="Saturday">
+         <RadioButton fx:id="saturday" layoutX="55.0" layoutY="501.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="300.0" text="SATURDAY">
             <font>
                <Font size="16.0" />
             </font>
          </RadioButton>
-         <RadioButton fx:id="sunday" layoutX="55.0" layoutY="541.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="99.0" text="Sunday">
+         <RadioButton fx:id="sunday" layoutX="55.0" layoutY="541.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="300.0" text="SUNDAY">
             <font>
                <Font size="16.0" />
             </font>
