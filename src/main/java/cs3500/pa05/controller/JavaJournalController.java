@@ -106,7 +106,7 @@ public class JavaJournalController implements Controller {
     button.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        TaskPopUpController controller= new TaskPopUpController(t);
+        TaskPopUpController controller= new TaskPopUpController(t, this);
         TaskPopUpView view = new TaskPopUpView(controller);
         stage.setTitle(t.getName());
         stage.setScene(view.load());

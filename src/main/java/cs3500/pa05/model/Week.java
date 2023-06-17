@@ -5,6 +5,7 @@ import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.model.day.*;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,7 +65,11 @@ public class Week {
         } if (numTasks() == 0) {
             return 0;
         } else {
-            return Math.multiplyExact(numTasksCompleted / numTasks(), 100);
+            double ratio = (double) numTasksCompleted / numTasks();
+            double percentage = ratio * 100;
+            DecimalFormat decimalFormat = new DecimalFormat("#.00");
+            String formattedPercentage = decimalFormat.format(percentage);
+            return Double.parseDouble(formattedPercentage);
         }
     }
 

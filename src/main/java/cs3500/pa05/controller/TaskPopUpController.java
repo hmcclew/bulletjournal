@@ -25,8 +25,11 @@ public class TaskPopUpController implements Controller{
 
     private Task task;
 
-    public TaskPopUpController(Task t) {
+    private JavaJournalController controller;
+
+    public TaskPopUpController(Task t, JavaJournalController controller) {
         this.task = t;
+        this.controller = controller;
     }
 
     @Override
@@ -55,6 +58,7 @@ public class TaskPopUpController implements Controller{
             task.markAsComplete();
             parent.getChildren().remove(markAsComplete);
             name.setText("COMPLETED TASK: " + task.getName());
+            controller.updateStatistics();
         });
     }
 }
