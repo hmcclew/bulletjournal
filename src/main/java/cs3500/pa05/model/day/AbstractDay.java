@@ -7,10 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractDay implements Day {
-  private List<Event> events;
-  private List<Task> tasks;
-  private int maximumTasks;
-  private int maximumEvents;
+  protected List<Event> events;
+  protected List<Task> tasks;
 
   public AbstractDay() {
     this.events = new ArrayList<>();
@@ -31,5 +29,4 @@ public abstract class AbstractDay implements Day {
   }
 
   public abstract String toJsonFormat();
-  public abstract String getDayOfTheWeek();
 }

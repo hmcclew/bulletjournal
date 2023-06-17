@@ -7,8 +7,4 @@ public class Thursday extends AbstractDay {
     return null;
   }
 
-  @Override
-  public String getDayOfTheWeek() {
-    return "Thursday";
-  }
 }

@@ -6,9 +6,4 @@ public class Saturday extends AbstractDay {
   public String toJsonFormat() {
     return null;
   }
-
-  @Override
-  public String getDayOfTheWeek() {
-    return "Saturday";
-  }
 }

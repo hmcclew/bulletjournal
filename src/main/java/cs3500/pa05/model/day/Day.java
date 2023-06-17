@@ -5,7 +5,6 @@ import cs3500.pa05.model.assignments.Task;
 import java.util.List;
 
 public interface Day {
-  String getDayOfTheWeek();
 
   List<Task> getTasks();
 
