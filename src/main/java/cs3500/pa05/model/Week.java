@@ -49,12 +49,8 @@ public class Week {
         this.maximumTasks = maximumTasks;
     }
 
-    public int getMaximumEvents() {
-        return this.maximumEvents;
-    }
-
-    public int getMaximumTasks() {
-        return this.maximumTasks;
+    public List<Task> getAllTasks() {
+        return this.allTasks;
     }
 
     public double getPercentTasksCompleted() {

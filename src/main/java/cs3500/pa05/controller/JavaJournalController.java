@@ -9,17 +9,15 @@ import cs3500.pa05.model.writer.BujoFileWriter;
 import cs3500.pa05.view.*;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import java.io.File;
-import java.io.IOException;
 
 public class JavaJournalController implements Controller {
 
@@ -89,7 +87,13 @@ public class JavaJournalController implements Controller {
   private Button showTaskQueue;
 
   @FXML
-  private VBox sidebar;
+  private Label weeksTasks;
+
+  @FXML
+  private VBox tasksBox;
+
+  @FXML
+  private SplitPane sideBar;
 
   private boolean sidebarVisible = false;
   private TranslateTransition sidebarTransition;
@@ -170,6 +174,30 @@ public class JavaJournalController implements Controller {
     initNewNote();
     initCreateCategory();
     initSaveFile();
+    initShowSideBar();
+  }
+
+  private void initShowSideBar() {
+    showTaskQueue.setOnAction(event -> {
+      if (sideBar.getDividerPositions()[0] >= 0.1) {
+        sideBar.setDividerPosition(0, 0.0);
+        weeksTasks.setText("");
+        tasksBox.getChildren().removeAll();
+      } else if (sideBar.getDividerPositions()[0] <= 0.1) {
+        sideBar.setDividerPosition(0, 0.2);
+        tasksBox.getChildren().removeAll();
+        weeksTasks.setText("This Week's Tasks");
+        for (Task task : week.getAllTasks()) {
+          if (task.isComplete()) {
+            Label label = new Label(task.getName() + ": Complete");
+            tasksBox.getChildren().add(label);
+          } else {
+            Label label = new Label(task.getName() + ": Not Complete");
+            tasksBox.getChildren().add(label);
+          }
+        }
+      }
+    });
   }
 
   private void initSaveFile() {
