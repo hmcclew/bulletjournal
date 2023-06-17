@@ -239,6 +239,11 @@ public class Week {
     this.name = name;
   }
 
+  /**
+   * determines if the maximum tasks for any day this week have been exceeded
+   *
+   * @return whether the maximum tasks for any day this week have been exceeded
+   */
   public boolean maxTasksExceeded() {
     List<Day> days = new ArrayList<>(Arrays.asList(monday, tuesday, wednesday, thursday,
         friday, saturday, saturday));
@@ -251,6 +256,11 @@ public class Week {
     return exceeded;
   }
 
+  /**
+   * determines if the maximum events for any day this week have been exceeded
+   *
+   * @return whether the maximum events for any day this week have been exceeded
+   */
   public boolean maxEventsExceeded() {
     List<Day> days = new ArrayList<>(Arrays.asList(monday, tuesday, wednesday, thursday,
         friday, saturday, saturday));
@@ -263,6 +273,11 @@ public class Week {
     return exceeded;
   }
 
+  /**
+   * returns the week as a json string
+   *
+   * @return the formatted json string
+   */
   public String toJsonFormat() {
     return "";
   }

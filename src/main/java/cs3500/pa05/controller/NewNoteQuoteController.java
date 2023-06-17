@@ -8,6 +8,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Controller for creating a new note or quote
+ */
 public class NewNoteQuoteController implements Controller {
 
   private Stage stage;
@@ -25,17 +28,32 @@ public class NewNoteQuoteController implements Controller {
   @FXML
   private VBox noteBox;
 
+  /**
+   * Constructor for a new note or quote controller
+   *
+   * @param stage the stage for creating the note
+   * @param week the week the note will belong to
+   * @param noteBox the box for the note to be displayed in the main week view
+   */
   public NewNoteQuoteController(Stage stage, Week week, VBox noteBox) {
     this.stage = stage;
     this.week = week;
     this.noteBox = noteBox;
   }
 
+  /**
+   * runs the controller
+   *
+   * @throws IllegalStateException if the scene could not load
+   */
   @Override
   public void run() throws IllegalStateException {
     initFinishButton();
   }
 
+  /**
+   * initializes the finish button
+   */
   private void initFinishButton() {
     finish.setOnAction(event -> {
       if (newNoteContent.getText() != "") {

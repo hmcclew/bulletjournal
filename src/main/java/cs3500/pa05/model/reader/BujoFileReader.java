@@ -5,6 +5,9 @@ import cs3500.pa05.model.day.Day;
 import java.nio.file.Path;
 import java.util.Scanner;
 
+/**
+ * Class representing a .bujo file reader
+ */
 public class BujoFileReader implements FileReader {
   private Path path;
   private Scanner scanner;

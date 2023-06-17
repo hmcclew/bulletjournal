@@ -4,6 +4,9 @@ import cs3500.pa05.model.assignments.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
+/**
+ * Class for the controller for an event pop up
+ */
 public class EventPopUpController implements Controller {
   @FXML
   private Label name;
@@ -25,10 +28,20 @@ public class EventPopUpController implements Controller {
 
   private Event event;
 
+  /**
+   * Constructor for an event pop up controller
+   *
+   * @param e the event in the popup
+   */
   public EventPopUpController(Event e) {
     this.event = e;
   }
 
+  /**
+   * runs the controller
+   *
+   * @throws IllegalStateException if unable to load
+   */
   @Override
   public void run() throws IllegalStateException {
     name.setText("Event: " + event.getName());
