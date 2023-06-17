@@ -1,5 +1,6 @@
 package cs3500.pa05.model;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import cs3500.pa05.model.assignments.Assignment;
 import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
@@ -12,6 +13,8 @@ import cs3500.pa05.model.day.Sunday;
 import cs3500.pa05.model.day.Thursday;
 import cs3500.pa05.model.day.Tuesday;
 import cs3500.pa05.model.day.Wednesday;
+
+import java.lang.reflect.Field;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,20 +24,20 @@ import java.util.List;
  * Class representing a week in a java journal
  */
 public class Week {
-  private String name;
-  private Monday monday;
-  private Tuesday tuesday;
-  private Wednesday wednesday;
-  private Thursday thursday;
-  private Friday friday;
-  private Saturday saturday;
-  private Sunday sunday;
-  private List<String> categories;
+  public String name;
+  public Monday monday;
+  public Tuesday tuesday;
+  public Wednesday wednesday;
+  public Thursday thursday;
+  public Friday friday;
+  public Saturday saturday;
+  public Sunday sunday;
+  public List<String> categories;
   public List<Event> allEvents;
-  private List<Task> allTasks;
+  public List<Task> allTasks;
   public List<String> quotesAndNotes;
-  private int maximumEvents;
-  private int maximumTasks;
+  public int maximumEvents;
+  public int maximumTasks;
 
   /**
    * Constructor for a week
@@ -51,6 +54,8 @@ public class Week {
     this.friday = new Friday();
     this.saturday = new Saturday();
     this.sunday = new Sunday();
+    this.maximumTasks = 0;
+    this.maximumEvents = 0;
   }
 
   /**
@@ -273,6 +278,11 @@ public class Week {
     return exceeded;
   }
 
+  /**
+   * returns the week as a json string
+   *
+   * @return the formatted json string
+   */
   /**
    * returns the week as a json string
    *

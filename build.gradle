@@ -46,6 +46,7 @@ javafx {
 }
 
 dependencies {
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.0")
     // JavaFX
     implementation('org.controlsfx:controlsfx:11.1.2')
     implementation 'io.github.javiercanillas:jackson-masker:0.9.9'

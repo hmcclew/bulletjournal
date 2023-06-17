@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/WeekTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/assignments/EventTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/assignments/TaskTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/DaysTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/FridayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/MondayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/SaturdayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/SundayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/ThursdayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/TuesdayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/day/WednesdayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/reader/BujoFileReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/writer/BujoFileWriterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/assignments/EventTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +44,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="pa05-template" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="verification" type="c8890929:TasksNode$1" />
               </path>
               <path>
@@ -73,6 +80,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -123,8 +131,15 @@
       <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cs3500.pa05.model.assignments" />
+      <recent name="cs3500.pa05.model.day" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]">
+  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [test]">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -256,10 +271,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]" />
         <item itemvalue="Gradle.WeekTest" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestReport]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
       </list>
     </recent_temporary>
@@ -472,6 +487,9 @@
     <MESSAGE value="week view appearance" />
     <MESSAGE value="code cleaning" />
     <MESSAGE value="style" />
-    <option name="LAST_COMMIT_MESSAGE" value="style" />
+    <MESSAGE value="readMe image of week gui" />
+    <MESSAGE value="tests" />
+    <MESSAGE value="save file" />
+    <option name="LAST_COMMIT_MESSAGE" value="save file" />
   </component>
 </project>

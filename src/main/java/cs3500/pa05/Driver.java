@@ -35,7 +35,7 @@ public class Driver extends Application {
   @Override
   public void start(Stage stage) {
     Week newWeek = new Week();
-    Controller controller = new JavaJournalController(newWeek);
+    Controller controller = new JavaJournalController(newWeek, stage);
     WeekView view = new WeekView(controller);
     try {
       stage.setTitle("New Java Journal Week");

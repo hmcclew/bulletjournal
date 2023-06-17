@@ -5,6 +5,8 @@ import cs3500.pa05.model.assignments.Assignment;
 import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.model.day.Days;
+import cs3500.pa05.model.reader.BujoFileReader;
+import cs3500.pa05.model.reader.FileReader;
 import cs3500.pa05.model.writer.BujoFileWriter;
 import cs3500.pa05.view.CreateCategoryView;
 import cs3500.pa05.view.EventPopUpView;
@@ -91,6 +93,9 @@ public class JavaJournalController implements Controller {
   private Button saveFile;
 
   @FXML
+  private Button openFile;
+
+  @FXML
   private Button showTaskQueue;
 
   @FXML
@@ -102,14 +107,17 @@ public class JavaJournalController implements Controller {
   @FXML
   private SplitPane sideBar;
 
+  private Stage primaryStage;
+
 
   /**
    * Constructor for a java journal controller
    *
    * @param w the week currently being displayed and edited
    */
-  public JavaJournalController(Week w) {
+  public JavaJournalController(Week w, Stage stage) {
     this.week = w;
+    this.primaryStage = stage;
   }
 
 
@@ -256,6 +264,30 @@ public class JavaJournalController implements Controller {
     initCreateCategory();
     initSaveFile();
     initShowSideBar();
+    initOpenFile();
+  }
+
+  /**
+   * initializes the open file button
+   */
+  private void initOpenFile() {
+    openFile.setOnAction(event -> {
+      FileChooser fileChooser = new FileChooser();
+      fileChooser.setTitle("Open File");
+
+      FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Bujo (*.bujo)",
+          "*.bujo");
+      fileChooser.getExtensionFilters().add(extensionFilter);
+
+      File selectedFile = fileChooser.showOpenDialog(primaryStage);
+
+
+      if (selectedFile != null) {
+        String filePath = selectedFile.getAbsolutePath();
+        FileReader bujoFileReader = new BujoFileReader();
+        bujoFileReader.read(filePath);
+      }
+    });
   }
 
   /**
@@ -290,7 +322,6 @@ public class JavaJournalController implements Controller {
   private void initSaveFile() {
     saveFile.setOnAction(event -> {
       week.setName(weekName.getText());
-      System.out.println(week.toJsonFormat());
       saveFile();
     });
   }
