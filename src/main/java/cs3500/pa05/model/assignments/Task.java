@@ -49,6 +49,10 @@ public class Task implements Assignment {
     return null;
   }
 
+  public boolean isComplete() {
+    return this.isComplete;
+  }
+
   @Override
   public String toJsonFormat() {
     return null;

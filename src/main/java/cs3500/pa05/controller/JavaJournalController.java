@@ -56,6 +56,15 @@ public class JavaJournalController implements Controller {
   @FXML
   private VBox saturdayContent;
 
+  @FXML
+  private Label totalEvents;
+
+  @FXML
+  private Label totalTasks;
+
+  @FXML
+  private Label tasksCompleted;
+
 
   public JavaJournalController() {
     this.week = new Week();
@@ -162,6 +171,12 @@ public class JavaJournalController implements Controller {
         System.err.println("Unable to load GUI." + exc.getMessage());
       }
     });
+  }
+
+  public void updateStatistics() {
+    totalEvents.setText("Total Events: " + week.numEvents());
+    totalTasks.setText("Total Tasks: " + week.numTasks());
+    tasksCompleted.setText("Percent Tasks Completed: " + week.getPercentTasksCompleted() + "%");
   }
 
   private void initNewEvent() {

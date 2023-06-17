@@ -81,7 +81,6 @@ public class NewEventController implements Controller {
                     && startTimeMinutesContent.getText() != ""
                     && durationHoursContent.getText() != ""
                     && durationMinutesContent.getText() != "") {
-                //if (wee)
                 determineStartTime();
                 determineDuration();
                 determineName();
@@ -95,6 +94,7 @@ public class NewEventController implements Controller {
                 }
                 week.addEvent(e);
                 controller.updateAssignmentDisplay(e);
+                controller.updateStatistics();
             } else {
                 showInvalidEventAlert();
             }

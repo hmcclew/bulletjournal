@@ -29,6 +29,7 @@ public class Week {
         this.quotesAndNotes = new ArrayList<>();
         this.categories = new ArrayList<>();
         this.allEvents = new ArrayList<>();
+        this.allTasks = new ArrayList<>();
         this.monday = new Monday();
         this.tuesday = new Tuesday();
         this.wednesday = new Wednesday();
@@ -50,8 +51,25 @@ public class Week {
         return this.maximumEvents;
     }
 
-    public int getEvents() {
+    public int getMaximumTasks() {
+        return this.maximumTasks;
+    }
+
+    public double getPercentTasksCompleted() {
+        int numTasksCompleted = 0;
+        for (Task task : allTasks) {
+            if (task.isComplete()) {
+                numTasksCompleted++;
+            }
+        } return Math.multiplyExact(numTasksCompleted / numTasks(), 100);
+    }
+
+    public int numEvents() {
         return this.allEvents.size();
+    }
+
+    public int numTasks() {
+        return this.allTasks.size();
     }
 
     public void addNoteOrQuote(String note) {
