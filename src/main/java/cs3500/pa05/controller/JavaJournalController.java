@@ -15,9 +15,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.io.File;
 
+/**
+ * main controller for a java journal
+ */
 public class JavaJournalController implements Controller {
 
   private Week week;
@@ -109,7 +111,8 @@ public class JavaJournalController implements Controller {
     Days day = week.determineDay(assignment);
     Button button = new Button(assignment.getName());
     button.setPrefWidth(300);
-    button.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-underline: true;");
+    button.setStyle("-fx-background-color: transparent; -fx-border-color: " +
+        "transparent; -fx-underline: true;");
     if (day.equals(Days.MONDAY)) {
       mondayContent.getChildren().add(button);
       initData(mondayContent, assignment);
@@ -290,7 +293,9 @@ public class JavaJournalController implements Controller {
 
   public void displayMaxEventsWarning() {
     if (week.maxEventsExceeded()) {
-      eventWarning.setText("WARNING: You have reached your maximum number of events for at least one day.");
+      eventWarning.setText("WARNING: You have reached your maximum "
+          +
+          "number of events for at least one day.");
     } else {
       eventWarning.setText(" ");
     }
@@ -298,7 +303,9 @@ public class JavaJournalController implements Controller {
 
   public void displayMaxTasksWarning() {
     if (week.maxTasksExceeded()) {
-      taskWarning.setText("WARNING: You have reached your maximum number of tasks for at least one day.");
+      taskWarning.setText("WARNING: You have reached your maximum "
+          +
+          "number of tasks for at least one day.");
     } else {
       taskWarning.setText(" ");
     }

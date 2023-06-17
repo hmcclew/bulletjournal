@@ -4,6 +4,9 @@ import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
 import java.util.List;
 
+/**
+ * Interface for a day of the week in java journal
+ */
 public interface Day {
 
   List<Task> getTasks();
