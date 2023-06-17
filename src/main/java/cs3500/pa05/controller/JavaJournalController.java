@@ -230,16 +230,16 @@ public class JavaJournalController implements Controller {
   }
 
   public void displayMaxEventsWarning() {
-    if (week.numEvents() >= week.getMaximumEvents()) {
-      eventWarning.setText("WARNING: You have reached your maximum number of events for this week.");
+    if (week.maxEventsExceeded()) {
+      eventWarning.setText("WARNING: You have reached your maximum number of events for at least one day.");
     } else {
       eventWarning.setText(" ");
     }
   }
 
   public void displayMaxTasksWarning() {
-    if (week.numTasks() >= week.getMaximumTasks()) {
-      taskWarning.setText("WARNING: You have reached your maximum number of tasks for this week.");
+    if (week.maxTasksExceeded()) {
+      taskWarning.setText("WARNING: You have reached your maximum number of tasks for at least one day.");
     } else {
       taskWarning.setText(" ");
     }

@@ -8,6 +8,7 @@ import cs3500.pa05.model.day.*;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Week {
@@ -149,7 +150,29 @@ public class Week {
         this.name = name;
     }
 
+    public boolean maxTasksExceeded() {
+        List<Day> days = new ArrayList<>(Arrays.asList(monday, tuesday, wednesday, thursday,
+                friday, saturday, saturday));
+        boolean exceeded = false;
+        for (Day day : days) {
+            if (day.getTasks().size() >= maximumTasks) {
+                exceeded = true;
+            }
+        } return exceeded;
+    }
+
+    public boolean maxEventsExceeded() {
+        List<Day> days = new ArrayList<>(Arrays.asList(monday, tuesday, wednesday, thursday,
+                friday, saturday, saturday));
+        boolean exceeded = false;
+        for (Day day : days) {
+            if (day.getEvents().size() >= maximumEvents) {
+                exceeded = true;
+            }
+        } return exceeded;
+    }
+
     public String toJsonFormat() {
-        return "";
+      return "";
     }
 }
