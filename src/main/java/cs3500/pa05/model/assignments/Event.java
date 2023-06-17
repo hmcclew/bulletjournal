@@ -4,16 +4,24 @@ package cs3500.pa05.model.assignments;
  * Class representing an event for java journal
  */
 public class Event extends AbstractAssignment {
-  private final String startTime;
-  private final String duration;
+  private String startTime;
+  private String duration;
+
+  /**
+   * Empty Constructor
+   */
+  public Event() {
+    this.startTime = "";
+    this.duration = "";
+  }
 
   /**
    * Constructor for an event with no description or category
    *
-   * @param name event name
-   * @param day event day
+   * @param name      event name
+   * @param day       event day
    * @param startTime event start time
-   * @param duration event duration
+   * @param duration  event duration
    */
   public Event(String name, String day, String startTime, String duration) {
     this.name = name;
@@ -27,10 +35,10 @@ public class Event extends AbstractAssignment {
   /**
    * Constructor for an event with a description
    *
-   * @param name event name
-   * @param day event day
-   * @param startTime event start time
-   * @param duration event duration
+   * @param name        event name
+   * @param day         event day
+   * @param startTime   event start time
+   * @param duration    event duration
    * @param description event description
    */
   public Event(String name, String day, String startTime, String duration, String description) {
@@ -55,25 +63,5 @@ public class Event extends AbstractAssignment {
    */
   public String getDuration() {
     return this.duration;
-  }
-
-  /**
-   * returns the event as a json string
-   *
-   * @return the formatted json string
-   */
-  @Override
-  public String toJsonFormat() {
-    StringBuilder jsonBuilder = new StringBuilder();
-    jsonBuilder.append("{");
-    jsonBuilder.append("\"name\": \"").append(name).append("\",");
-    jsonBuilder.append("\"day\": \"").append(day).append("\",");
-    jsonBuilder.append("\"start-time\": \"").append(startTime).append("\",");
-    jsonBuilder.append("\"duration\": \"").append(duration).append("\",");
-    jsonBuilder.append("\"category\": \"").append(category).append("\",");
-    jsonBuilder.append("\"description\": \"").append(description).append("\",");
-    jsonBuilder.setLength(jsonBuilder.length() - 1);
-    jsonBuilder.append("}");
-    return jsonBuilder.toString();
   }
 }

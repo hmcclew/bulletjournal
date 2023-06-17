@@ -13,8 +13,7 @@ import cs3500.pa05.model.day.Sunday;
 import cs3500.pa05.model.day.Thursday;
 import cs3500.pa05.model.day.Tuesday;
 import cs3500.pa05.model.day.Wednesday;
-
-import java.lang.reflect.Field;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,20 +23,22 @@ import java.util.List;
  * Class representing a week in a java journal
  */
 public class Week {
-  public String name;
-  public Monday monday;
-  public Tuesday tuesday;
-  public Wednesday wednesday;
-  public Thursday thursday;
-  public Friday friday;
-  public Saturday saturday;
-  public Sunday sunday;
-  public List<String> categories;
-  public List<Event> allEvents;
-  public List<Task> allTasks;
-  public List<String> quotesAndNotes;
-  public int maximumEvents;
-  public int maximumTasks;
+  private String name;
+  private Monday monday;
+  private Tuesday tuesday;
+  private Wednesday wednesday;
+  private Thursday thursday;
+  private Friday friday;
+  private Saturday saturday;
+  private Sunday sunday;
+  private List<String> categories;
+  private List<Event> allEvents;
+  private List<Task> allTasks;
+  private List<String> quotesAndNotes;
+  private int maximumEvents;
+  private int maximumTasks;
+
+  private double percentTasksCompleted;
 
   /**
    * Constructor for a week
@@ -56,6 +57,7 @@ public class Week {
     this.sunday = new Sunday();
     this.maximumTasks = 0;
     this.maximumEvents = 0;
+    this.percentTasksCompleted = 0.0;
   }
 
   /**
@@ -104,6 +106,7 @@ public class Week {
       double percentage = ratio * 100;
       DecimalFormat decimalFormat = new DecimalFormat("#.00");
       String formattedPercentage = decimalFormat.format(percentage);
+      this.percentTasksCompleted = Double.parseDouble(formattedPercentage);
       return Double.parseDouble(formattedPercentage);
     }
   }
@@ -283,48 +286,15 @@ public class Week {
    *
    * @return the formatted json string
    */
-  /**
-   * returns the week as a json string
-   *
-   * @return the formatted json string
-   */
   public String toJsonFormat() {
-    StringBuilder jsonBuilder = new StringBuilder();
-    jsonBuilder.append("{");
-    jsonBuilder.append("\"name\": \"").append(name).append("\",");
-    jsonBuilder.append("\"maximum-events\": ").append(maximumEvents).append(",");
-    jsonBuilder.append("\"maximum-tasks\": ").append(maximumTasks).append(",");
-    jsonBuilder.append("\"categories\": ").append(Arrays.toString(categories.toArray())).append(",");
-    jsonBuilder.append("\"quotes-and-notes\": ").append(Arrays.toString(quotesAndNotes.toArray())).append(",");
-    jsonBuilder.append("\"percent-tasks-completed\": ").append(getPercentTasksCompleted()).append(",");
-    jsonBuilder.append("\"all-events\": [");
-    for (Event event : allEvents) {
-      jsonBuilder.append(event.toJsonFormat()).append(",");
+    try {
+      ObjectMapper mapper = new ObjectMapper();
+      String content = mapper.writeValueAsString(this);
+      return content;
+    } catch (IOException e) {
+      System.err.println("Unable to parse to Json");
     }
-    if (!allEvents.isEmpty()) {
-      jsonBuilder.setLength(jsonBuilder.length() - 1);
-    }
-    jsonBuilder.append("],");
-
-    jsonBuilder.append("\"all-tasks\": [");
-    for (Task task : allTasks) {
-      jsonBuilder.append(task.toJsonFormat()).append(",");
-    }
-    if (!allTasks.isEmpty()) {
-      jsonBuilder.setLength(jsonBuilder.length() - 1);
-    }
-    jsonBuilder.append("],");
-    jsonBuilder.append("\"days\": {");
-    jsonBuilder.append("\"monday\": ").append(monday.toJsonFormat()).append(",");
-    jsonBuilder.append("\"tuesday\": ").append(tuesday.toJsonFormat()).append(",");
-    jsonBuilder.append("\"wednesday\": ").append(wednesday.toJsonFormat()).append(",");
-    jsonBuilder.append("\"thursday\": ").append(thursday.toJsonFormat()).append(",");
-    jsonBuilder.append("\"friday\": ").append(friday.toJsonFormat()).append(",");
-    jsonBuilder.append("\"saturday\": ").append(saturday.toJsonFormat()).append(",");
-    jsonBuilder.append("\"sunday\": ").append(sunday.toJsonFormat());
-    jsonBuilder.append("}");
-    jsonBuilder.append("}");
-    return jsonBuilder.toString();
+    return null;
   }
 
   /**

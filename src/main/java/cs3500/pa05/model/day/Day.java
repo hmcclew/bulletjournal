@@ -36,11 +36,4 @@ public interface Day {
    * @param t the task to be added
    */
   void addTask(Task t);
-
-  /**
-   * the json formatted string of this class
-   *
-   * @return the json formatted string
-   */
-  String toJsonFormat();
 }

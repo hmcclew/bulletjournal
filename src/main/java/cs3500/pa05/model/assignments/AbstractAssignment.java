@@ -78,11 +78,4 @@ public abstract class AbstractAssignment implements Assignment {
   public void setCategory(String category) {
     this.category = category;
   }
-
-  /**
-   * returns the event as a json string
-   *
-   * @return the formatted json string
-   */
-  public abstract String toJsonFormat();
 }

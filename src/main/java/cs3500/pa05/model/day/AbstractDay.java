@@ -64,31 +64,4 @@ public abstract class AbstractDay implements Day {
     tasks.add(t);
   }
 
-  /**
-   * the json formatted string of this class
-   *
-   * @return the json formatted string
-   */
-  public String toJsonFormat() {
-    StringBuilder jsonBuilder = new StringBuilder();
-    jsonBuilder.append("{");
-    jsonBuilder.append("\"events\": [");
-    for (Event event : events) {
-      jsonBuilder.append(event.toJsonFormat()).append(",");
-    }
-    if (!events.isEmpty()) {
-      jsonBuilder.setLength(jsonBuilder.length() - 1);
-    }
-    jsonBuilder.append("],");
-    jsonBuilder.append("\"tasks\": [");
-    for (Task task : tasks) {
-      jsonBuilder.append(task.toJsonFormat()).append(",");
-    }
-    if (!tasks.isEmpty()) {
-      jsonBuilder.setLength(jsonBuilder.length() - 1);
-    }
-    jsonBuilder.append("]");
-    jsonBuilder.append("}");
-    return jsonBuilder.toString();
-  }
 }

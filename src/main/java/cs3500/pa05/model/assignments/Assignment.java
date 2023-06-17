@@ -34,13 +34,6 @@ public interface Assignment {
   String getCategory();
 
   /**
-   * returns the event as a json string
-   *
-   * @return the formatted json string
-   */
-  String toJsonFormat();
-
-  /**
    * sets the category of this assignment
    *
    * @param category the category to be set
