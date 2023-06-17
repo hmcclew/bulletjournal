@@ -17,6 +17,11 @@ public class BujoFileReader implements FileReader {
 
   private JavaJournalController controller;
 
+  /**
+   * Constructor for a bujo file reader
+   *
+   * @param controller the main controller
+   */
   public BujoFileReader(JavaJournalController controller) {
     this.controller = controller;
   }

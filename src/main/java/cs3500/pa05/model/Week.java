@@ -333,6 +333,11 @@ public class Week {
     return this.allEvents;
   }
 
+  /**
+   * getter method for the week name
+   *
+   * @return gets the name of the week
+   */
   public String getName() {
     return this.name;
   }

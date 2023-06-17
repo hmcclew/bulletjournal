@@ -120,6 +120,7 @@ public class JavaJournalController implements Controller {
    * Constructor for a java journal controller
    *
    * @param w the week currently being displayed and edited
+   * @param stage the main stage of the application
    */
   public JavaJournalController(Week w, Stage stage) {
     this.week = w;
