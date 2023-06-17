@@ -3,7 +3,6 @@ package cs3500.pa05.model.reader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import cs3500.pa05.controller.JavaJournalController;
 import cs3500.pa05.model.Week;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
