@@ -102,6 +102,7 @@ public class JavaJournalController implements Controller {
   @FXML
   private SplitPane sideBar;
 
+
   /**
    * Constructor for a java journal controller
    *
