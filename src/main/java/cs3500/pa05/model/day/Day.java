@@ -11,7 +11,7 @@ public interface Day {
 
   List<Event> getEvents();
 
-  void addEvent();
+  void addEvent(Event e);
 
   void addTask();
 

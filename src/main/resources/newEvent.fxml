@@ -24,7 +24,7 @@
                 </font>
             </Label>
             <TextField fx:id="nameContent" layoutX="30.0" layoutY="110.0" prefHeight="20.0" prefWidth="811.0" />
-            <Label fx:id="description" layoutX="30.0" layoutY="150.0" text="Description">
+            <Label fx:id="description" layoutX="30.0" layoutY="150.0" text="Description (Optional)">
                 <font>
                     <Font size="16.0" />
                 </font>
@@ -47,16 +47,16 @@
                 </font>
             </Label>
             <Button fx:id="finish" layoutX="380.0" layoutY="650.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" text="Finish" />
-         <RadioButton fx:id="thursday" layoutX="35.0" layoutY="300.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="99.0" text="Thursday" />
-         <RadioButton fx:id="saturday" layoutX="35.0" layoutY="340.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="114.0" text="Saturday" />
-         <RadioButton fx:id="tuesday" layoutX="35.0" layoutY="260.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="88.0" text="Tuesday" />
-         <RadioButton fx:id="friday" layoutX="35.0" layoutY="320.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="75.0" text="Friday" />
-         <RadioButton fx:id="wednesday" layoutX="35.0" layoutY="280.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="106.0" text="Wednesday" />
-         <RadioButton fx:id="monday" layoutX="35.0" layoutY="240.0" mnemonicParsing="false" text="Monday" />
-         <RadioButton fx:id="sunday" layoutX="35.0" layoutY="360.0" mnemonicParsing="false" text="Sunday" />
+         <RadioButton fx:id="thursday" layoutX="35.0" layoutY="300.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="99.0" text="THURSDAY" />
+         <RadioButton fx:id="saturday" layoutX="35.0" layoutY="340.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="114.0" text="SATURDAY" />
+         <RadioButton fx:id="tuesday" layoutX="35.0" layoutY="260.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="88.0" text="TUESDAY" />
+         <RadioButton fx:id="friday" layoutX="35.0" layoutY="320.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="75.0" text="FRIDAY" />
+         <RadioButton fx:id="wednesday" layoutX="35.0" layoutY="280.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="106.0" text="WEDNESDAY" />
+         <RadioButton fx:id="monday" layoutX="35.0" layoutY="240.0" mnemonicParsing="false" text="MONDAY" />
+         <RadioButton fx:id="sunday" layoutX="35.0" layoutY="360.0" mnemonicParsing="false" text="SUNDAY" />
          <TextField fx:id="startTimeMinutesContent" layoutX="288.0" layoutY="440.0" prefHeight="32.0" prefWidth="190.0" />
-         <Label fx:id="startTimeHours" layoutX="30.0" layoutY="415.0" prefHeight="19.0" prefWidth="36.0" text="Hours" />
-         <Label fx:id="startTimeMinutes" layoutX="291.0" layoutY="415.0" prefHeight="19.0" prefWidth="72.0" text="Minutes" />
+         <Label fx:id="startTimeHours" layoutX="30.0" layoutY="415.0" prefHeight="19.0" prefWidth="36.0" text="Hour" />
+         <Label fx:id="startTimeMinutes" layoutX="291.0" layoutY="415.0" prefHeight="19.0" prefWidth="72.0" text="Minute" />
          <Label fx:id="durationHours" layoutX="30.0" layoutY="505.0" prefHeight="19.0" prefWidth="36.0" text="Hours" />
          <TextField fx:id="startTimeHoursContent" layoutX="30.0" layoutY="440.0" prefHeight="32.0" prefWidth="190.0" />
          <Label fx:id="durationMinutes" layoutX="291.0" layoutY="505.0" prefHeight="19.0" prefWidth="72.0" text="Minutes" />

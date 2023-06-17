@@ -30,6 +30,16 @@ public class Task implements Assignment {
   }
 
   @Override
+  public String getDay() {
+    return null;
+  }
+
+  @Override
+  public String getName() {
+    return null;
+  }
+
+  @Override
   public String toJsonFormat() {
     return null;
   }

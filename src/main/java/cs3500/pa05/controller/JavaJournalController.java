@@ -1,16 +1,17 @@
 package cs3500.pa05.controller;
 
-import cs3500.pa05.model.week.Week;
+import cs3500.pa05.model.Week;
+import cs3500.pa05.model.assignments.Assignment;
+import cs3500.pa05.model.day.Days;
 import cs3500.pa05.view.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class JavaJournalController implements Controller {
 
-  private Week week = new Week();
+  private Week week;
 
   @FXML
   private Button newEvent;
@@ -30,10 +31,57 @@ public class JavaJournalController implements Controller {
   @FXML
   private Button createCategory;
 
+  @FXML
+  private VBox sundayContent;
+
+  @FXML
+  private VBox mondayContent;
+
+  @FXML
+  private VBox tuesdayContent;
+
+  @FXML
+  private VBox wednesdayContent;
+
+  @FXML
+  private VBox thursdayContent;
+
+  @FXML
+  private VBox fridayContent;
+
+  @FXML
+  private VBox saturdayContent;
+
+
+  public JavaJournalController() {
+    this.week = new Week();
+  }
+
 
   @Override
   public void run() throws IllegalStateException {
     initButtons();
+  }
+
+  public void updateAssignmentDisplay(Assignment assignment) {
+    Days day = week.determineDay(assignment);
+    Button button = new Button(assignment.getName());
+    button.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-underline: true;");
+    if (day.equals(Days.MONDAY)) {
+      mondayContent.getChildren().add(button);
+    } else if (day.equals(Days.TUESDAY)) {
+      tuesdayContent.getChildren().add(button);
+    } else if (day.equals(Days.WEDNESDAY)) {
+      wednesdayContent.getChildren().add(button);
+    } else if (day.equals(Days.THURSDAY)) {
+      thursdayContent.getChildren().add(button);
+    } else if (day.equals(Days.FRIDAY)) {
+      fridayContent.getChildren().add(button);
+    } else if (day.equals(Days.SATURDAY)) {
+      saturdayContent.getChildren().add(button);
+    } else if (day.equals(Days.SUNDAY)) {
+      sundayContent.getChildren().add(button);
+    }
   }
 
   private void initButtons() {
@@ -95,7 +143,7 @@ public class JavaJournalController implements Controller {
     newEvent.setOnAction(event -> {
       try {
         Stage newEventStage = new Stage();
-        NewEventController controller = new NewEventController(newEventStage, week);
+        NewEventController controller = new NewEventController(newEventStage, week, this);
         NewEventView view = new NewEventView(controller);
         newEventStage.setTitle("Create New Event");
         newEventStage.setScene(view.load());
