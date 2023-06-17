@@ -25,7 +25,7 @@ public abstract class AbstractNewAssignmentController {
   @FXML
   protected RadioButton sunday;
   @FXML
-  protected ChoiceBox categoryChoices;
+  protected ChoiceBox<String> categoryChoices;
   protected String category;
 
   protected String day;
