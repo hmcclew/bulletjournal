@@ -13,9 +13,9 @@
 
 <?import javafx.scene.layout.Pane?>
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="726.0" prefWidth="1500.0">
+    <AnchorPane prefHeight="726.0" prefWidth="1450.0">
         <children>
-            <SplitPane fx:id="sideBar" layoutX="0.0" layoutY="0.0" prefHeight="726.0" prefWidth="1500.0" dividerPositions="0.0">
+            <SplitPane fx:id="sideBar" layoutX="0.0" layoutY="0.0" prefHeight="726.0" prefWidth="1450.0" dividerPositions="0.0">
                 <items>
                     <VBox prefHeight="729.0" prefWidth="200.0" maxWidth="200.0">
                         <children>
@@ -37,7 +37,7 @@
                     <Font size="20.0" />
                 </font>
             </Label>
-            <TitledPane fx:id="monday" animated="false" layoutX="35.0" layoutY="87.0" prefHeight="195.0" prefWidth="109.0" text="Monday">
+            <TitledPane fx:id="monday" animated="false" layoutX="10.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Monday">
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
@@ -46,7 +46,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <TitledPane fx:id="tuesday" animated="false" layoutX="175.0" layoutY="87.0" prefHeight="195.0" prefWidth="109.0" text="Tuesday">
+            <TitledPane fx:id="tuesday" animated="false" layoutX="210.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Tuesday">
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
@@ -55,7 +55,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <TitledPane fx:id="wednesday" animated="false" layoutX="315.0" layoutY="84.0" prefHeight="195.0" prefWidth="109.0" text="Wednesday">
+            <TitledPane fx:id="wednesday" animated="false" layoutX="410.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Wednesday">
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
@@ -64,7 +64,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <TitledPane fx:id="thursday" animated="false" layoutX="455.0" layoutY="84.0" prefHeight="195.0" prefWidth="109.0" text="Thursday">
+            <TitledPane fx:id="thursday" animated="false" layoutX="610.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Thursday">
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
@@ -73,7 +73,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <TitledPane fx:id="friday" animated="false" layoutX="595.0" layoutY="82.0" prefHeight="195.0" prefWidth="109.0" text="Friday">
+            <TitledPane fx:id="friday" animated="false" layoutX="810.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Friday">
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
@@ -82,7 +82,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <TitledPane fx:id="saturday" animated="false" layoutX="735.0" layoutY="81.0" prefHeight="195.0" prefWidth="109.0" text="Saturday">
+            <TitledPane fx:id="saturday" animated="false" layoutX="1010.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Saturday">
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
@@ -91,7 +91,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <TitledPane fx:id="sunday" animated="false" layoutX="875.0" layoutY="80.0" prefHeight="195.0" prefWidth="109.0" text="Sunday">
+            <TitledPane fx:id="sunday" animated="false" layoutX="1210.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Sunday">
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
@@ -100,8 +100,8 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
-            <Button fx:id="openFile" layoutX="750.0" layoutY="21.0" mnemonicParsing="false" text="open file" />
-            <Button fx:id="saveFile" layoutX="850.0" layoutY="21.0" mnemonicParsing="false" text="save file" />
+            <Button fx:id="openFile" layoutX="1000.0" layoutY="21.0" mnemonicParsing="false" text="open file" />
+            <Button fx:id="saveFile" layoutX="1100.0" layoutY="21.0" mnemonicParsing="false" text="save file" />
             <Button fx:id="newTask" layoutX="40.0" layoutY="507.0" mnemonicParsing="false" text="new task" />
             <Button fx:id="newEvent" layoutX="120.0" layoutY="507.0" mnemonicParsing="false" text="new event" />
             <Button fx:id="setMaxEventsTasks" layoutX="200.0" layoutY="507.0" mnemonicParsing="false" text="set maximum events and tasks" />

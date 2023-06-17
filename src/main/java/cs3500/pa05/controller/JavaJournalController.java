@@ -7,7 +7,6 @@ import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.model.day.Days;
 import cs3500.pa05.model.writer.BujoFileWriter;
 import cs3500.pa05.view.*;
-import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -95,9 +94,6 @@ public class JavaJournalController implements Controller {
   @FXML
   private SplitPane sideBar;
 
-  private boolean sidebarVisible = false;
-  private TranslateTransition sidebarTransition;
-
 
   public JavaJournalController() {
     this.week = new Week();
@@ -112,30 +108,54 @@ public class JavaJournalController implements Controller {
   public void updateAssignmentDisplay(Assignment assignment) {
     Days day = week.determineDay(assignment);
     Button button = new Button(assignment.getName());
+    button.setPrefWidth(200);
     button.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-underline: true;");
+    if (day.equals(Days.MONDAY)) {
+      mondayContent.getChildren().add(button);
+      initData(mondayContent, assignment);
+    } else if (day.equals(Days.TUESDAY)) {
+      tuesdayContent.getChildren().add(button);
+      initData(tuesdayContent, assignment);
+    } else if (day.equals(Days.WEDNESDAY)) {
+      wednesdayContent.getChildren().add(button);
+      initData(wednesdayContent, assignment);
+    } else if (day.equals(Days.THURSDAY)) {
+      thursdayContent.getChildren().add(button);
+      initData(thursdayContent, assignment);
+    } else if (day.equals(Days.FRIDAY)) {
+      fridayContent.getChildren().add(button);
+      initData(fridayContent, assignment);
+    } else if (day.equals(Days.SATURDAY)) {
+      saturdayContent.getChildren().add(button);
+      initData(saturdayContent, assignment);
+    } else if (day.equals(Days.SUNDAY)) {
+      sundayContent.getChildren().add(button);
+      initData(sundayContent, assignment);
+    }
     if (assignment instanceof Event) {
       initEventDisplay(button, (Event) assignment);
     } else if (assignment instanceof Task) {
       initTaskDisplay(button, (Task) assignment);
     }
-    if (day.equals(Days.MONDAY)) {
-      mondayContent.getChildren().add(button);
-    } else if (day.equals(Days.TUESDAY)) {
-      tuesdayContent.getChildren().add(button);
-    } else if (day.equals(Days.WEDNESDAY)) {
-      wednesdayContent.getChildren().add(button);
-    } else if (day.equals(Days.THURSDAY)) {
-      thursdayContent.getChildren().add(button);
-    } else if (day.equals(Days.FRIDAY)) {
-      fridayContent.getChildren().add(button);
-    } else if (day.equals(Days.SATURDAY)) {
-      saturdayContent.getChildren().add(button);
-    } else if (day.equals(Days.SUNDAY)) {
-      sundayContent.getChildren().add(button);
+  }
+
+  private void initData(VBox content, Assignment a) {
+    if (a.getDescription() != "No Description Available.") {
+      Label description = new Label("Description: " + a.getDescription());
+      content.getChildren().add(description);
+    }
+    if (a.getCategory() != "No Category Available.") {
+      Label category = new Label("Category: " + a.getCategory());
+      content.getChildren().add(category);
     }
   }
 
   private void initTaskDisplay(Button button, Task t) {
+    if (t.isComplete()) {
+      button.setText(t.getName() + ": Complete");
+    } else {
+      button.setText(t.getName() + ": Not Complete");
+    }
     button.setOnAction(event -> {
       try {
         Stage stage = new Stage();
@@ -182,10 +202,10 @@ public class JavaJournalController implements Controller {
       if (sideBar.getDividerPositions()[0] >= 0.1) {
         sideBar.setDividerPosition(0, 0.0);
         weeksTasks.setText("");
-        tasksBox.getChildren().removeAll();
+        tasksBox.getChildren().clear();
       } else if (sideBar.getDividerPositions()[0] <= 0.1) {
         sideBar.setDividerPosition(0, 0.2);
-        tasksBox.getChildren().removeAll();
+        tasksBox.getChildren().clear();
         weeksTasks.setText("This Week's Tasks");
         for (Task task : week.getAllTasks()) {
           if (task.isComplete()) {
@@ -219,7 +239,7 @@ public class JavaJournalController implements Controller {
     if (file != null) {
       try {
         BujoFileWriter fileWriter = new BujoFileWriter();
-        fileWriter.writeToFile(file.toPath(), "");
+        fileWriter.writeToFile(file.toPath(), week.toJsonFormat());
       } catch (Exception e) {
         System.out.println("An error occurred while saving the file.");
       }
