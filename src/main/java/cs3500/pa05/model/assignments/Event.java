@@ -42,6 +42,23 @@ public class Event implements Assignment {
   }
 
   @Override
+  public String getDescription() {
+    return this.description;
+  }
+
+  @Override
+  public String getCategory() {
+    return this.category;
+  }
+
+  public String getStartTime() {
+    return this.startTime;
+  }
+  public String getDuration() {
+    return this.duration;
+  }
+
+  @Override
   public String toJsonFormat() {
     return null;
   }

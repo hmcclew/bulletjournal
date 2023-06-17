@@ -2,10 +2,14 @@ package cs3500.pa05.controller;
 
 import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Assignment;
+import cs3500.pa05.model.assignments.Event;
+import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.model.day.Days;
 import cs3500.pa05.view.*;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -67,6 +71,11 @@ public class JavaJournalController implements Controller {
     Days day = week.determineDay(assignment);
     Button button = new Button(assignment.getName());
     button.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-underline: true;");
+    if (assignment instanceof Event) {
+      initEventDisplay(button, (Event) assignment);
+    } else if (assignment instanceof Task) {
+
+    }
     if (day.equals(Days.MONDAY)) {
       mondayContent.getChildren().add(button);
     } else if (day.equals(Days.TUESDAY)) {
@@ -82,6 +91,27 @@ public class JavaJournalController implements Controller {
     } else if (day.equals(Days.SUNDAY)) {
       sundayContent.getChildren().add(button);
     }
+  }
+
+  private void initEventDisplay(Button button, Event e) {
+    button.setOnAction(event -> {
+      try {
+        Stage stage = new Stage();
+        VBox vBox = new VBox();
+        Label day = new Label(e.getDay());
+        Label name = new Label("Event: " + e.getName());
+        Label description = new Label("Description: " + e.getDescription());
+        Label startTime = new Label("Start Time: " + e.getStartTime());
+        Label duration = new Label("Duration: " + e.getDuration());
+        vBox.getChildren().addAll(day, name, description, startTime, duration);
+        Scene scene = new Scene(vBox, 500, 500);
+        stage.setTitle(e.getName());
+        stage.setScene(scene);
+        stage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI.");
+      }
+    });
   }
 
   private void initButtons() {

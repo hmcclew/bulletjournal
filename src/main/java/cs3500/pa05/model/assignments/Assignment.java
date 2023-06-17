@@ -5,5 +5,7 @@ public interface Assignment {
 
   String getDay();
   String getName();
+  String getDescription();
+  String getCategory();
   String toJsonFormat();
 }
