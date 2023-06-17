@@ -2,10 +2,8 @@ package cs3500.pa05.controller;
 
 import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Event;
-import cs3500.pa05.model.day.Days;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class NewEventController implements Controller {
@@ -46,18 +44,13 @@ public class NewEventController implements Controller {
     private TextField startTimeMinutesContent;
     private String day;
     private String name;
-
     private String description;
-
     private String startTime;
-
     private String duration;
-
     private String category;
-
     private Event e;
-
     private JavaJournalController controller;
+
 
     public NewEventController(Stage stage, Week week, JavaJournalController controller) {
         this.stage = stage;
@@ -70,23 +63,25 @@ public class NewEventController implements Controller {
         initRadioButtons();
         initCategories();
         initFinishButton();
+        initCategory();
     }
 
     private void initCategories() {
         for (String category : week.getCategories()) {
             categoryChoices.getItems().add(category);
         }
+        categoryChoices.setDisable(false);
     }
 
     private void initFinishButton() {
         finish.setOnAction(event -> {
             if (nameContent.getText() != ""
                     && day != null
-            && startTimeHoursContent.getText() != ""
-            && startTimeMinutesContent.getText() != ""
-            && durationHoursContent.getText() != ""
-            && durationMinutesContent.getText() != "") {
-                determineCategory();
+                    && startTimeHoursContent.getText() != ""
+                    && startTimeMinutesContent.getText() != ""
+                    && durationHoursContent.getText() != ""
+                    && durationMinutesContent.getText() != "") {
+                //if (wee)
                 determineStartTime();
                 determineDuration();
                 determineName();
@@ -98,18 +93,35 @@ public class NewEventController implements Controller {
                     e = new Event(name, day, startTime, duration);
                     setCategory();
                 }
+                week.addEvent(e);
+                controller.updateAssignmentDisplay(e);
+            } else {
+                showInvalidEventAlert();
             }
-            week.addEvent(e);
-            controller.updateAssignmentDisplay(e);
+
             stage.close();
         });
+    }
+
+    private void showInvalidEventAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Invalid Event");
+        alert.setHeaderText(null);
+        alert.setContentText("Event could not be created because you left one or more required fields blank.");
+        alert.showAndWait();
+    }
+
+    private void showMaximumEventsExceededAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Maximum Events Exceeded");
+        alert.setHeaderText(null);
+        alert.setContentText("Event could not be created because you left one or more required fields blank.");
+        alert.showAndWait();
     }
 
     private void setCategory() {
         if (category != null) {
             e.setCategory(category);
-        } else {
-            e.setCategory("");
         }
     }
 
@@ -125,13 +137,12 @@ public class NewEventController implements Controller {
         duration = durationHoursContent.getText() + ":" + durationMinutesContent.getText();
     }
 
-    private void determineCategory() {
-        categoryChoices.valueProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
-                category = newValue.toString();
-            }
+    private void initCategory() {
+        categoryChoices.setOnAction(event -> {
+            category = categoryChoices.getValue().toString();
         });
     }
+
 
     private void initRadioButtons() {
         ToggleGroup toggleGroup = new ToggleGroup();

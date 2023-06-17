@@ -44,7 +44,7 @@ public class Event implements Assignment {
 
   @Override
   public String getCategory() {
-    if (this.category != "") {
+    if (this.category != null) {
       return this.category;
     } else {
       return "No Category Available.";

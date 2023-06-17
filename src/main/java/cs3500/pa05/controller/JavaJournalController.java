@@ -152,7 +152,7 @@ public class JavaJournalController implements Controller {
     setMaxEventsTasks.setOnAction(event -> {
       try {
         Stage newMaxStage = new Stage();
-        SetMaxController controller = new SetMaxController(newMaxStage);
+        SetMaxController controller = new SetMaxController(newMaxStage, week);
         SetMaximumView view = new SetMaximumView(controller);
         newMaxStage.setTitle("Set Maximum Tasks and Events");
         newMaxStage.setScene(view.load());

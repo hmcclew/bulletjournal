@@ -8,98 +8,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" width="500.0">
     <AnchorPane prefHeight="454.0" prefWidth="1514.0">
       <children>
-         <Label layoutX="538.0" layoutY="38.0" text="Set Maximum Events and Tasks">
+         <Label layoutX="100.0" layoutY="38.0" text="Set Maximum Events and Tasks">
             <font>
-               <Font size="34.0" />
+               <Font size="25.0" />
             </font>
          </Label>
-         <TitledPane fx:id="monday" animated="false" layoutX="46.0" layoutY="124.0" prefHeight="209.0" prefWidth="177.0" text="Monday">
+         <TitledPane fx:id="days" animated="false" layoutX="120.0" layoutY="124.0" prefHeight="209.0" prefWidth="177.0" text="Maximum Tasks and Events for Each Day">
            <content>
-             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="166.0">
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="130.0">
                   <children>
-                     <Label fx:id="setMaxEvents" layoutX="16.0" layoutY="21.0" text="Set Maximum Events" />
-                     <TextField fx:id="setMaxEventsContent" layoutX="17.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
-                     <Label fx:id="setMaxTasks" layoutX="17.0" layoutY="91.0" text="Set Maximum Tasks" />
-                     <TextField fx:id="setMaxTasksContent" layoutX="19.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
+                     <Label fx:id="setMaxEvents" layoutX="80.0" layoutY="21.0" text="Set Maximum Events" />
+                     <TextField fx:id="setMaxEventsContent" layoutX="70.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
+                     <Label fx:id="setMaxTasks" layoutX="80.0" layoutY="91.0" text="Set Maximum Tasks" />
+                     <TextField fx:id="setMaxTasksContent" layoutX="70.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
                   </children>
                </AnchorPane>
            </content>
          </TitledPane>
-         <TitledPane fx:id="tuesday" animated="false" layoutX="253.0" layoutY="124.0" prefHeight="209.0" prefWidth="177.0" text="Tuesday">
-            <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="166.0">
-                  <children>
-                     <Label fx:id="setMaxEvents" layoutX="16.0" layoutY="21.0" text="Set Maximum Events" />
-                     <TextField fx:id="setMaxEventsContent" layoutX="17.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
-                     <Label fx:id="setMaxTasks" layoutX="17.0" layoutY="91.0" text="Set Maximum Tasks" />
-                     <TextField fx:id="setMaxTasksContent" layoutX="19.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
-                  </children>
-               </AnchorPane>
-            </content>
-         </TitledPane>
-         <TitledPane animated="false" layoutX="459.0" layoutY="120.0" prefHeight="209.0" prefWidth="177.0" text="Wednesday">
-            <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="166.0">
-                  <children>
-                     <Label fx:id="setMaxEvents" layoutX="16.0" layoutY="21.0" text="Set Maximum Events" />
-                     <TextField fx:id="setMaxEventsContent" layoutX="17.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
-                     <Label fx:id="setMaxTasks" layoutX="17.0" layoutY="91.0" text="Set Maximum Tasks" />
-                     <TextField fx:id="setMaxTasksContent" layoutX="19.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
-                  </children>
-               </AnchorPane>
-            </content>
-         </TitledPane>
-         <TitledPane animated="false" layoutX="666.0" layoutY="119.0" prefHeight="209.0" prefWidth="177.0" text="Thursday">
-            <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="166.0">
-                  <children>
-                     <Label fx:id="setMaxEvents" layoutX="16.0" layoutY="21.0" text="Set Maximum Events" />
-                     <TextField fx:id="setMaxEventsContent" layoutX="17.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
-                     <Label fx:id="setMaxTasks" layoutX="17.0" layoutY="91.0" text="Set Maximum Tasks" />
-                     <TextField fx:id="setMaxTasksContent" layoutX="19.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
-                  </children>
-               </AnchorPane>
-            </content>
-         </TitledPane>
-         <TitledPane animated="false" layoutX="879.0" layoutY="116.0" prefHeight="209.0" prefWidth="177.0" text="Friday">
-            <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="166.0">
-                  <children>
-                     <Label fx:id="setMaxEvents" layoutX="16.0" layoutY="21.0" text="Set Maximum Events" />
-                     <TextField fx:id="setMaxEventsCOntent" layoutX="17.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
-                     <Label fx:id="setMaxTasks" layoutX="17.0" layoutY="91.0" text="Set Maximum Tasks" />
-                     <TextField fx:id="setMaxTasksContent" layoutX="19.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
-                  </children>
-               </AnchorPane>
-            </content>
-         </TitledPane>
-         <TitledPane animated="false" layoutX="1084.0" layoutY="114.0" prefHeight="209.0" prefWidth="177.0" text="Saturday">
-            <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="166.0">
-                  <children>
-                     <Label fx:id="setMaxEvents" layoutX="16.0" layoutY="21.0" text="Set Maximum Events" />
-                     <TextField fx:id="setMaxEventsCOntent" layoutX="17.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
-                     <Label fx:id="setMaxTasks" layoutX="17.0" layoutY="91.0" text="Set Maximum Tasks" />
-                     <TextField fx:id="setMaxTasksContent" layoutX="19.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
-                  </children>
-               </AnchorPane>
-            </content>
-         </TitledPane>
-         <TitledPane animated="false" layoutX="1294.0" layoutY="114.0" prefHeight="209.0" prefWidth="177.0" text="Sunday">
-            <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="166.0">
-                  <children>
-                     <Label fx:id="setMaxEvents" layoutX="16.0" layoutY="21.0" text="Set Maximum Events" />
-                     <TextField fx:id="setMaxEventsContent" layoutX="17.0" layoutY="50.0" prefHeight="26.0" prefWidth="134.0" />
-                     <Label fx:id="setMaxTasks" layoutX="17.0" layoutY="91.0" text="Set Maximum Tasks" />
-                     <TextField fx:id="setMaxTasksContent" layoutX="19.0" layoutY="120.0" prefHeight="26.0" prefWidth="134.0" />
-                  </children>
-               </AnchorPane>
-            </content>
-         </TitledPane>
-         <Button fx:id="finish" layoutX="688.0" layoutY="387.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="113.0" text="Finish" />
+         <Button fx:id="finish" layoutX="190.0" layoutY="387.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="113.0" text="Finish" />
       </children></AnchorPane>
 </Scene>

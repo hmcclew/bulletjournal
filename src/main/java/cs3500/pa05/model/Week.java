@@ -21,6 +21,9 @@ public class Week {
     private List<Event> allEvents;
     private List<Task> allTasks;
     private List<String> quotesAndNotes;
+    private int maximumEvents;
+
+    private int maximumTasks;
 
     public Week() {
         this.quotesAndNotes = new ArrayList<>();
@@ -33,6 +36,22 @@ public class Week {
         this.friday = new Friday();
         this.saturday = new Saturday();
         this.sunday = new Sunday();
+    }
+
+    public void setMaximumEvents(int maximumEvents) {
+        this.maximumEvents = maximumEvents;
+    }
+
+    public void setMaximumTasks(int maximumTasks) {
+        this.maximumTasks = maximumTasks;
+    }
+
+    public int getMaximumEvents() {
+        return this.maximumEvents;
+    }
+
+    public int getEvents() {
+        return this.allEvents.size();
     }
 
     public void addNoteOrQuote(String note) {
