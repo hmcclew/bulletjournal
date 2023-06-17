@@ -41,7 +41,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <VBox fx:id="mondayContent" layoutX="-3.0" prefHeight="170.0" prefWidth="112.0" />
+                            <VBox fx:id="mondayContent" layoutX="0.0" prefHeight="170.0" prefWidth="200.0" />
                         </children>
                     </AnchorPane>
                 </content>
@@ -50,7 +50,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <VBox fx:id="tuesdayContent" layoutX="-2.0" prefHeight="170.0" prefWidth="112.0" />
+                            <VBox fx:id="tuesdayContent" layoutX="0.0" prefHeight="170.0" prefWidth="112.0" />
                         </children>
                     </AnchorPane>
                 </content>
@@ -59,7 +59,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <VBox fx:id="wednesdayContent" layoutX="-2.0" layoutY="-1.0" prefHeight="170.0" prefWidth="112.0" />
+                            <VBox fx:id="wednesdayContent" layoutX="0.0" layoutY="-1.0" prefHeight="170.0" prefWidth="112.0" />
                         </children>
                     </AnchorPane>
                 </content>
@@ -68,7 +68,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <VBox fx:id="thursdayContent" layoutX="-2.0" layoutY="-1.0" prefHeight="170.0" prefWidth="112.0" />
+                            <VBox fx:id="thursdayContent" layoutX="0.0" layoutY="-1.0" prefHeight="170.0" prefWidth="112.0" />
                         </children>
                     </AnchorPane>
                 </content>
@@ -77,7 +77,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <VBox fx:id="fridayContent" layoutX="3.0" prefHeight="170.0" prefWidth="112.0" />
+                            <VBox fx:id="fridayContent" layoutX="0.0" prefHeight="170.0" prefWidth="112.0" />
                         </children>
                     </AnchorPane>
                 </content>
@@ -86,7 +86,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <VBox fx:id="saturdayContent" layoutX="-2.0" prefHeight="170.0" prefWidth="112.0" />
+                            <VBox fx:id="saturdayContent" layoutX="0.0" prefHeight="170.0" prefWidth="112.0" />
                         </children>
                     </AnchorPane>
                 </content>
@@ -95,7 +95,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <VBox fx:id="sundayContent" layoutX="-2.0" prefHeight="170.0" prefWidth="112.0" />
+                            <VBox fx:id="sundayContent" layoutX="0.0" prefHeight="170.0" prefWidth="112.0" />
                         </children>
                     </AnchorPane>
                 </content>
@@ -115,7 +115,7 @@
             </Label>
             <Label fx:id="taskWarning" layoutX="500.0" layoutY="600.0" text="" />
             <Label fx:id="eventWarning" layoutX="500.0" layoutY="625.0" text="" />
-            <VBox fx:id="notesContent" layoutX="40.0" layoutY="354.0" prefHeight="111.0" prefWidth="890.0" />
+            <VBox fx:id="notesContent" layoutX="40.0" layoutY="354.0" prefHeight="100.0" prefWidth="890.0" />
             <Label fx:id="totalEvents" layoutX="40.0" layoutY="578.0" text="Total Events: 0" />
             <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0" />
             <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0" text="Percent Tasks Completed: 0.0%" />

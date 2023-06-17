@@ -108,7 +108,7 @@ public class JavaJournalController implements Controller {
   public void updateAssignmentDisplay(Assignment assignment) {
     Days day = week.determineDay(assignment);
     Button button = new Button(assignment.getName());
-    button.setPrefWidth(200);
+    button.setPrefWidth(300);
     button.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-underline: true;");
     if (day.equals(Days.MONDAY)) {
       mondayContent.getChildren().add(button);
@@ -148,6 +148,15 @@ public class JavaJournalController implements Controller {
       Label category = new Label("Category: " + a.getCategory());
       content.getChildren().add(category);
     }
+    if (a instanceof Event) {
+      initEventData(content, (Event) a);
+    }
+  }
+
+  private void initEventData(VBox content, Event event) {
+    Label startTime = new Label("StartTime: " + event.getStartTime());
+    Label duration = new Label("Duration: " + event.getDuration());
+    content.getChildren().addAll(startTime, duration);
   }
 
   private void initTaskDisplay(Button button, Task t) {

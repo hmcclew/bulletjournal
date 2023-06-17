@@ -3,7 +3,15 @@ package cs3500.pa05.model;
 import cs3500.pa05.model.assignments.Assignment;
 import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
-import cs3500.pa05.model.day.*;
+import cs3500.pa05.model.day.Monday;
+import cs3500.pa05.model.day.Tuesday;
+import cs3500.pa05.model.day.Wednesday;
+import cs3500.pa05.model.day.Thursday;
+import cs3500.pa05.model.day.Friday;
+import cs3500.pa05.model.day.Saturday;
+import cs3500.pa05.model.day.Sunday;
+import cs3500.pa05.model.day.Days;
+import cs3500.pa05.model.day.Day;
 
 
 import java.text.DecimalFormat;

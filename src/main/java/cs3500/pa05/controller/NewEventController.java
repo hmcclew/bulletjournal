@@ -5,7 +5,6 @@ import cs3500.pa05.model.assignments.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import javafx.util.converter.CharacterStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 
 public class NewEventController extends AbstractNewAssignmentController implements Controller {
@@ -33,7 +32,6 @@ public class NewEventController extends AbstractNewAssignmentController implemen
     private String name;
     private Event e;
     private JavaJournalController controller;
-
 
     public NewEventController(Stage stage, Week week, JavaJournalController controller) {
         this.stage = stage;
