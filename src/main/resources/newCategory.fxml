@@ -15,7 +15,7 @@
                <Font size="22.0" />
             </font>
          </Label>
-         <Label layoutX="35.0" layoutY="116.0" prefHeight="27.0" prefWidth="148.0" text="Write New Category">
+         <Label layoutX="35.0" layoutY="116.0" prefHeight="27.0" prefWidth="300.0" text="Add New Category for this Week">
             <font>
                <Font size="16.0" />
             </font>

@@ -1,15 +1,23 @@
 package cs3500.pa05.view;
 
 import cs3500.pa05.controller.Controller;
+import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
-import java.io.IOException;
 
+/**
+ * View class for a Java Journal week
+ */
 public class WeekView implements JavaJournalView {
 
   FXMLLoader loader;
 
+  /**
+   * Constructor for a week view
+   *
+   * @param controller the controller for this view
+   */
   public WeekView(Controller controller) {
     this.loader = new FXMLLoader();
     this.loader.setLocation(getClass().getClassLoader().getResource("week.fxml"));
