@@ -30,9 +30,9 @@ public class Week {
   private Saturday saturday;
   private Sunday sunday;
   private List<String> categories;
-  private List<Event> allEvents;
+  public List<Event> allEvents;
   private List<Task> allTasks;
-  private List<String> quotesAndNotes;
+  public List<String> quotesAndNotes;
   private int maximumEvents;
   private int maximumTasks;
 
@@ -315,5 +315,45 @@ public class Week {
     jsonBuilder.append("}");
     jsonBuilder.append("}");
     return jsonBuilder.toString();
+  }
+
+  /**
+   * Get the maximum events that can be set in a week
+   *
+   * @return maximum events in a week
+   */
+  public int getMaximumEvents() {
+    return this.maximumEvents;
+  }
+
+  /**
+   * Get the maximum tasks that can be set in a week
+   *
+   * @return maximum tasks in a week
+   */
+  public int getMaximumTasks() {
+    return this.maximumTasks;
+  }
+
+  /**
+   * Get the list of quotes and notes for the week
+   *
+   * @return list of quotes and notes
+   */
+  public List<String> getQuotesAndNotes() {
+    return this.quotesAndNotes;
+  }
+
+  /**
+   * Get all the events for the week
+   *
+   * @return list of all events
+   */
+  public List<Event> getAllEvents() {
+    return this.allEvents;
+  }
+
+  public String getName() {
+    return this.name;
   }
 }
