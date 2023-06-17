@@ -1,10 +1,7 @@
 package cs3500.pa05.controller;
 
 import cs3500.pa05.model.week.Week;
-import cs3500.pa05.view.NewEventView;
-import cs3500.pa05.view.NewNoteQuoteView;
-import cs3500.pa05.view.NewTaskView;
-import cs3500.pa05.view.SetMaximumView;
+import cs3500.pa05.view.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -30,6 +27,9 @@ public class JavaJournalController implements Controller {
   @FXML
   private VBox notesContent;
 
+  @FXML
+  private Button createCategory;
+
 
   @Override
   public void run() throws IllegalStateException {
@@ -41,6 +41,7 @@ public class JavaJournalController implements Controller {
     initNewTask();
     initSetMax();
     initNewNote();
+    initCreateCategory();
   }
 
   private void initNewNote() {
@@ -50,6 +51,21 @@ public class JavaJournalController implements Controller {
         NewNoteQuoteController controller = new NewNoteQuoteController(stage, week, notesContent);
         NewNoteQuoteView view = new NewNoteQuoteView(controller);
         stage.setTitle("Add a New Note or Quote");
+        stage.setScene(view.load());
+        controller.run();
+        stage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI." + exc.getMessage());
+      }
+    });
+  }
+  private void initCreateCategory() {
+    createCategory.setOnAction(event -> {
+      try {
+        Stage stage = new Stage();
+        CreateCategoryController controller = new CreateCategoryController(stage, week);
+        CreateCategoryView view = new CreateCategoryView(controller);
+        stage.setTitle("Create a New Category for the Week");
         stage.setScene(view.load());
         controller.run();
         stage.show();
@@ -79,7 +95,7 @@ public class JavaJournalController implements Controller {
     newEvent.setOnAction(event -> {
       try {
         Stage newEventStage = new Stage();
-        NewEventController controller = new NewEventController(newEventStage);
+        NewEventController controller = new NewEventController(newEventStage, week);
         NewEventView view = new NewEventView(controller);
         newEventStage.setTitle("Create New Event");
         newEventStage.setScene(view.load());

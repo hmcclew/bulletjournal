@@ -19,18 +19,27 @@ public class Week {
     private List<String> categories;
     private List<Event> allEvents;
     private List<Task> allTasks;
-    public List<String> quotesAndNotes;
+    private List<String> quotesAndNotes;
 
     public Week() {
         this.quotesAndNotes = new ArrayList<>();
+        this.categories = new ArrayList<>();
     }
 
     public void addNoteOrQuote(String note) {
         quotesAndNotes.add(note);
     }
 
-    public void addCategory() {
+    public List<String> getQuotesAndNotes() {
+        return this.quotesAndNotes;
+    }
 
+    public List<String> getCategories() {
+        return this.categories;
+    }
+
+    public void addCategory(String category) {
+        categories.add(category);
     }
 
     public String toJsonFormat() {
