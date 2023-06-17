@@ -69,9 +69,7 @@ public class NewEventController extends AbstractNewAssignmentController implemen
                 week.addEvent(e);
                 controller.updateAssignmentDisplay(e);
                 controller.updateStatistics();
-                if (week.numEvents() == week.getMaximumEvents()) {
-                    controller.displayMaxEventsWarning();
-                }
+                controller.displayMaxEventsWarning();
             } else {
                 showInvalidEventAlert();
             }

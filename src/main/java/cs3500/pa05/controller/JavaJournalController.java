@@ -32,7 +32,10 @@ public class JavaJournalController implements Controller {
   private Button newEvent;
 
   @FXML
-  private VBox warnings;
+  private Label taskWarning;
+
+  @FXML
+  private Label eventWarning;
 
   @FXML
   private Button newTask;
@@ -227,20 +230,26 @@ public class JavaJournalController implements Controller {
   }
 
   public void displayMaxEventsWarning() {
-    Label warning = new Label("WARNING: You have reached your maximum number of events for this week.");
-    warnings.getChildren().add(warning);
+    if (week.numEvents() >= week.getMaximumEvents()) {
+      eventWarning.setText("WARNING: You have reached your maximum number of events for this week.");
+    } else {
+      eventWarning.setText(" ");
+    }
   }
 
   public void displayMaxTasksWarning() {
-    Label warning = new Label("WARNING: You have reached your maximum number of tasks for this week.");
-    warnings.getChildren().add(warning);
+    if (week.numTasks() >= week.getMaximumTasks()) {
+      taskWarning.setText("WARNING: You have reached your maximum number of tasks for this week.");
+    } else {
+      taskWarning.setText(" ");
+    }
   }
 
   private void initSetMax() {
     setMaxEventsTasks.setOnAction(event -> {
       try {
         Stage newMaxStage = new Stage();
-        SetMaxController controller = new SetMaxController(newMaxStage, week);
+        SetMaxController controller = new SetMaxController(newMaxStage, week, this);
         SetMaximumView view = new SetMaximumView(controller);
         newMaxStage.setTitle("Set Maximum Tasks and Events");
         newMaxStage.setScene(view.load());
@@ -250,6 +259,7 @@ public class JavaJournalController implements Controller {
         System.err.println("Unable to load GUI." + exc.getMessage());
       }
     });
+
   }
 
   public void updateStatistics() {

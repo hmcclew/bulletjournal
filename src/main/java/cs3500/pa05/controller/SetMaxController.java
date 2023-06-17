@@ -19,9 +19,12 @@ public class SetMaxController implements Controller {
     @FXML
     private TextField setMaxTasksContent;
 
-    public SetMaxController(Stage stage, Week week) {
+    private JavaJournalController controller;
+
+    public SetMaxController(Stage stage, Week week, JavaJournalController controller) {
         this.stage = stage;
         this.week = week;
+        this.controller = controller;
     }
 
     @Override
@@ -36,6 +39,8 @@ public class SetMaxController implements Controller {
                 int maxTasks = Integer.parseInt(setMaxTasksContent.getText());
                 week.setMaximumEvents(maxEvents);
                 week.setMaximumTasks(maxTasks);
+                controller.displayMaxEventsWarning();
+                controller.displayMaxTasksWarning();
             } catch (Exception e) {
                 showInvalidMaximumError();
             }
