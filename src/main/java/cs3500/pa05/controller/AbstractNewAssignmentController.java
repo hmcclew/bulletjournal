@@ -10,26 +10,68 @@ import javafx.scene.control.ToggleGroup;
  * Abstract class for a controller to create a new assignment
  */
 public abstract class AbstractNewAssignmentController {
+
+  /**
+   * button for selecting monday
+   */
   @FXML
   protected RadioButton monday;
+
+  /**
+   * button for selecting tuesday
+   */
   @FXML
   protected RadioButton tuesday;
+
+  /**
+   * button for selecting wednesday
+   */
   @FXML
   protected RadioButton wednesday;
+
+  /**
+   * button for selecting thursday
+   */
   @FXML
   protected RadioButton thursday;
+
+  /**
+   * button for selecting friday
+   */
   @FXML
   protected RadioButton friday;
+
+  /**
+   * button for selecting saturday
+   */
   @FXML
   protected RadioButton saturday;
+
+  /**
+   * button for selecting sunday
+   */
   @FXML
   protected RadioButton sunday;
+
+  /**
+   * category choices
+   */
   @FXML
   protected ChoiceBox<String> categoryChoices;
+
+  /**
+   * string representing new assignment category
+   */
   protected String category;
 
+  /**
+   * string representing new assignment day
+   */
   protected String day;
 
+  /**
+   * string representing new assignment week
+   */
   protected Week week;
 
   /**

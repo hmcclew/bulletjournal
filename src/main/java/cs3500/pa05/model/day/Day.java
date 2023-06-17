@@ -9,13 +9,38 @@ import java.util.List;
  */
 public interface Day {
 
+  /**
+   * getter method for the tasks of day
+   *
+   * @return all tasks for the day
+   */
   List<Task> getTasks();
 
+  /**
+   * getter method for the events of day
+   *
+   * @return all events for the day
+   */
   List<Event> getEvents();
 
+  /**
+   * adds an event to this day's events
+   *
+   * @param e the event to be added
+   */
   void addEvent(Event e);
 
+  /**
+   * adds a task to this day's tasks
+   *
+   * @param t the task to be added
+   */
   void addTask(Task t);
 
+  /**
+   * the json formatted string of this class
+   *
+   * @return the json formatted string
+   */
   String toJsonFormat();
 }

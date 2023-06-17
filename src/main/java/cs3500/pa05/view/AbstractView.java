@@ -9,6 +9,9 @@ import javafx.scene.Scene;
  */
 public abstract class AbstractView implements JavaJournalView {
 
+  /**
+   * FXML Loader
+   */
   protected FXMLLoader loader;
 
   /**

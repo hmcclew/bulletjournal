@@ -5,9 +5,21 @@ package cs3500.pa05.model.assignments;
  */
 public abstract class AbstractAssignment implements Assignment {
 
+  /**
+   * name for the assignment
+   */
   protected String name;
+  /**
+   * day for the assignment
+   */
   protected String day;
+  /**
+   * description for the assignment
+   */
   protected String description;
+  /**
+   * category for the assignment
+   */
   protected String category;
 
   /**

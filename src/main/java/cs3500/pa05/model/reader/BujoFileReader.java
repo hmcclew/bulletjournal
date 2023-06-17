@@ -17,12 +17,4 @@ public class BujoFileReader implements FileReader {
   public void read(String path) {
 
   }
-
-  public void parseDays(Week week) {
-
-  }
-
-  public void parseEventsAndTasks(Day day) {
-
-  }
 }
