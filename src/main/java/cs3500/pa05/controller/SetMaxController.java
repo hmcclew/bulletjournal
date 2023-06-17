@@ -24,6 +24,13 @@ public class SetMaxController implements Controller {
 
   private JavaJournalController controller;
 
+  /**
+   * Constructor for a set max controller
+   *
+   * @param stage the stage for the popup window
+   * @param week the week the maximums will affect
+   * @param controller the main controller
+   */
   public SetMaxController(Stage stage, Week week, JavaJournalController controller) {
     this.stage = stage;
     this.week = week;

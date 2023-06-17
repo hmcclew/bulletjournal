@@ -2,6 +2,7 @@ package cs3500.pa05;
 
 import cs3500.pa05.controller.Controller;
 import cs3500.pa05.controller.JavaJournalController;
+import cs3500.pa05.model.Week;
 import cs3500.pa05.view.WeekView;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -39,7 +40,8 @@ public class Driver extends Application {
    */
   @Override
   public void start(Stage stage) {
-    Controller controller = new JavaJournalController();
+    Week newWeek = new Week();
+    Controller controller = new JavaJournalController(newWeek);
     WeekView view = new WeekView(controller);
     try {
       stage.setTitle("New Java Journal Week");

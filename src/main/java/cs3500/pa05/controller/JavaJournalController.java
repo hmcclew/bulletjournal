@@ -9,12 +9,12 @@ import cs3500.pa05.model.writer.BujoFileWriter;
 import cs3500.pa05.view.CreateCategoryView;
 import cs3500.pa05.view.EventPopUpView;
 import cs3500.pa05.view.NewEventView;
-import cs3500.pa05.view.NewTaskView;
 import cs3500.pa05.view.NewNoteQuoteView;
+import cs3500.pa05.view.NewTaskView;
 import cs3500.pa05.view.SetMaximumView;
 import cs3500.pa05.view.TaskPopUpView;
-import javafx.fxml.FXML;
 import java.io.File;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
@@ -102,17 +102,31 @@ public class JavaJournalController implements Controller {
   @FXML
   private SplitPane sideBar;
 
-
-  public JavaJournalController() {
-    this.week = new Week();
+  /**
+   * Constructor for a java journal controller
+   *
+   * @param w the week currently being displayed and edited
+   */
+  public JavaJournalController(Week w) {
+    this.week = w;
   }
 
 
+  /**
+   * runs the controller
+   *
+   * @throws IllegalStateException if the week is null
+   */
   @Override
   public void run() throws IllegalStateException {
     initButtons();
   }
 
+  /**
+   * updates the week display based on the new assignment
+   *
+   * @param assignment the assignment being added to the week view
+   */
   public void updateAssignmentDisplay(Assignment assignment) {
     Days day = week.determineDay(assignment);
     Button button = new Button(assignment.getName());
@@ -149,6 +163,12 @@ public class JavaJournalController implements Controller {
     }
   }
 
+  /**
+   * initializes the data to be displayed in a week with an assignemnt
+   *
+   * @param content the vbox the data will be added to
+   * @param a the assignment whose data will be added
+   */
   private void initData(VBox content, Assignment a) {
     if (a.getDescription() != "No Description Available.") {
       Label description = new Label("Description: " + a.getDescription());
@@ -163,12 +183,24 @@ public class JavaJournalController implements Controller {
     }
   }
 
+  /**
+   * initializes the data to be displayed in a week with an event
+   *
+   * @param content the vbox the data will be added to
+   * @param event the event whose data will be added
+   */
   private void initEventData(VBox content, Event event) {
     Label startTime = new Label("StartTime: " + event.getStartTime());
     Label duration = new Label("Duration: " + event.getDuration());
     content.getChildren().addAll(startTime, duration);
   }
 
+  /**
+   *  initializes the task pop up windows button for each task
+   *
+   * @param button the button attached to the task title
+   * @param t the task used to format the popup
+   */
   private void initTaskDisplay(Button button, Task t) {
     if (t.isComplete()) {
       button.setText(t.getName() + ": Complete");
@@ -190,6 +222,12 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   *  initializes the event pop up windows button for each event
+   *
+   * @param button the button attached to the event title
+   * @param e the event used to format the popup
+   */
   private void initEventDisplay(Button button, Event e) {
     button.setOnAction(event -> {
       try {
@@ -206,6 +244,9 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * initializes all buttons in the week view
+   */
   private void initButtons() {
     initNewEvent();
     initNewTask();
@@ -216,6 +257,9 @@ public class JavaJournalController implements Controller {
     initShowSideBar();
   }
 
+  /**
+   * initializes the show task queue button
+   */
   private void initShowSideBar() {
     showTaskQueue.setOnAction(event -> {
       if (sideBar.getDividerPositions()[0] >= 0.1) {
@@ -239,6 +283,9 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * initializes the save file button
+   */
   private void initSaveFile() {
     saveFile.setOnAction(event -> {
       week.setName(weekName.getText());
@@ -246,6 +293,9 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * saves the week to a .bujo file
+   */
   private void saveFile() {
     FileChooser fileChooser = new FileChooser();
     fileChooser.setTitle("Save File");
@@ -266,6 +316,9 @@ public class JavaJournalController implements Controller {
     }
   }
 
+  /**
+   * initializes the create new note button
+   */
   private void initNewNote() {
     newNote.setOnAction(event -> {
       try {
@@ -282,6 +335,9 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * initializes the create new category button
+   */
   private void initCreateCategory() {
     createCategory.setOnAction(event -> {
       try {
@@ -298,6 +354,9 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * displays a warning message if any day of the week has exceeded the maximum events
+   */
   public void displayMaxEventsWarning() {
     if (week.maxEventsExceeded()) {
       eventWarning.setText("WARNING: You have reached your maximum "
@@ -308,6 +367,9 @@ public class JavaJournalController implements Controller {
     }
   }
 
+  /**
+   * displays a warning message if any day of the week has exceeded the maximum tasks
+   */
   public void displayMaxTasksWarning() {
     if (week.maxTasksExceeded()) {
       taskWarning.setText("WARNING: You have reached your maximum "
@@ -318,6 +380,9 @@ public class JavaJournalController implements Controller {
     }
   }
 
+  /**
+   * initializes the set maximum events and tasks button
+   */
   private void initSetMax() {
     setMaxEventsTasks.setOnAction(event -> {
       try {
@@ -335,12 +400,18 @@ public class JavaJournalController implements Controller {
 
   }
 
+  /**
+   * updates the week's statistics
+   */
   public void updateStatistics() {
     totalEvents.setText("Total Events: " + week.numEvents());
     totalTasks.setText("Total Tasks: " + week.numTasks());
     tasksCompleted.setText("Percent Tasks Completed: " + week.getPercentTasksCompleted() + "%");
   }
 
+  /**
+   * initializes the create new event button
+   */
   private void initNewEvent() {
     newEvent.setOnAction(event -> {
       try {
@@ -357,6 +428,9 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * initializes the create new task button
+   */
   private void initNewTask() {
     newTask.setOnAction(event -> {
       try {

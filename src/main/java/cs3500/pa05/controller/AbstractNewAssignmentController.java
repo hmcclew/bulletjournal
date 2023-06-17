@@ -6,6 +6,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 
+/**
+ * Abstract class for a controller to create a new assignment
+ */
 public abstract class AbstractNewAssignmentController {
   @FXML
   protected RadioButton monday;
@@ -29,6 +32,9 @@ public abstract class AbstractNewAssignmentController {
 
   protected Week week;
 
+  /**
+   * initializes all the category options shown in the popup
+   */
   public void initCategories() {
     for (String category : week.getCategories()) {
       categoryChoices.getItems().add(category);
@@ -36,6 +42,9 @@ public abstract class AbstractNewAssignmentController {
     categoryChoices.setDisable(false);
   }
 
+  /**
+   * initializes all radio buttons so only one can be pressed at a time
+   */
   public void initRadioButtons() {
     ToggleGroup toggleGroup = new ToggleGroup();
     monday.setToggleGroup(toggleGroup);
@@ -54,7 +63,10 @@ public abstract class AbstractNewAssignmentController {
     });
   }
 
-  protected void initCategory() {
+  /**
+   * determines which category the user has selected
+   */
+  public void initCategory() {
     categoryChoices.setOnAction(event -> {
       category = categoryChoices.getValue().toString();
     });

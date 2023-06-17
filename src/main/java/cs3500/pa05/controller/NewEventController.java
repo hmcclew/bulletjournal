@@ -3,10 +3,17 @@ package cs3500.pa05.controller;
 import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
 
+/**
+ * Controller for creating a new event
+ */
 public class NewEventController extends AbstractNewAssignmentController implements Controller {
 
   private Stage stage;
@@ -33,12 +40,24 @@ public class NewEventController extends AbstractNewAssignmentController implemen
   private Event createdEvent;
   private JavaJournalController controller;
 
+  /**
+   * Constructor for a new event controller
+   *
+   * @param stage the stage for the popup window
+   * @param week the week this event will belong to
+   * @param controller the main controller
+   */
   public NewEventController(Stage stage, Week week, JavaJournalController controller) {
     this.stage = stage;
     this.week = week;
     this.controller = controller;
   }
 
+  /**
+   * runs the controller
+   *
+   * @throws IllegalStateException if the run could not complete
+   */
   @Override
   public void run() throws IllegalStateException {
     initRadioButtons();
@@ -48,6 +67,9 @@ public class NewEventController extends AbstractNewAssignmentController implemen
     initTextFields();
   }
 
+  /**
+   * initializes the text fields to only take integer inputs up to two digits
+   */
   private void initTextFields() {
     startTimeHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
         c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
@@ -59,7 +81,9 @@ public class NewEventController extends AbstractNewAssignmentController implemen
         c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
   }
 
-
+  /**
+   * initializes the finish button
+   */
   private void initFinishButton() {
     finish.setOnAction(event -> {
       if (nameContent.getText() != ""
@@ -91,6 +115,9 @@ public class NewEventController extends AbstractNewAssignmentController implemen
     });
   }
 
+  /**
+   * displays an alert if the event could not be created
+   */
   private void showInvalidEventAlert() {
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
     alert.setTitle("Invalid Event");
@@ -101,20 +128,32 @@ public class NewEventController extends AbstractNewAssignmentController implemen
     alert.showAndWait();
   }
 
+  /**
+   * sets the category of the created event
+   */
   private void setCategory() {
     if (category != null) {
       createdEvent.setCategory(category);
     }
   }
 
+  /**
+   * determines the name of the created event
+   */
   private void determineName() {
     name = nameContent.getText();
   }
 
+  /**
+   * determines the start time of the created event
+   */
   private void determineStartTime() {
     startTime = startTimeHoursContent.getText() + ":" + startTimeMinutesContent.getText();
   }
 
+  /**
+   * determines the duration of the created event
+   */
   private void determineDuration() {
     duration = durationHoursContent.getText() + " hours and " + durationMinutesContent.getText()
         + " minutes";
