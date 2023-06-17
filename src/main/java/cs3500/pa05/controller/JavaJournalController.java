@@ -5,17 +5,28 @@ import cs3500.pa05.model.assignments.Assignment;
 import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.model.day.Days;
+import cs3500.pa05.model.writer.BujoFileWriter;
 import cs3500.pa05.view.*;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
+import java.io.File;
+import java.io.IOException;
 
 public class JavaJournalController implements Controller {
 
   private Week week;
+
+  @FXML
+  private TextField weekName;
 
   @FXML
   private Button newEvent;
@@ -64,6 +75,18 @@ public class JavaJournalController implements Controller {
 
   @FXML
   private Label tasksCompleted;
+
+  @FXML
+  private Button saveFile;
+
+  @FXML
+  private Button showTaskQueue;
+
+  @FXML
+  private VBox sidebar;
+
+  private boolean sidebarVisible = false;
+  private TranslateTransition sidebarTransition;
 
 
   public JavaJournalController() {
@@ -140,6 +163,33 @@ public class JavaJournalController implements Controller {
     initSetMax();
     initNewNote();
     initCreateCategory();
+    initSaveFile();
+  }
+
+  private void initSaveFile() {
+    saveFile.setOnAction(event -> {
+        week.setName(weekName.getText());
+        saveFile();
+    });
+  }
+
+  private void saveFile() {
+    FileChooser fileChooser = new FileChooser();
+    fileChooser.setTitle("Save File");
+
+    FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Bujo (*.bujo)", "*.bujo");
+    fileChooser.getExtensionFilters().add(extensionFilter);
+
+    File file = fileChooser.showSaveDialog(null);
+
+    if (file != null) {
+      try {
+        BujoFileWriter fileWriter = new BujoFileWriter();
+        fileWriter.writeToFile(file.toPath(), "");
+      } catch (Exception e) {
+        System.out.println("An error occurred while saving the file.");
+      }
+    }
   }
 
   private void initNewNote() {

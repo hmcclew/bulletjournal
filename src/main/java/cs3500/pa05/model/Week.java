@@ -5,6 +5,7 @@ import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.model.day.*;
 
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,6 @@ public class Week {
     private List<Task> allTasks;
     private List<String> quotesAndNotes;
     private int maximumEvents;
-
     private int maximumTasks;
 
     public Week() {
@@ -145,8 +145,16 @@ public class Week {
         categories.add(category);
     }
 
-    public String toJsonFormat() {
-        return null;
+    public void setName(String name) {
+        this.name = name;
     }
 
+//    public String toJsonFormat() {
+//        try {
+//            ObjectMapper mapper = new ObjectMapper();
+//            return mapper.writeValueAsString(this);
+//        } catch (IOException e) {
+//            throw new IllegalArgumentException(e.getMessage());
+//        }
+//    }
 }
