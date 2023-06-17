@@ -19,6 +19,7 @@ public class Event extends AbstractAssignment {
   public String getStartTime() {
     return this.startTime;
   }
+
   public String getDuration() {
     return this.duration;
   }

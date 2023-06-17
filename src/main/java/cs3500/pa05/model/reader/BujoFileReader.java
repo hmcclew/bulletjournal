@@ -1,8 +1,7 @@
 package cs3500.pa05.model.reader;
 
-import cs3500.pa05.model.day.Day;
 import cs3500.pa05.model.Week;
-
+import cs3500.pa05.model.day.Day;
 import java.nio.file.Path;
 import java.util.Scanner;
 

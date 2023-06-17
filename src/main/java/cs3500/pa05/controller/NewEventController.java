@@ -9,113 +9,113 @@ import javafx.util.converter.IntegerStringConverter;
 
 public class NewEventController extends AbstractNewAssignmentController implements Controller {
 
-    private Stage stage;
-    @FXML
-    private Button finish;
-    @FXML
-    private ChoiceBox categoryChoices;
-    @FXML
-    private TextField nameContent;
-    @FXML
-    private TextField descriptionContent;
-    @FXML
-    private TextField durationHoursContent;
-    @FXML
-    private TextField durationMinutesContent;
-    @FXML
-    private TextField startTimeHoursContent;
-    @FXML
-    private TextField startTimeMinutesContent;
-    private String description;
-    private String startTime;
-    private String duration;
-    private String name;
-    private Event e;
-    private JavaJournalController controller;
+  private Stage stage;
+  @FXML
+  private Button finish;
+  @FXML
+  private ChoiceBox categoryChoices;
+  @FXML
+  private TextField nameContent;
+  @FXML
+  private TextField descriptionContent;
+  @FXML
+  private TextField durationHoursContent;
+  @FXML
+  private TextField durationMinutesContent;
+  @FXML
+  private TextField startTimeHoursContent;
+  @FXML
+  private TextField startTimeMinutesContent;
+  private String description;
+  private String startTime;
+  private String duration;
+  private String name;
+  private Event e;
+  private JavaJournalController controller;
 
-    public NewEventController(Stage stage, Week week, JavaJournalController controller) {
-        this.stage = stage;
-        this.week = week;
-        this.controller = controller;
-    }
+  public NewEventController(Stage stage, Week week, JavaJournalController controller) {
+    this.stage = stage;
+    this.week = week;
+    this.controller = controller;
+  }
 
-    @Override
-    public void run() throws IllegalStateException {
-        initRadioButtons();
-        initCategories();
-        initFinishButton();
-        initCategory();
-        initTextFields();
-    }
+  @Override
+  public void run() throws IllegalStateException {
+    initRadioButtons();
+    initCategories();
+    initFinishButton();
+    initCategory();
+    initTextFields();
+  }
 
-    private void initTextFields() {
-        startTimeHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
-        startTimeMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
-        durationMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
-        durationHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
-    }
+  private void initTextFields() {
+    startTimeHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+    startTimeMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+    durationMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+    durationHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+  }
 
 
-    private void initFinishButton() {
-        finish.setOnAction(event -> {
-            if (nameContent.getText() != ""
-                    && day != null
-                    && startTimeHoursContent.getText() != ""
-                    && startTimeMinutesContent.getText() != ""
-                    && durationHoursContent.getText() != ""
-                    && durationMinutesContent.getText() != "") {
-                determineStartTime();
-                determineDuration();
-                determineName();
-                if (descriptionContent.getText() != "") {
-                    description = descriptionContent.getText();
-                    e = new Event(name, day, startTime, duration, description);
-                    setCategory();
-                } else {
-                    e = new Event(name, day, startTime, duration);
-                    setCategory();
-                }
-                week.addEvent(e);
-                controller.updateAssignmentDisplay(e);
-                controller.updateStatistics();
-                controller.displayMaxEventsWarning();
-            } else {
-                showInvalidEventAlert();
-            }
-
-            stage.close();
-        });
-    }
-
-    private void showInvalidEventAlert() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Invalid Event");
-        alert.setHeaderText(null);
-        alert.setContentText("Event could not be created because you left one or more required fields blank.");
-        alert.showAndWait();
-    }
-
-    private void setCategory() {
-        if (category != null) {
-            e.setCategory(category);
+  private void initFinishButton() {
+    finish.setOnAction(event -> {
+      if (nameContent.getText() != ""
+          && day != null
+          && startTimeHoursContent.getText() != ""
+          && startTimeMinutesContent.getText() != ""
+          && durationHoursContent.getText() != ""
+          && durationMinutesContent.getText() != "") {
+        determineStartTime();
+        determineDuration();
+        determineName();
+        if (descriptionContent.getText() != "") {
+          description = descriptionContent.getText();
+          e = new Event(name, day, startTime, duration, description);
+          setCategory();
+        } else {
+          e = new Event(name, day, startTime, duration);
+          setCategory();
         }
-    }
+        week.addEvent(e);
+        controller.updateAssignmentDisplay(e);
+        controller.updateStatistics();
+        controller.displayMaxEventsWarning();
+      } else {
+        showInvalidEventAlert();
+      }
 
-    private void determineName() {
-        name = nameContent.getText();
-    }
+      stage.close();
+    });
+  }
 
-    private void determineStartTime() {
-        startTime = startTimeHoursContent.getText() + ":" + startTimeMinutesContent.getText();
-    }
+  private void showInvalidEventAlert() {
+    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    alert.setTitle("Invalid Event");
+    alert.setHeaderText(null);
+    alert.setContentText("Event could not be created because you left one or more required fields blank.");
+    alert.showAndWait();
+  }
 
-    private void determineDuration() {
-        duration = durationHoursContent.getText() + " hours and " + durationMinutesContent.getText()
-                + " minutes";
+  private void setCategory() {
+    if (category != null) {
+      e.setCategory(category);
     }
+  }
+
+  private void determineName() {
+    name = nameContent.getText();
+  }
+
+  private void determineStartTime() {
+    startTime = startTimeHoursContent.getText() + ":" + startTimeMinutesContent.getText();
+  }
+
+  private void determineDuration() {
+    duration = durationHoursContent.getText() + " hours and " + durationMinutesContent.getText()
+        + " minutes";
+  }
 
 }

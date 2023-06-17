@@ -20,7 +20,7 @@ public abstract class AbstractView implements JavaJournalView {
   public Scene load() throws IllegalStateException {
     try {
       return this.loader.load();
-     } catch (IOException exc) {
+    } catch (IOException exc) {
       throw new IllegalStateException("Unable to load layout." + exc.getMessage());
     }
   }

@@ -168,7 +168,7 @@ public class JavaJournalController implements Controller {
     button.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        TaskPopUpController controller= new TaskPopUpController(t, this);
+        TaskPopUpController controller = new TaskPopUpController(t, this);
         TaskPopUpView view = new TaskPopUpView(controller);
         stage.setTitle(t.getName());
         stage.setScene(view.load());
@@ -184,7 +184,7 @@ public class JavaJournalController implements Controller {
     button.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        EventPopUpController controller= new EventPopUpController(e);
+        EventPopUpController controller = new EventPopUpController(e);
         EventPopUpView view = new EventPopUpView(controller);
         stage.setTitle(e.getName());
         stage.setScene(view.load());
@@ -231,8 +231,8 @@ public class JavaJournalController implements Controller {
 
   private void initSaveFile() {
     saveFile.setOnAction(event -> {
-        week.setName(weekName.getText());
-        saveFile();
+      week.setName(weekName.getText());
+      saveFile();
     });
   }
 
@@ -240,7 +240,8 @@ public class JavaJournalController implements Controller {
     FileChooser fileChooser = new FileChooser();
     fileChooser.setTitle("Save File");
 
-    FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Bujo (*.bujo)", "*.bujo");
+    FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Bujo (*.bujo)",
+        "*.bujo");
     fileChooser.getExtensionFilters().add(extensionFilter);
 
     File file = fileChooser.showSaveDialog(null);
@@ -270,6 +271,7 @@ public class JavaJournalController implements Controller {
       }
     });
   }
+
   private void initCreateCategory() {
     createCategory.setOnAction(event -> {
       try {

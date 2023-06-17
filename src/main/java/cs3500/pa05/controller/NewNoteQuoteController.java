@@ -10,40 +10,41 @@ import javafx.stage.Stage;
 
 public class NewNoteQuoteController implements Controller {
 
-    private Stage stage;
+  private Stage stage;
 
-    private Week week;
+  private Week week;
 
-    private String noteText;
+  private String noteText;
 
-    @FXML
-    private TextField newNoteContent;
+  @FXML
+  private TextField newNoteContent;
 
-    @FXML
-    private Button finish;
+  @FXML
+  private Button finish;
 
-    @FXML
-    private VBox noteBox;
+  @FXML
+  private VBox noteBox;
 
-    public NewNoteQuoteController(Stage stage, Week week, VBox noteBox) {
-        this.stage = stage;
-        this.week = week;
-        this.noteBox = noteBox;
-    }
-    @Override
-    public void run() throws IllegalStateException {
-        initFinishButton();
-    }
+  public NewNoteQuoteController(Stage stage, Week week, VBox noteBox) {
+    this.stage = stage;
+    this.week = week;
+    this.noteBox = noteBox;
+  }
 
-    private void initFinishButton() {
-        finish.setOnAction(event -> {
-            if (newNoteContent.getText() != "") {
-                noteText = newNoteContent.getText();
-                week.addNoteOrQuote(noteText);
-                Label label = new Label(noteText);
-                noteBox.getChildren().add(label);
-            }
-            stage.close();
-        });
-    }
+  @Override
+  public void run() throws IllegalStateException {
+    initFinishButton();
+  }
+
+  private void initFinishButton() {
+    finish.setOnAction(event -> {
+      if (newNoteContent.getText() != "") {
+        noteText = newNoteContent.getText();
+        week.addNoteOrQuote(noteText);
+        Label label = new Label(noteText);
+        noteBox.getChildren().add(label);
+      }
+      stage.close();
+    });
+  }
 }
