@@ -279,6 +279,41 @@ public class Week {
    * @return the formatted json string
    */
   public String toJsonFormat() {
-    return "";
+    StringBuilder jsonBuilder = new StringBuilder();
+    jsonBuilder.append("{");
+    jsonBuilder.append("\"name\": \"").append(name).append("\",");
+    jsonBuilder.append("\"maximum-events\": ").append(maximumEvents).append(",");
+    jsonBuilder.append("\"maximum-tasks\": ").append(maximumTasks).append(",");
+    jsonBuilder.append("\"categories\": ").append(Arrays.toString(categories.toArray())).append(",");
+    jsonBuilder.append("\"quotes-and-notes\": ").append(Arrays.toString(quotesAndNotes.toArray())).append(",");
+    jsonBuilder.append("\"percent-tasks-completed\": ").append(getPercentTasksCompleted()).append(",");
+    jsonBuilder.append("\"all-events\": [");
+    for (Event event : allEvents) {
+      jsonBuilder.append(event.toJsonFormat()).append(",");
+    }
+    if (!allEvents.isEmpty()) {
+      jsonBuilder.setLength(jsonBuilder.length() - 1);
+    }
+    jsonBuilder.append("],");
+
+    jsonBuilder.append("\"all-tasks\": [");
+    for (Task task : allTasks) {
+      jsonBuilder.append(task.toJsonFormat()).append(",");
+    }
+    if (!allTasks.isEmpty()) {
+      jsonBuilder.setLength(jsonBuilder.length() - 1);
+    }
+    jsonBuilder.append("],");
+    jsonBuilder.append("\"days\": {");
+    jsonBuilder.append("\"monday\": ").append(monday.toJsonFormat()).append(",");
+    jsonBuilder.append("\"tuesday\": ").append(tuesday.toJsonFormat()).append(",");
+    jsonBuilder.append("\"wednesday\": ").append(wednesday.toJsonFormat()).append(",");
+    jsonBuilder.append("\"thursday\": ").append(thursday.toJsonFormat()).append(",");
+    jsonBuilder.append("\"friday\": ").append(friday.toJsonFormat()).append(",");
+    jsonBuilder.append("\"saturday\": ").append(saturday.toJsonFormat()).append(",");
+    jsonBuilder.append("\"sunday\": ").append(sunday.toJsonFormat());
+    jsonBuilder.append("}");
+    jsonBuilder.append("}");
+    return jsonBuilder.toString();
   }
 }

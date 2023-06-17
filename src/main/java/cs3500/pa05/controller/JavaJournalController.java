@@ -290,6 +290,7 @@ public class JavaJournalController implements Controller {
   private void initSaveFile() {
     saveFile.setOnAction(event -> {
       week.setName(weekName.getText());
+      System.out.println(week.toJsonFormat());
       saveFile();
     });
   }

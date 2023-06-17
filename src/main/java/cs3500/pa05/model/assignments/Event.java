@@ -20,6 +20,8 @@ public class Event extends AbstractAssignment {
     this.day = day;
     this.startTime = startTime;
     this.duration = duration;
+    this.description = "";
+    this.category = "";
   }
 
   /**
@@ -34,6 +36,7 @@ public class Event extends AbstractAssignment {
   public Event(String name, String day, String startTime, String duration, String description) {
     this(name, day, startTime, duration);
     this.description = description;
+    this.category = "";
   }
 
   /**
@@ -61,6 +64,16 @@ public class Event extends AbstractAssignment {
    */
   @Override
   public String toJsonFormat() {
-    return null;
+    StringBuilder jsonBuilder = new StringBuilder();
+    jsonBuilder.append("{");
+    jsonBuilder.append("\"name\": \"").append(name).append("\",");
+    jsonBuilder.append("\"day\": \"").append(day).append("\",");
+    jsonBuilder.append("\"start-time\": \"").append(startTime).append("\",");
+    jsonBuilder.append("\"duration\": \"").append(duration).append("\",");
+    jsonBuilder.append("\"category\": \"").append(category).append("\",");
+    jsonBuilder.append("\"description\": \"").append(description).append("\",");
+    jsonBuilder.setLength(jsonBuilder.length() - 1);
+    jsonBuilder.append("}");
+    return jsonBuilder.toString();
   }
 }

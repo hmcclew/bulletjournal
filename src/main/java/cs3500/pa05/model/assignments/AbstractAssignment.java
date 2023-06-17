@@ -49,7 +49,7 @@ public abstract class AbstractAssignment implements Assignment {
    */
   @Override
   public String getCategory() {
-    if (this.category != null) {
+    if (this.category != "") {
       return this.category;
     } else {
       return "No Category Available.";
@@ -63,7 +63,7 @@ public abstract class AbstractAssignment implements Assignment {
    */
   @Override
   public String getDescription() {
-    if (this.description != null) {
+    if (this.description != "") {
       return this.description;
     } else {
       return "No Description Available.";

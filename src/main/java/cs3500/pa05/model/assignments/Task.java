@@ -15,6 +15,8 @@ public class Task extends AbstractAssignment {
   public Task(String name, String day) {
     this.name = name;
     this.day = day;
+    this.description = "";
+    this.category = "";
   }
 
   /**
@@ -43,6 +45,7 @@ public class Task extends AbstractAssignment {
   public Task(String name, String day, String description) {
     this(name, day);
     this.description = description;
+    this.category = "";
     this.isComplete = false;
   }
 
@@ -69,6 +72,19 @@ public class Task extends AbstractAssignment {
    */
   @Override
   public String toJsonFormat() {
-    return null;
+    StringBuilder jsonBuilder = new StringBuilder();
+    jsonBuilder.append("{");
+    jsonBuilder.append("\"name\": \"").append(name).append("\",");
+    jsonBuilder.append("\"day\": \"").append(day).append("\",");
+    if (isComplete) {
+      jsonBuilder.append("\"status\": \"").append("complete").append("\",");
+    } else {
+      jsonBuilder.append("\"status\": \"").append("not complete").append("\",");
+    }
+    jsonBuilder.append("\"category\": \"").append(category).append("\",");
+    jsonBuilder.append("\"description\": \"").append(description).append("\",");
+    jsonBuilder.setLength(jsonBuilder.length() - 1);
+    jsonBuilder.append("}");
+    return jsonBuilder.toString();
   }
 }
