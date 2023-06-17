@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+/**
+ * controller for creating a new task
+ */
 public class NewTaskController extends AbstractNewAssignmentController implements Controller {
 
   private Stage stage;
@@ -17,15 +20,27 @@ public class NewTaskController extends AbstractNewAssignmentController implement
   private TextField descriptionContent;
   private String name;
   private String description;
-  private Task t;
+  private Task task;
   private JavaJournalController controller;
 
+  /**
+   * Constructor for a new task controller
+   *
+   * @param stage the stage displayed for creating a new task
+   * @param week the week the task belongs to
+   * @param controller the main controller
+   */
   public NewTaskController(Stage stage, Week week, JavaJournalController controller) {
     this.stage = stage;
     this.week = week;
     this.controller = controller;
   }
 
+  /**
+   * runs the controller
+   *
+   * @throws IllegalStateException if the scene could not be loaded
+   */
   @Override
   public void run() throws IllegalStateException {
     initRadioButtons();
@@ -34,6 +49,9 @@ public class NewTaskController extends AbstractNewAssignmentController implement
     initCategory();
   }
 
+  /**
+   * initializes the finish button in the window for creating a task
+   */
   private void initFinishButton() {
     finish.setOnAction(event -> {
       if (nameContent.getText() != ""
@@ -41,14 +59,14 @@ public class NewTaskController extends AbstractNewAssignmentController implement
         name = nameContent.getText();
         if (descriptionContent.getText() != "") {
           description = descriptionContent.getText();
-          t = new Task(name, day, description);
+          task = new Task(name, day, description);
           setCategory();
         } else {
-          t = new Task(name, day);
+          task = new Task(name, day);
           setCategory();
         }
-        week.addTask(t);
-        controller.updateAssignmentDisplay(t);
+        week.addTask(task);
+        controller.updateAssignmentDisplay(task);
         controller.updateStatistics();
         controller.displayMaxTasksWarning();
       } else {
@@ -59,17 +77,25 @@ public class NewTaskController extends AbstractNewAssignmentController implement
     });
   }
 
+  /**
+   * sets the category of the task
+   */
   private void setCategory() {
     if (category != null) {
-      t.setCategory(category);
+      task.setCategory(category);
     }
   }
 
+  /**
+   * displays an alert if the entered fields are invalid for creating a new task
+   */
   private void showInvalidTaskAlert() {
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
     alert.setTitle("Invalid Task");
     alert.setHeaderText(null);
-    alert.setContentText("Task could not be created because you left one or more required fields blank.");
+    alert.setContentText("Task could not be created because you "
+        +
+        "left one or more required fields blank.");
     alert.showAndWait();
   }
 }

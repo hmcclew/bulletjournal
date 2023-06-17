@@ -7,6 +7,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * Controller for setting weekly maximum and minimum tasks
+ */
 public class SetMaxController implements Controller {
 
   private Stage stage;

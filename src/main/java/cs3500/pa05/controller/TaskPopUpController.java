@@ -2,11 +2,13 @@ package cs3500.pa05.controller;
 
 import cs3500.pa05.model.assignments.Task;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 
+/**
+ * Controller for a task pop up mini viewer
+ */
 public class TaskPopUpController implements Controller {
   @FXML
   private Label name;
@@ -27,11 +29,22 @@ public class TaskPopUpController implements Controller {
 
   private JavaJournalController controller;
 
+  /**
+   * Constructor for a task pop up controller
+   *
+   * @param t the task in the pop up window
+   * @param controller the main controller
+   */
   public TaskPopUpController(Task t, JavaJournalController controller) {
     this.task = t;
     this.controller = controller;
   }
 
+  /**
+   * runs the controller
+   *
+   * @throws IllegalStateException if unable to load the scene
+   */
   @Override
   public void run() throws IllegalStateException {
     determineName();
@@ -41,6 +54,9 @@ public class TaskPopUpController implements Controller {
     initMarkAsComplete();
   }
 
+  /**
+   * determines the name display of the task
+   */
   private void determineName() {
     if (task.isComplete()) {
       name.setText("COMPLETED TASK: " + task.getName());
@@ -49,6 +65,9 @@ public class TaskPopUpController implements Controller {
     }
   }
 
+  /**
+   * initializes the button to mark a task as complete
+   */
   private void initMarkAsComplete() {
     HBox parent = (HBox) markAsComplete.getParent();
     if (task.isComplete()) {

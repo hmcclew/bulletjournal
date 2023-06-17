@@ -30,7 +30,7 @@ public class NewEventController extends AbstractNewAssignmentController implemen
   private String startTime;
   private String duration;
   private String name;
-  private Event e;
+  private Event createdEvent;
   private JavaJournalController controller;
 
   public NewEventController(Stage stage, Week week, JavaJournalController controller) {
@@ -73,14 +73,14 @@ public class NewEventController extends AbstractNewAssignmentController implemen
         determineName();
         if (descriptionContent.getText() != "") {
           description = descriptionContent.getText();
-          e = new Event(name, day, startTime, duration, description);
+          createdEvent = new Event(name, day, startTime, duration, description);
           setCategory();
         } else {
-          e = new Event(name, day, startTime, duration);
+          createdEvent = new Event(name, day, startTime, duration);
           setCategory();
         }
-        week.addEvent(e);
-        controller.updateAssignmentDisplay(e);
+        week.addEvent(createdEvent);
+        controller.updateAssignmentDisplay(createdEvent);
         controller.updateStatistics();
         controller.displayMaxEventsWarning();
       } else {
@@ -95,13 +95,15 @@ public class NewEventController extends AbstractNewAssignmentController implemen
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
     alert.setTitle("Invalid Event");
     alert.setHeaderText(null);
-    alert.setContentText("Event could not be created because you left one or more required fields blank.");
+    alert.setContentText("Event could not be created because "
+        +
+        "you left one or more required fields blank.");
     alert.showAndWait();
   }
 
   private void setCategory() {
     if (category != null) {
-      e.setCategory(category);
+      createdEvent.setCategory(category);
     }
   }
 

@@ -6,8 +6,15 @@ import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.model.day.Days;
 import cs3500.pa05.model.writer.BujoFileWriter;
-import cs3500.pa05.view.*;
+import cs3500.pa05.view.CreateCategoryView;
+import cs3500.pa05.view.EventPopUpView;
+import cs3500.pa05.view.NewEventView;
+import cs3500.pa05.view.NewTaskView;
+import cs3500.pa05.view.NewNoteQuoteView;
+import cs3500.pa05.view.SetMaximumView;
+import cs3500.pa05.view.TaskPopUpView;
 import javafx.fxml.FXML;
+import java.io.File;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
@@ -15,7 +22,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import java.io.File;
 
 /**
  * main controller for a java journal
@@ -111,7 +117,8 @@ public class JavaJournalController implements Controller {
     Days day = week.determineDay(assignment);
     Button button = new Button(assignment.getName());
     button.setPrefWidth(300);
-    button.setStyle("-fx-background-color: transparent; -fx-border-color: " +
+    button.setStyle("-fx-background-color: transparent; -fx-border-color: "
+        +
         "transparent; -fx-underline: true;");
     if (day.equals(Days.MONDAY)) {
       mondayContent.getChildren().add(button);

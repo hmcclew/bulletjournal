@@ -6,6 +6,9 @@ import cs3500.pa05.view.WeekView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+/**
+ * Driver Class for Java Journal
+ */
 public class Driver extends Application {
 
 

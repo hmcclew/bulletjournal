@@ -1,5 +1,8 @@
 package cs3500.pa05.model.assignments;
 
+/**
+ * interface for an assignment for a week
+ */
 public interface Assignment {
   String getDay();
 
