@@ -33,6 +33,9 @@ public class JavaJournalController implements Controller {
   private Week week;
 
   @FXML
+  private Label newWeek;
+
+  @FXML
   private TextField weekName;
 
   @FXML
@@ -106,6 +109,9 @@ public class JavaJournalController implements Controller {
 
   @FXML
   private SplitPane sideBar;
+
+  @FXML
+  private Button saveName;
 
   private Stage primaryStage;
 
@@ -265,6 +271,33 @@ public class JavaJournalController implements Controller {
     initSaveFile();
     initShowSideBar();
     initOpenFile();
+    initSaveName();
+  }
+
+  private void initSaveName() {
+    saveName.setOnAction(event -> {
+      week.setName(weekName.getText());
+      newWeek.setText(weekName.getText());
+      weekName.setText("");
+    });
+  }
+
+  public void openWeek(Week w) {
+    this.week = w;
+    newWeek.setText(week.getName());
+    for (Task task : week.getAllTasks()) {
+      updateAssignmentDisplay(task);
+    }
+    for (Event event : week.getAllEvents()) {
+      updateAssignmentDisplay(event);
+    }
+    for (String note : week.getQuotesAndNotes()) {
+      Label label = new Label(note);
+      notesContent.getChildren().add(label);
+    }
+    updateStatistics();
+    displayMaxEventsWarning();
+    displayMaxTasksWarning();
   }
 
   /**
@@ -284,7 +317,7 @@ public class JavaJournalController implements Controller {
 
       if (selectedFile != null) {
         String filePath = selectedFile.getAbsolutePath();
-        FileReader bujoFileReader = new BujoFileReader();
+        FileReader bujoFileReader = new BujoFileReader(this);
         bujoFileReader.read(filePath);
       }
     });
@@ -321,7 +354,6 @@ public class JavaJournalController implements Controller {
    */
   private void initSaveFile() {
     saveFile.setOnAction(event -> {
-      week.setName(weekName.getText());
       saveFile();
     });
   }

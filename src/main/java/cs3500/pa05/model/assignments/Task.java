@@ -4,13 +4,13 @@ package cs3500.pa05.model.assignments;
  * Represents a task in a java journal week
  */
 public class Task extends AbstractAssignment {
-  private boolean status;
+  private boolean complete;
 
   /**
    * Empty Constructor
    */
   public Task() {
-    this.status = false;
+    this.complete = false;
   }
 
   /**
@@ -38,7 +38,7 @@ public class Task extends AbstractAssignment {
     this(name, day);
     this.description = description;
     this.category = category;
-    this.status = false;
+    this.complete = false;
     setCategory(category);
   }
 
@@ -53,14 +53,14 @@ public class Task extends AbstractAssignment {
     this(name, day);
     this.description = description;
     this.category = "";
-    this.status = false;
+    this.complete = false;
   }
 
   /**
    * marks the task as complete
    */
   public void markAsComplete() {
-    this.status = true;
+    this.complete = true;
   }
 
   /**
@@ -69,6 +69,6 @@ public class Task extends AbstractAssignment {
    * @return whether the task is complete
    */
   public boolean isComplete() {
-    return this.status;
+    return this.complete;
   }
 }

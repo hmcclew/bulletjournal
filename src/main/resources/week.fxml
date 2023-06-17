@@ -100,6 +100,7 @@
                     </AnchorPane>
                 </content>
             </TitledPane>
+                <Button fx:id="saveName" layoutX="320.0" layoutY="30.0" mnemonicParsing="false" text="save week name" />
             <Button fx:id="openFile" layoutX="1000.0" layoutY="21.0" mnemonicParsing="false" text="open file" />
             <Button fx:id="saveFile" layoutX="1100.0" layoutY="21.0" mnemonicParsing="false" text="save file" />
             <Button fx:id="newTask" layoutX="40.0" layoutY="507.0" mnemonicParsing="false" text="new task" />
@@ -119,7 +120,7 @@
             <Label fx:id="totalEvents" layoutX="40.0" layoutY="578.0" text="Total Events: 0" />
             <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0" />
             <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0" text="Percent Tasks Completed: 0.0%" />
-            <TextField fx:id="weekName" layoutX="150.0" layoutY="33.0" />
+            <TextField fx:id="weekName" layoutX="150.0" layoutY="30.0" />
             </Pane>
                 </items>
             </SplitPane>
