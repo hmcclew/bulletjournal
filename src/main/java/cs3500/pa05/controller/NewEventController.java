@@ -108,6 +108,8 @@ public class NewEventController implements Controller {
     private void setCategory() {
         if (category != null) {
             e.setCategory(category);
+        } else {
+            e.setCategory("");
         }
     }
 

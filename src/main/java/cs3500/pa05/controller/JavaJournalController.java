@@ -97,16 +97,11 @@ public class JavaJournalController implements Controller {
     button.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        VBox vBox = new VBox();
-        Label day = new Label(e.getDay());
-        Label name = new Label("Event: " + e.getName());
-        Label description = new Label("Description: " + e.getDescription());
-        Label startTime = new Label("Start Time: " + e.getStartTime());
-        Label duration = new Label("Duration: " + e.getDuration());
-        vBox.getChildren().addAll(day, name, description, startTime, duration);
-        Scene scene = new Scene(vBox, 500, 500);
+        EventPopUpController controller= new EventPopUpController(e);
+        EventPopUpView view = new EventPopUpView(controller);
         stage.setTitle(e.getName());
-        stage.setScene(scene);
+        stage.setScene(view.load());
+        controller.run();
         stage.show();
       } catch (IllegalStateException exc) {
         System.err.println("Unable to load GUI.");

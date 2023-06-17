@@ -20,12 +20,6 @@ public class Event implements Assignment {
     this.description = description;
   }
 
-  public Event(String name, String day, String startTime, String duration, String description,
-               String category) {
-    this(name, day, startTime, duration, description);
-    setCategory(category);
-  }
-
   public void setCategory(String category) {
     this.category = category;
   }
@@ -41,22 +35,31 @@ public class Event implements Assignment {
     return this.name;
   }
 
-  @Override
-  public String getDescription() {
-    return this.description;
-  }
-
-  @Override
-  public String getCategory() {
-    return this.category;
-  }
-
   public String getStartTime() {
     return this.startTime;
   }
   public String getDuration() {
     return this.duration;
   }
+
+  @Override
+  public String getCategory() {
+    if (this.category != "") {
+      return this.category;
+    } else {
+      return "No Category Available.";
+    }
+  }
+
+  @Override
+  public String getDescription() {
+    if (this.description != null) {
+      return this.description;
+    } else {
+      return "No Description Available.";
+    }
+  }
+
 
   @Override
   public String toJsonFormat() {

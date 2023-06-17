@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="285.0" prefWidth="399.0">
+      <children>
+         <VBox layoutX="-1.0" prefHeight="294.0" prefWidth="400.0">
+            <children>
+               <Label fx:id="name" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="401.0" text="Name" textAlignment="RIGHT">
+                  <font>
+                     <Font size="28.0" />
+                  </font>
+               </Label>
+               <Label fx:id="day" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Day" />
+               <Label fx:id="description" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Description" />
+               <Label fx:id="startTime" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Start Time" />
+               <Label fx:id="duration" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Duration" />
+               <Label fx:id="catgory" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Category" />
+            </children>
+         </VBox>
+      </children></AnchorPane>
+</Scene>
