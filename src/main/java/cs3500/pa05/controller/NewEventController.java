@@ -5,6 +5,8 @@ import cs3500.pa05.model.assignments.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.util.converter.CharacterStringConverter;
+import javafx.util.converter.IntegerStringConverter;
 
 public class NewEventController extends AbstractNewAssignmentController implements Controller {
 
@@ -45,7 +47,20 @@ public class NewEventController extends AbstractNewAssignmentController implemen
         initCategories();
         initFinishButton();
         initCategory();
+        initTextFields();
     }
+
+    private void initTextFields() {
+        startTimeHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+        startTimeMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+        durationMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+        durationHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
+                c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
+    }
+
 
     private void initFinishButton() {
         finish.setOnAction(event -> {
