@@ -149,12 +149,7 @@ public class Week {
         this.name = name;
     }
 
-//    public String toJsonFormat() {
-//        try {
-//            ObjectMapper mapper = new ObjectMapper();
-//            return mapper.writeValueAsString(this);
-//        } catch (IOException e) {
-//            throw new IllegalArgumentException(e.getMessage());
-//        }
-//    }
+    public String toJsonFormat() {
+        return "";
+    }
 }

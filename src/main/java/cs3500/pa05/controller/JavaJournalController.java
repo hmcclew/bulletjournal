@@ -32,6 +32,9 @@ public class JavaJournalController implements Controller {
   private Button newEvent;
 
   @FXML
+  private VBox warnings;
+
+  @FXML
   private Button newTask;
 
   @FXML
@@ -221,6 +224,16 @@ public class JavaJournalController implements Controller {
         System.err.println("Unable to load GUI." + exc.getMessage());
       }
     });
+  }
+
+  public void displayMaxEventsWarning() {
+    Label warning = new Label("WARNING: You have reached your maximum number of events for this week.");
+    warnings.getChildren().add(warning);
+  }
+
+  public void displayMaxTasksWarning() {
+    Label warning = new Label("WARNING: You have reached your maximum number of tasks for this week.");
+    warnings.getChildren().add(warning);
   }
 
   private void initSetMax() {

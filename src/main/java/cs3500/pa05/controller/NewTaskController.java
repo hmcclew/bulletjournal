@@ -50,6 +50,9 @@ public class NewTaskController extends AbstractNewAssignmentController implement
                 week.addTask(t);
                 controller.updateAssignmentDisplay(t);
                 controller.updateStatistics();
+                if (week.numTasks() == week.getMaximumTasks()) {
+                    controller.displayMaxTasksWarning();
+                }
             } else {
                 showInvalidTaskAlert();
             }

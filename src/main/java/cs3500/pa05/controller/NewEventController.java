@@ -69,6 +69,9 @@ public class NewEventController extends AbstractNewAssignmentController implemen
                 week.addEvent(e);
                 controller.updateAssignmentDisplay(e);
                 controller.updateStatistics();
+                if (week.numEvents() == week.getMaximumEvents()) {
+                    controller.displayMaxEventsWarning();
+                }
             } else {
                 showInvalidEventAlert();
             }
@@ -80,14 +83,6 @@ public class NewEventController extends AbstractNewAssignmentController implemen
     private void showInvalidEventAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Invalid Event");
-        alert.setHeaderText(null);
-        alert.setContentText("Event could not be created because you left one or more required fields blank.");
-        alert.showAndWait();
-    }
-
-    private void showMaximumEventsExceededAlert() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Maximum Events Exceeded");
         alert.setHeaderText(null);
         alert.setContentText("Event could not be created because you left one or more required fields blank.");
         alert.showAndWait();
