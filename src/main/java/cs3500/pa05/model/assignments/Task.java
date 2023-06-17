@@ -50,13 +50,21 @@ public class Task implements Assignment {
   }
 
   @Override
-  public String getDescription() {
-    return this.description;
+  public String getCategory() {
+    if (this.category != null) {
+      return this.category;
+    } else {
+      return "No Category Available.";
+    }
   }
 
   @Override
-  public String getCategory() {
-    return this.category;
+  public String getDescription() {
+    if (this.description != null) {
+      return this.description;
+    } else {
+      return "No Description Available.";
+    }
   }
 
   public boolean isComplete() {

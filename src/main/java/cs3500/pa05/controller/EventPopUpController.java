@@ -31,11 +31,11 @@ public class EventPopUpController implements Controller {
 
     @Override
     public void run() throws IllegalStateException {
-        name.setText(event.getName());
-        description.setText(event.getDescription());
-        day.setText(event.getDay());
-        category.setText(event.getCategory());
-        startTime.setText(event.getStartTime());
-        duration.setText(event.getDuration());
+        name.setText("Event: " + event.getName());
+        description.setText("Description: " + event.getDescription());
+        day.setText("Day: " + event.getDay());
+        category.setText("Category: " + event.getCategory());
+        startTime.setText("Start Time: " + event.getStartTime());
+        duration.setText("Duration: " + event.getDuration());
     }
 }

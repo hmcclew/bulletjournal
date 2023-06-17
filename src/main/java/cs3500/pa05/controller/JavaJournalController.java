@@ -83,7 +83,7 @@ public class JavaJournalController implements Controller {
     if (assignment instanceof Event) {
       initEventDisplay(button, (Event) assignment);
     } else if (assignment instanceof Task) {
-
+      initTaskDisplay(button, (Task) assignment);
     }
     if (day.equals(Days.MONDAY)) {
       mondayContent.getChildren().add(button);
@@ -100,6 +100,22 @@ public class JavaJournalController implements Controller {
     } else if (day.equals(Days.SUNDAY)) {
       sundayContent.getChildren().add(button);
     }
+  }
+
+  private void initTaskDisplay(Button button, Task t) {
+    button.setOnAction(event -> {
+      try {
+        Stage stage = new Stage();
+        TaskPopUpController controller= new TaskPopUpController(t);
+        TaskPopUpView view = new TaskPopUpView(controller);
+        stage.setTitle(t.getName());
+        stage.setScene(view.load());
+        controller.run();
+        stage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI.");
+      }
+    });
   }
 
   private void initEventDisplay(Button button, Event e) {
