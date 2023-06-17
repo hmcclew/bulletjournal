@@ -274,6 +274,9 @@ public class JavaJournalController implements Controller {
     initSaveName();
   }
 
+  /**
+   * Updates the name of the week
+   */
   private void initSaveName() {
     saveName.setOnAction(event -> {
       week.setName(weekName.getText());
@@ -282,8 +285,14 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * Opens the given week in the display
+   *
+   * @param w the week to be displayed
+   */
   public void openWeek(Week w) {
     this.week = w;
+    clearContents();
     newWeek.setText(week.getName());
     for (Task task : week.getAllTasks()) {
       updateAssignmentDisplay(task);
@@ -298,6 +307,19 @@ public class JavaJournalController implements Controller {
     updateStatistics();
     displayMaxEventsWarning();
     displayMaxTasksWarning();
+  }
+
+  /**
+   * Clears the existing week contents
+   */
+  private void clearContents() {
+    mondayContent.getChildren().clear();
+    tuesdayContent.getChildren().clear();
+    wednesdayContent.getChildren().clear();
+    thursdayContent.getChildren().clear();
+    fridayContent.getChildren().clear();
+    saturdayContent.getChildren().clear();
+    sundayContent.getChildren().clear();
   }
 
   /**
