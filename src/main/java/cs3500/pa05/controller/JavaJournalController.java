@@ -247,7 +247,7 @@ public class JavaJournalController implements Controller {
    *  initializes the task pop up windows button for each task
    *
    * @param button the button attached to the task title
-   * @param t the task used to format the popup
+   * @param task the task used to format the popup
    */
   public void initTaskDisplay(Button button, Task task) {
     if (task.isComplete()) {
