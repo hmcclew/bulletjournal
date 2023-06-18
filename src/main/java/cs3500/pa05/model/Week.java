@@ -342,30 +342,65 @@ public class Week {
     return this.name;
   }
 
+  /**
+   * getter method for the monday of this week
+   *
+   * @return the monday of this week
+   */
   public Monday getMonday() {
     return monday;
   }
 
+  /**
+   * getter method for the tuesday of this week
+   *
+   * @return the tuesday of this week
+   */
   public Tuesday getTuesday() {
     return tuesday;
   }
 
+  /**
+   * getter method for the wednesday of this week
+   *
+   * @return the wednesday of this week
+   */
   public Wednesday getWednesday() {
     return wednesday;
   }
 
+  /**
+   * getter method for the thursday of this week
+   *
+   * @return the thursday of this week
+   */
   public Thursday getThursday() {
     return thursday;
   }
 
+  /**
+   * getter method for the friday of this week
+   *
+   * @return the friday of this week
+   */
   public Friday getFriday() {
     return friday;
   }
 
+  /**
+   * getter method for the saturday of this week
+   *
+   * @return the saturday of this week
+   */
   public Saturday getSaturday() {
     return saturday;
   }
 
+  /**
+   * getter method for the sunday of this week
+   *
+   * @return the sunday of this week
+   */
   public Sunday getSunday() {
     return sunday;
   }

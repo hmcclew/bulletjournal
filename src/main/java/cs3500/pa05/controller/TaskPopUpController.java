@@ -37,6 +37,7 @@ public class TaskPopUpController implements Controller {
    *
    * @param t the task in the popup window
    * @param controller the main controller
+   * @param button the button clicked to create the popup
    */
   public TaskPopUpController(Task t, JavaJournalController controller, Button button) {
     this.task = t;

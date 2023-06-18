@@ -79,6 +79,11 @@ public abstract class AbstractAssignment implements Assignment {
     this.category = category;
   }
 
+  /**
+   * setter method for the description of this assignment
+   *
+   * @param description the assignment description to be set
+   */
   public void setDescription(String description) {
     this.description = description;
   }
