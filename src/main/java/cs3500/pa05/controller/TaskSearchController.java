@@ -8,11 +8,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
+/**
+ * Controller for searching for tasks
+ */
 public class TaskSearchController implements Controller {
 
   private Week week;
-
-  private JavaJournalController controller;
 
   @FXML
   private VBox searchResults;
@@ -20,10 +21,13 @@ public class TaskSearchController implements Controller {
   @FXML
   private TextField searchBar;
 
-  public TaskSearchController(Week week, JavaJournalController controller) {
+  /**
+   * Constructor for a task search controller
+   *
+   * @param week the week with tasks being searched
+   */
+  public TaskSearchController(Week week) {
     this.week = week;
-    this.controller = controller;
-
   }
 
   /**
@@ -37,12 +41,20 @@ public class TaskSearchController implements Controller {
     initSearchResults();
   }
 
+  /**
+   * initializes the listener in the search bar text field
+   */
   private void initSearchBar() {
     searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
       updateSearchResults(newValue);
     });
   }
 
+  /**
+   * updates the displayed search results based the content in the search bar
+   *
+   * @param searchText the content in the search bar
+   */
   private void updateSearchResults(String searchText) {
     searchResults.getChildren().clear();
 
@@ -53,6 +65,11 @@ public class TaskSearchController implements Controller {
     }
   }
 
+  /**
+   * initializes the display of a task in the search results
+   *
+   * @param task the task being formatted
+   */
   private void initTaskDisplay(Task task) {
     VBox taskBox = new VBox();
     taskBox.setPadding(new Insets(0, 0, 20, 110));
@@ -76,6 +93,10 @@ public class TaskSearchController implements Controller {
     searchResults.getChildren().add(taskBox);
   }
 
+  /**
+   * initializes all search results when the tab is first opened
+   * to show all tasks
+   */
   private void initSearchResults() {
     for (Task task : week.getAllTasks()) {
       initTaskDisplay(task);

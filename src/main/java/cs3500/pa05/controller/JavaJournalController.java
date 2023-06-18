@@ -152,11 +152,14 @@ public class JavaJournalController implements Controller {
     initTaskSearch();
   }
 
+  /**
+   * initializes the button to start searching for a task
+   */
   private void initTaskSearch() {
     taskSearch.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        TaskSearchController controller = new TaskSearchController(week, this);
+        TaskSearchController controller = new TaskSearchController(week);
         TaskSearchView view = new TaskSearchView(controller);
         stage.setTitle("Search for a Task");
         stage.setScene(view.load());
