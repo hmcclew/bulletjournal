@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/AbstractAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/AbstractAssignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/WeekTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/WeekTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/assignments/EventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/assignments/EventTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/assignments/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/assignments/TaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/reader/BujoFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/reader/BujoFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/writer/BujoFileWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/writer/BujoFileWriterTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +32,30 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="pa05-template" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -116,7 +130,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]">
+  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [test]">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -126,52 +140,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BujoFileWriterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="pa05-robert-hope-nour [checkstyleMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;model.writer.BujoFileWriterTest&quot;" />
+            <option value="checkstyleMain" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="TaskTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="pa05-robert-hope-nour [checkstyleTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;model.assignments.TaskTest&quot;" />
+            <option value="checkstyleTest" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="pa05-robert-hope-nour [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -242,19 +252,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Gradle.BujoFileWriterTest" />
-      <item itemvalue="Gradle.TaskTest" />
+      <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
+      <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
       <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]" />
       <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestReport]" />
       <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestReport]" />
-        <item itemvalue="Gradle.TaskTest" />
-        <item itemvalue="Gradle.BujoFileWriterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +421,49 @@
       <option name="project" value="LOCAL" />
       <updated>1687008426798</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="save file">
+      <created>1687040600444</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1687040600444</updated>
+    </task>
+    <task id="LOCAL-00021" summary="open file">
+      <created>1687042111550</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1687042111550</updated>
+    </task>
+    <task id="LOCAL-00022" summary="open file">
+      <created>1687043530231</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1687043530231</updated>
+    </task>
+    <task id="LOCAL-00023" summary="open file">
+      <created>1687043792128</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1687043792128</updated>
+    </task>
+    <task id="LOCAL-00024" summary="open file">
+      <created>1687043818229</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1687043818229</updated>
+    </task>
+    <task id="LOCAL-00025" summary="style">
+      <created>1687044193637</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1687044193637</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
