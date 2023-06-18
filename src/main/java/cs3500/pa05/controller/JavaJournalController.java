@@ -139,6 +139,21 @@ public class JavaJournalController implements Controller {
   }
 
   /**
+   * initializes all buttons in the week view
+   */
+  private void initButtons() {
+    initNewEvent();
+    initNewTask();
+    initSetMax();
+    initNewNote();
+    initCreateCategory();
+    initSaveFile();
+    initShowSideBar();
+    initOpenFile();
+    initSaveName();
+  }
+
+  /**
    * updates the week display based on the new assignment
    *
    * @param assignment the assignment being added to the week view
@@ -152,25 +167,25 @@ public class JavaJournalController implements Controller {
         "transparent; -fx-underline: true;");
     if (day.equals(Days.MONDAY)) {
       mondayContent.getChildren().add(button);
-      initData(mondayContent, assignment);
+      initAssignmentDisplayData(mondayContent, assignment);
     } else if (day.equals(Days.TUESDAY)) {
       tuesdayContent.getChildren().add(button);
-      initData(tuesdayContent, assignment);
+      initAssignmentDisplayData(tuesdayContent, assignment);
     } else if (day.equals(Days.WEDNESDAY)) {
       wednesdayContent.getChildren().add(button);
-      initData(wednesdayContent, assignment);
+      initAssignmentDisplayData(wednesdayContent, assignment);
     } else if (day.equals(Days.THURSDAY)) {
       thursdayContent.getChildren().add(button);
-      initData(thursdayContent, assignment);
+      initAssignmentDisplayData(thursdayContent, assignment);
     } else if (day.equals(Days.FRIDAY)) {
       fridayContent.getChildren().add(button);
-      initData(fridayContent, assignment);
+      initAssignmentDisplayData(fridayContent, assignment);
     } else if (day.equals(Days.SATURDAY)) {
       saturdayContent.getChildren().add(button);
-      initData(saturdayContent, assignment);
+      initAssignmentDisplayData(saturdayContent, assignment);
     } else if (day.equals(Days.SUNDAY)) {
       sundayContent.getChildren().add(button);
-      initData(sundayContent, assignment);
+      initAssignmentDisplayData(sundayContent, assignment);
     }
     if (assignment instanceof Event) {
       initEventDisplay(button, (Event) assignment);
@@ -185,7 +200,7 @@ public class JavaJournalController implements Controller {
    * @param content the vbox the data will be added to
    * @param a the assignment whose data will be added
    */
-  private void initData(VBox content, Assignment a) {
+  private void initAssignmentDisplayData(VBox content, Assignment a) {
     if (a.getDescription() != "No Description Available.") {
       Label description = new Label("Description: " + a.getDescription());
       content.getChildren().add(description);
@@ -271,21 +286,6 @@ public class JavaJournalController implements Controller {
   }
 
   /**
-   * initializes all buttons in the week view
-   */
-  private void initButtons() {
-    initNewEvent();
-    initNewTask();
-    initSetMax();
-    initNewNote();
-    initCreateCategory();
-    initSaveFile();
-    initShowSideBar();
-    initOpenFile();
-    initSaveName();
-  }
-
-  /**
    * Updates the name of the week
    */
   private void initSaveName() {
@@ -304,7 +304,7 @@ public class JavaJournalController implements Controller {
    */
   public void openWeek(Week w) {
     this.week = w;
-    clearContents();
+    clearWeekDisplayContents();
     primaryStage.setTitle(week.getName());
     newWeek.setText(week.getName());
     for (Task task : week.getAllTasks()) {
@@ -325,7 +325,7 @@ public class JavaJournalController implements Controller {
   /**
    * Clears the existing week contents
    */
-  private void clearContents() {
+  private void clearWeekDisplayContents() {
     mondayContent.getChildren().clear();
     tuesdayContent.getChildren().clear();
     wednesdayContent.getChildren().clear();
