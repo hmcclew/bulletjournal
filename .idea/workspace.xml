@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="scroll view">
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="task search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/TaskSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/TaskSearchController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +307,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="3265000" />
+      <workItem from="1687118348683" duration="4629000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -553,7 +554,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687118038311</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="task search">
+      <created>1687121737607</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1687121737607</updated>
+    </task>
+    <task id="LOCAL-00037" summary="task search">
+      <created>1687121741485</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1687121741485</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,6 +626,7 @@
     <MESSAGE value="style" />
     <MESSAGE value="updated uml" />
     <MESSAGE value="scroll view" />
-    <option name="LAST_COMMIT_MESSAGE" value="scroll view" />
+    <MESSAGE value="task search" />
+    <option name="LAST_COMMIT_MESSAGE" value="task search" />
   </component>
 </project>

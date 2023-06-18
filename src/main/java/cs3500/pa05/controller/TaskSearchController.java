@@ -4,7 +4,9 @@ import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Task;
 import cs3500.pa05.view.TaskPopUpView;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -48,22 +50,37 @@ public class TaskSearchController implements Controller{
 
     for (Task task : week.getAllTasks()) {
       if (task.getName().toLowerCase().contains(searchText.toLowerCase())) {
-        initTaskButton(task);
+        initTaskDisplay(task);
       }
     }
   }
 
-  private void initTaskButton(Task task) {
-    Button taskButton = new Button(task.getName());
-    taskButton.setPrefWidth(380);
-    taskButton.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-underline: true;");
-    controller.initTaskDisplay(taskButton, task);
-    searchResults.getChildren().add(taskButton);
+  private void initTaskDisplay(Task task) {
+    VBox taskBox = new VBox();
+    taskBox.setPadding(new Insets(0,0,20,120));
+    Label taskName = new Label(task.getName());
+    taskName.setPadding(new Insets(0,0,0,70));
+    taskName.setWrapText(true);
+    Label taskDescription = new Label("Description: " + task.getDescription());
+    taskDescription.setWrapText(true);
+    taskDescription.setPadding(new Insets(0, 60, 0, 0));
+    Label taskCategory = new Label("Category: " + task.getCategory());
+    taskCategory.setWrapText(true);
+    taskCategory.setPadding(new Insets(0, 60, 0, 0));
+    Label taskDay = new Label("Day: " + task.getDay());
+    if (task.isComplete()) {
+      Label taskStatus = new Label("Status: Complete");
+      taskBox.getChildren().addAll(taskName, taskDay, taskDescription, taskCategory, taskStatus);
+    } else {
+      Label taskStatus = new Label("Status: Not Complete");
+      taskBox.getChildren().addAll(taskName, taskDay, taskDescription, taskCategory, taskStatus);
+    }
+    searchResults.getChildren().add(taskBox);
   }
 
   private void initSearchResults() {
     for (Task task : week.getAllTasks()) {
-      initTaskButton(task);
+      initTaskDisplay(task);
     }
   }
 }
