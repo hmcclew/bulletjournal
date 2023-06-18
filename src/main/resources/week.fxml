@@ -32,7 +32,7 @@
                         </padding>
                     </VBox>
             <Pane>
-            <Label fx:id="newWeek" layoutX="40.0" layoutY="33.0" text="New Week">
+            <Label fx:id="newWeek" layoutX="10.0" layoutY="30.0" text="New Week">
                 <font>
                     <Font size="20.0" />
                 </font>
