@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="task search">
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/CreateCategoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/CreateCategoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EventPopUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EventPopUpView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewEventView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewNoteQuoteView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewNoteQuoteView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewTaskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewTaskView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/SetMaximumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/SetMaximumView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskPopUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskPopUpView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskSearchView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskSearchView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/eventPopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/event-popup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maxEventsError.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maxTasksError.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/newCategory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-category.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/newEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-event.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/newNoteOrQuote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-note-or-quote.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/newTask.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-task.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/setMaxEventsTasks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/set-max-events-and-tasks.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/taskPopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/task-popup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/taskSearch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/task-search.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tasks.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +146,7 @@
       <recent name="cs3500.pa05.view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [checkstyleMain]">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -296,9 +276,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
       </list>
@@ -324,7 +304,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="5385000" />
+      <workItem from="1687118348683" duration="5752000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -606,7 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687123545954</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="style">
+      <created>1687123764201</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1687123764201</updated>
+    </task>
+    <task id="LOCAL-00042" summary="style">
+      <created>1687124104889</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1687124104889</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,10 +655,10 @@
     <MESSAGE value="week view appearance" />
     <MESSAGE value="code cleaning" />
     <MESSAGE value="updated sample image" />
-    <MESSAGE value="style" />
     <MESSAGE value="updated uml" />
     <MESSAGE value="scroll view" />
     <MESSAGE value="task search" />
-    <option name="LAST_COMMIT_MESSAGE" value="task search" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
 </project>

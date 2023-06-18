@@ -15,7 +15,8 @@ public class SetMaximumView extends AbstractView {
    */
   public SetMaximumView(Controller controller) {
     this.loader = new FXMLLoader();
-    this.loader.setLocation(getClass().getClassLoader().getResource("set-max-events-and-tasks.fxml"));
+    this.loader.setLocation(getClass().getClassLoader().getResource(
+        "set-max-events-and-tasks.fxml"));
     this.loader.setController(controller);
   }
 }
