@@ -34,7 +34,7 @@ public class BujoFileReader implements FileReader {
   @Override
   public void read(String filePath) {
     this.path = Paths.get(filePath);
-    Week week = new Week();
+    Week week;
     ObjectMapper objectMapper = new ObjectMapper();
 
     try {
@@ -43,7 +43,7 @@ public class BujoFileReader implements FileReader {
       week = objectMapper.readValue(this.fileContent, Week.class);
       controller.openWeek(week);
     } catch (IOException e) {
-      e.printStackTrace();
+      System.err.println("Could Not Read File");
     }
   }
 }

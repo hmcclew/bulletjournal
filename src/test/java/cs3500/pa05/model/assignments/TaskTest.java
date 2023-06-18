@@ -1,4 +1,4 @@
-package model.assignments;
+package cs3500.pa05.model.assignments;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;

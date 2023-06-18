@@ -1,41 +1,41 @@
-package model.day;
+package cs3500.pa05.model.day;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
-import cs3500.pa05.model.day.Tuesday;
+import cs3500.pa05.model.day.Friday;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Tests for the tuesday class
+ * Test the Friday Class
  */
-public class TuesdayTest {
-  private Tuesday tuesday;
+public class FridayTest {
+  private Friday friday;
 
   @BeforeEach
   public void setUp() {
-    tuesday = new Tuesday();
+    friday = new Friday();
   }
 
   @Test
   public void testAddEvent() {
-    Event event = new Event("Meeting", "Tuesday", "10:00", "2h");
-    tuesday.addEvent(event);
+    Event event = new Event("Meeting", "Friday", "10:00", "2h");
+    friday.addEvent(event);
 
-    List<Event> events = tuesday.getEvents();
+    List<Event> events = friday.getEvents();
     assertEquals(1, events.size());
     assertEquals(event, events.get(0));
   }
 
   @Test
   public void testAddTask() {
-    Task task = new Task("Shopping", "Tuesday");
-    tuesday.addTask(task);
+    Task task = new Task("Shopping", "Friday");
+    friday.addTask(task);
 
-    List<Task> tasks = tuesday.getTasks();
+    List<Task> tasks = friday.getTasks();
     assertEquals(1, tasks.size());
     assertEquals(task, tasks.get(0));
   }

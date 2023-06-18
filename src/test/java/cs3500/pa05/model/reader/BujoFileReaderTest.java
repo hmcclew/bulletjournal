@@ -1,4 +1,4 @@
-package model.reader;
+package cs3500.pa05.model.reader;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;

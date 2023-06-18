@@ -1,4 +1,4 @@
-package model.day;
+package cs3500.pa05.model.day;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;

@@ -1,4 +1,4 @@
-package model.writer;
+package cs3500.pa05.model.writer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
