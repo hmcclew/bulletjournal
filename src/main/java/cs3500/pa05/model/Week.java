@@ -341,4 +341,32 @@ public class Week {
   public String getName() {
     return this.name;
   }
+
+  public Monday getMonday() {
+    return monday;
+  }
+
+  public Tuesday getTuesday() {
+    return tuesday;
+  }
+
+  public Wednesday getWednesday() {
+    return wednesday;
+  }
+
+  public Thursday getThursday() {
+    return thursday;
+  }
+
+  public Friday getFriday() {
+    return friday;
+  }
+
+  public Saturday getSaturday() {
+    return saturday;
+  }
+
+  public Sunday getSunday() {
+    return sunday;
+  }
 }

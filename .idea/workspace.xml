@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/AbstractAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/AbstractAssignment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/assignments/EventTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/WeekTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/WeekTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/assignments/EventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/assignments/EventTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/assignments/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/assignments/TaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/reader/BujoFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/reader/BujoFileReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/writer/BujoFileWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/writer/BujoFileWriterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,24 +47,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="pa05-template" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pa05-template" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="documentation" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pa05-template" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pa05-template" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="verification" type="c8890929:TasksNode$1" />
               </path>
               <path>
@@ -80,7 +65,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -131,15 +115,8 @@
       <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="cs3500.pa05.model.assignments" />
-      <recent name="cs3500.pa05.model.day" />
-    </key>
   </component>
-  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [test]">
+  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -149,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeekTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BujoFileWriterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,7 +139,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;model.WeekTest&quot;" />
+            <option value="&quot;model.writer.BujoFileWriterTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="TaskTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;model.assignments.TaskTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -217,28 +218,6 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="pa05-robert-hope-nour [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="pa05-robert-hope-nour [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -263,19 +242,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Gradle.WeekTest" />
+      <item itemvalue="Gradle.BujoFileWriterTest" />
+      <item itemvalue="Gradle.TaskTest" />
       <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]" />
       <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestReport]" />
       <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
-      <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestCoverageVerification]" />
-        <item itemvalue="Gradle.WeekTest" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [jacocoTestReport]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
+        <item itemvalue="Gradle.TaskTest" />
+        <item itemvalue="Gradle.BujoFileWriterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -487,9 +466,6 @@
     <MESSAGE value="week view appearance" />
     <MESSAGE value="code cleaning" />
     <MESSAGE value="style" />
-    <MESSAGE value="readMe image of week gui" />
-    <MESSAGE value="tests" />
-    <MESSAGE value="save file" />
-    <option name="LAST_COMMIT_MESSAGE" value="save file" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
 </project>

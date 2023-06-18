@@ -46,6 +46,4 @@ public class BujoFileReader implements FileReader {
       e.printStackTrace();
     }
   }
-
-
 }
