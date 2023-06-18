@@ -203,10 +203,12 @@ public class JavaJournalController implements Controller {
   private void initAssignmentDisplayData(VBox content, Assignment a) {
     if (a.getDescription() != "No Description Available.") {
       Label description = new Label("Description: " + a.getDescription());
+      description.setWrapText(true);
       content.getChildren().add(description);
     }
     if (a.getCategory() != "No Category Available.") {
       Label category = new Label("Category: " + a.getCategory());
+      category.setWrapText(true);
       content.getChildren().add(category);
     }
     if (a instanceof Event) {

@@ -12,116 +12,171 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ListView?>
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <AnchorPane prefHeight="726.0" prefWidth="1450.0">
         <children>
-            <SplitPane fx:id="sideBar" layoutX="0.0" layoutY="0.0" prefHeight="726.0" prefWidth="1450.0" dividerPositions="0.0">
+            <SplitPane fx:id="sideBar" layoutX="0.0" layoutY="0.0" prefHeight="726.0" prefWidth="1450.0"
+                       dividerPositions="0.0">
                 <items>
                     <VBox prefHeight="729.0" prefWidth="200.0" maxWidth="200.0">
                         <children>
                             <Label fx:id="weeksTasks" text="">
                                 <font>
-                                    <Font size="20.0" />
+                                    <Font size="20.0"/>
                                 </font>
                             </Label>
                             <VBox fx:id="tasksBox" prefHeight="683.0" prefWidth="134.0" minWidth="0.0">
                             </VBox>
                         </children>
                         <padding>
-                            <Insets left="0.0" />
+                            <Insets left="0.0"/>
                         </padding>
                     </VBox>
-            <Pane>
-            <Label fx:id="newWeek" layoutX="10.0" layoutY="30.0" text="New Week">
-                <font>
-                    <Font size="20.0" />
-                </font>
-            </Label>
-            <TitledPane fx:id="monday" animated="false" layoutX="10.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Monday">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <VBox fx:id="mondayContent" layoutX="0.0" prefHeight="170.0" prefWidth="200.0" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-            <TitledPane fx:id="tuesday" animated="false" layoutX="210.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Tuesday">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <VBox fx:id="tuesdayContent" layoutX="0.0" prefHeight="170.0" prefWidth="200.0" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-            <TitledPane fx:id="wednesday" animated="false" layoutX="410.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Wednesday">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <VBox fx:id="wednesdayContent" layoutX="0.0" layoutY="-1.0" prefHeight="170.0" prefWidth="200.0" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-            <TitledPane fx:id="thursday" animated="false" layoutX="610.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Thursday">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <VBox fx:id="thursdayContent" layoutX="0.0" layoutY="-1.0" prefHeight="170.0" prefWidth="200.0" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-            <TitledPane fx:id="friday" animated="false" layoutX="810.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Friday">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <VBox fx:id="fridayContent" layoutX="0.0" prefHeight="170.0" prefWidth="200.0" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-            <TitledPane fx:id="saturday" animated="false" layoutX="1010.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Saturday">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <VBox fx:id="saturdayContent" layoutX="0.0" prefHeight="170.0" prefWidth="200.0" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-            <TitledPane fx:id="sunday" animated="false" layoutX="1210.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Sunday">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <VBox fx:id="sundayContent" layoutX="0.0" prefHeight="170.0" prefWidth="200.0" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-                <Button fx:id="saveName" layoutX="320.0" layoutY="30.0" mnemonicParsing="false" text="save week name" />
-            <Button fx:id="openFile" layoutX="1000.0" layoutY="21.0" mnemonicParsing="false" text="open file" />
-            <Button fx:id="saveFile" layoutX="1100.0" layoutY="21.0" mnemonicParsing="false" text="save file" />
-            <Button fx:id="newTask" layoutX="40.0" layoutY="507.0" mnemonicParsing="false" text="new task" />
-            <Button fx:id="newEvent" layoutX="120.0" layoutY="507.0" mnemonicParsing="false" text="new event" />
-            <Button fx:id="setMaxEventsTasks" layoutX="200.0" layoutY="507.0" mnemonicParsing="false" text="set maximum events and tasks" />
-            <Button fx:id="showTaskQueue" layoutX="390.0" layoutY="507.0" mnemonicParsing="false" text="show task queue" />
-            <Button fx:id="createCategory" layoutX="510.0" layoutY="507.0" mnemonicParsing="false" text="create category " />
-            <Button fx:id="newNote" layoutX="620.0" layoutY="507.0" mnemonicParsing="false" text="new note" />
-            <Label fx:id="notesAndQuotes" layoutX="40.0" layoutY="308.0" text="Notes &amp; Quotes">
-                <font>
-                    <Font size="20.0" />
-                </font>
-            </Label>
-            <Label fx:id="taskWarning" layoutX="500.0" layoutY="600.0" text="" />
-            <Label fx:id="eventWarning" layoutX="500.0" layoutY="625.0" text="" />
-            <VBox fx:id="notesContent" layoutX="40.0" layoutY="354.0" prefHeight="100.0" prefWidth="890.0" />
-            <Label fx:id="totalEvents" layoutX="40.0" layoutY="578.0" text="Total Events: 0" />
-            <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0" />
-            <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0" text="Percent Tasks Completed: 0.0%" />
-            <TextField fx:id="weekName" layoutX="150.0" layoutY="30.0" />
-            </Pane>
+                    <Pane>
+                        <Label fx:id="newWeek" layoutX="10.0" layoutY="30.0" text="New Week">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <TitledPane fx:id="monday" animated="false" layoutX="10.0" layoutY="87.0" prefHeight="195.0"
+                                    prefWidth="200.0" text="Monday">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="180.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
+                                            <content>
+                                                <VBox fx:id="mondayContent" layoutX="0.0" prefHeight="170.0"
+                                                      prefWidth="180.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tuesday" animated="false" layoutX="210.0" layoutY="87.0" prefHeight="195.0"
+                                    prefWidth="200.0" text="Tuesday">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
+                                            <content>
+                                                <VBox fx:id="tuesdayContent" layoutX="0.0" prefHeight="170.0"
+                                                      prefWidth="180.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="wednesday" animated="false" layoutX="410.0" layoutY="87.0" prefHeight="195.0"
+                                    prefWidth="200.0" text="Wednesday">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
+                                            <content>
+                                                <VBox fx:id="wednesdayContent" layoutX="0.0" layoutY="-1.0"
+                                                      prefHeight="170.0" prefWidth="180.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="thursday" animated="false" layoutX="610.0" layoutY="87.0" prefHeight="195.0"
+                                    prefWidth="200.0" text="Thursday">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
+                                            <content>
+                                                <VBox fx:id="thursdayContent" layoutX="0.0" layoutY="-1.0"
+                                                      prefHeight="170.0"
+                                                      prefWidth="180.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="friday" animated="false" layoutX="810.0" layoutY="87.0" prefHeight="195.0"
+                                    prefWidth="200.0" text="Friday">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
+                                            <content>
+                                                <VBox fx:id="fridayContent" layoutX="0.0" prefHeight="170.0"
+                                                      prefWidth="180.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="saturday" animated="false" layoutX="1010.0" layoutY="87.0" prefHeight="195.0"
+                                    prefWidth="200.0" text="Saturday">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
+                                            <content>
+                                                <VBox fx:id="saturdayContent" layoutX="0.0" prefHeight="170.0"
+                                                      prefWidth="180.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="sunday" animated="false" layoutX="1210.0" layoutY="87.0" prefHeight="195.0"
+                                    prefWidth="200.0" text="Sunday">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
+                                            <content>
+                                                <VBox fx:id="sundayContent" layoutX="0.0" prefHeight="170.0"
+                                                      prefWidth="180.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <Button fx:id="saveName" layoutX="320.0" layoutY="30.0" mnemonicParsing="false"
+                                text="save week name"/>
+                        <Button fx:id="openFile" layoutX="1000.0" layoutY="21.0" mnemonicParsing="false"
+                                text="open file"/>
+                        <Button fx:id="saveFile" layoutX="1100.0" layoutY="21.0" mnemonicParsing="false"
+                                text="save file"/>
+                        <Button fx:id="newTask" layoutX="40.0" layoutY="507.0" mnemonicParsing="false" text="new task"/>
+                        <Button fx:id="newEvent" layoutX="120.0" layoutY="507.0" mnemonicParsing="false"
+                                text="new event"/>
+                        <Button fx:id="setMaxEventsTasks" layoutX="200.0" layoutY="507.0" mnemonicParsing="false"
+                                text="set maximum events and tasks"/>
+                        <Button fx:id="showTaskQueue" layoutX="390.0" layoutY="507.0" mnemonicParsing="false"
+                                text="show task queue"/>
+                        <Button fx:id="createCategory" layoutX="510.0" layoutY="507.0" mnemonicParsing="false"
+                                text="create category "/>
+                        <Button fx:id="newNote" layoutX="620.0" layoutY="507.0" mnemonicParsing="false"
+                                text="new note"/>
+                        <Label fx:id="notesAndQuotes" layoutX="40.0" layoutY="308.0" text="Notes &amp; Quotes">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="taskWarning" layoutX="500.0" layoutY="600.0" text=""/>
+                        <Label fx:id="eventWarning" layoutX="500.0" layoutY="625.0" text=""/>
+                        <VBox fx:id="notesContent" layoutX="40.0" layoutY="354.0" prefHeight="100.0" prefWidth="890.0"/>
+                        <Label fx:id="totalEvents" layoutX="40.0" layoutY="578.0" text="Total Events: 0"/>
+                        <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0"/>
+                        <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0"
+                               text="Percent Tasks Completed: 0.0%"/>
+                        <TextField fx:id="weekName" layoutX="150.0" layoutY="30.0"/>
+                    </Pane>
                 </items>
             </SplitPane>
         </children>
