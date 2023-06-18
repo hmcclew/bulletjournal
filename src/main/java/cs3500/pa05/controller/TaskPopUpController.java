@@ -66,7 +66,7 @@ public class TaskPopUpController implements Controller {
     if (task.isComplete()) {
       name.setText("COMPLETED TASK: " + task.getName());
     } else {
-      name.setText("Task: " + task.getName());
+      name.setText("INCOMPLETE TASK: " + task.getName());
     }
   }
 

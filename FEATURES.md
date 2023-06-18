@@ -14,6 +14,8 @@
 - Weekly Overview
 
 ## Section 4: Quality of Life
+- Mind Changes
+- Task Search
 
 
 ## Section 5: Extra Credit

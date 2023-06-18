@@ -163,6 +163,8 @@
                                 text="create category "/>
                         <Button fx:id="newNote" layoutX="620.0" layoutY="507.0" mnemonicParsing="false"
                                 text="new note"/>
+                        <Button fx:id="taskSearch" layoutX="695.0" layoutY="507.0" mnemonicParsing="false"
+                                text="search for a task"/>
                         <Label fx:id="notesAndQuotes" layoutX="40.0" layoutY="308.0" text="Notes &amp; Quotes">
                             <font>
                                 <Font size="20.0"/>

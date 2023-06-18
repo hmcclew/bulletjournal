@@ -8,13 +8,8 @@ import cs3500.pa05.model.day.Days;
 import cs3500.pa05.model.reader.BujoFileReader;
 import cs3500.pa05.model.reader.FileReader;
 import cs3500.pa05.model.writer.BujoFileWriter;
-import cs3500.pa05.view.CreateCategoryView;
-import cs3500.pa05.view.EventPopUpView;
-import cs3500.pa05.view.NewEventView;
-import cs3500.pa05.view.NewNoteQuoteView;
-import cs3500.pa05.view.NewTaskView;
-import cs3500.pa05.view.SetMaximumView;
-import cs3500.pa05.view.TaskPopUpView;
+import cs3500.pa05.view.*;
+
 import java.io.File;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -113,6 +108,9 @@ public class JavaJournalController implements Controller {
   @FXML
   private Button saveName;
 
+  @FXML
+  private Button taskSearch;
+
   private Stage primaryStage;
 
 
@@ -151,6 +149,23 @@ public class JavaJournalController implements Controller {
     initShowSideBar();
     initOpenFile();
     initSaveName();
+    initTaskSearch();
+  }
+
+  private void initTaskSearch() {
+    taskSearch.setOnAction(event -> {
+      try {
+        Stage stage = new Stage();
+        TaskSearchController controller = new TaskSearchController(week, this);
+        TaskSearchView view = new TaskSearchView(controller);
+        stage.setTitle("Search for a Task");
+        stage.setScene(view.load());
+        controller.run();
+        stage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI.");
+      }
+    });
   }
 
   /**
@@ -234,18 +249,18 @@ public class JavaJournalController implements Controller {
    * @param button the button attached to the task title
    * @param t the task used to format the popup
    */
-  private void initTaskDisplay(Button button, Task t) {
-    if (t.isComplete()) {
-      button.setText(t.getName() + ": Complete");
+  public void initTaskDisplay(Button button, Task task) {
+    if (task.isComplete()) {
+      button.setText(task.getName() + ": Complete");
     } else {
-      button.setText(t.getName() + ": Not Complete");
+      button.setText(task.getName() + ": Not Complete");
     }
     button.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        TaskPopUpController controller = new TaskPopUpController(t, this, button);
+        TaskPopUpController controller = new TaskPopUpController(task, this, button);
         TaskPopUpView view = new TaskPopUpView(controller);
-        stage.setTitle(t.getName());
+        stage.setTitle(task.getName());
         stage.setScene(view.load());
         controller.run();
         stage.show();

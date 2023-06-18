@@ -80,8 +80,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -305,7 +305,8 @@
       <workItem from="1686997401964" duration="10570000" />
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
-      <workItem from="1687118020437" duration="9000" />
+      <workItem from="1687118020437" duration="311000" />
+      <workItem from="1687118348683" duration="3265000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -545,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687117947046</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="scroll view">
+      <created>1687118038310</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1687118038311</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
