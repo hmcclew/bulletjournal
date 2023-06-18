@@ -25,6 +25,9 @@ public class TaskPopUpController implements Controller {
   @FXML
   private Label category;
 
+  @FXML
+  private Button buttonClicked;
+
   private Task task;
 
   private JavaJournalController controller;
@@ -32,12 +35,13 @@ public class TaskPopUpController implements Controller {
   /**
    * Constructor for a task pop up controller
    *
-   * @param t the task in the pop up window
+   * @param t the task in the popup window
    * @param controller the main controller
    */
-  public TaskPopUpController(Task t, JavaJournalController controller) {
+  public TaskPopUpController(Task t, JavaJournalController controller, Button button) {
     this.task = t;
     this.controller = controller;
+    this.buttonClicked = button;
   }
 
   /**
@@ -78,6 +82,7 @@ public class TaskPopUpController implements Controller {
       parent.getChildren().remove(markAsComplete);
       name.setText("COMPLETED TASK: " + task.getName());
       controller.updateStatistics();
+      controller.updateButtonTitleAsComplete(buttonClicked, task);
     });
   }
 }

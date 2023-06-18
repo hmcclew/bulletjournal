@@ -226,7 +226,7 @@ public class JavaJournalController implements Controller {
     button.setOnAction(event -> {
       try {
         Stage stage = new Stage();
-        TaskPopUpController controller = new TaskPopUpController(t, this);
+        TaskPopUpController controller = new TaskPopUpController(t, this, button);
         TaskPopUpView view = new TaskPopUpView(controller);
         stage.setTitle(t.getName());
         stage.setScene(view.load());
@@ -236,6 +236,16 @@ public class JavaJournalController implements Controller {
         System.err.println("Unable to load GUI.");
       }
     });
+  }
+
+  /**
+   * updates the display of a task's button for a popup view to show its now complete
+   *
+   * @param button the associated button for the popup for the task
+   * @param task the task whose title is being updated
+   */
+  public void updateButtonTitleAsComplete(Button button, Task task) {
+    button.setText(task.getName() + ": Complete");
   }
 
   /**
