@@ -2,16 +2,13 @@ package cs3500.pa05.controller;
 
 import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Task;
-import cs3500.pa05.view.TaskPopUpView;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
-public class TaskSearchController implements Controller{
+public class TaskSearchController implements Controller {
 
   private Week week;
 
@@ -28,6 +25,7 @@ public class TaskSearchController implements Controller{
     this.controller = controller;
 
   }
+
   /**
    * runs the controller
    *
@@ -57,9 +55,9 @@ public class TaskSearchController implements Controller{
 
   private void initTaskDisplay(Task task) {
     VBox taskBox = new VBox();
-    taskBox.setPadding(new Insets(0,0,20,120));
+    taskBox.setPadding(new Insets(0, 0, 20, 110));
     Label taskName = new Label(task.getName());
-    taskName.setPadding(new Insets(0,0,0,70));
+    taskName.setPadding(new Insets(0, 0, 0, 80));
     taskName.setWrapText(true);
     Label taskDescription = new Label("Description: " + task.getDescription());
     taskDescription.setWrapText(true);
