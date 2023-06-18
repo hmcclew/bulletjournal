@@ -16,7 +16,7 @@ public class NewTaskView extends AbstractView {
    */
   public NewTaskView(Controller controller) {
     this.loader = new FXMLLoader();
-    this.loader.setLocation(getClass().getClassLoader().getResource("newTask.fxml"));
+    this.loader.setLocation(getClass().getClassLoader().getResource("new-task.fxml"));
     this.loader.setController(controller);
   }
 }

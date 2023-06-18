@@ -15,7 +15,7 @@ public class NewNoteQuoteView extends AbstractView {
    */
   public NewNoteQuoteView(Controller controller) {
     this.loader = new FXMLLoader();
-    this.loader.setLocation(getClass().getClassLoader().getResource("newNoteOrQuote.fxml"));
+    this.loader.setLocation(getClass().getClassLoader().getResource("new-note-or-quote.fxml"));
     this.loader.setController(controller);
   }
 }

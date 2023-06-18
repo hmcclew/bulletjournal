@@ -15,7 +15,7 @@ public class NewEventView extends AbstractView {
    */
   public NewEventView(Controller controller) {
     this.loader = new FXMLLoader();
-    this.loader.setLocation(getClass().getClassLoader().getResource("newEvent.fxml"));
+    this.loader.setLocation(getClass().getClassLoader().getResource("new-event.fxml"));
     this.loader.setController(controller);
   }
 }

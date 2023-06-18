@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="task search">
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/TaskSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/TaskSearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/CreateCategoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/CreateCategoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EventPopUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EventPopUpView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewEventView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewNoteQuoteView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewNoteQuoteView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewTaskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/NewTaskView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/SetMaximumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/SetMaximumView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskPopUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskPopUpView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskSearchView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TaskSearchView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eventPopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/event-popup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maxEventsError.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maxTasksError.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newCategory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-category.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-event.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newNoteOrQuote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-note-or-quote.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newTask.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/new-task.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/setMaxEventsTasks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/set-max-events-and-tasks.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/taskPopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/task-popup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/taskSearch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/task-search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tasks.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +324,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="4966000" />
+      <workItem from="1687118348683" duration="5385000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -574,7 +592,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687123022617</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="task search">
+      <created>1687123347922</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1687123347923</updated>
+    </task>
+    <task id="LOCAL-00040" summary="task search">
+      <created>1687123545954</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1687123545954</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

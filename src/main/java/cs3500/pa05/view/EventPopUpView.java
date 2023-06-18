@@ -15,7 +15,7 @@ public class EventPopUpView extends AbstractView {
    */
   public EventPopUpView(Controller controller) {
     this.loader = new FXMLLoader();
-    this.loader.setLocation(getClass().getClassLoader().getResource("eventPopUp.fxml"));
+    this.loader.setLocation(getClass().getClassLoader().getResource("event-popup.fxml"));
     this.loader.setController(controller);
   }
 }

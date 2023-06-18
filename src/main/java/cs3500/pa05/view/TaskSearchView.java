@@ -7,7 +7,7 @@ public class TaskSearchView extends AbstractView {
 
   public TaskSearchView(Controller controller) {
     this.loader = new FXMLLoader();
-    this.loader.setLocation(getClass().getClassLoader().getResource("taskSearch.fxml"));
+    this.loader.setLocation(getClass().getClassLoader().getResource("task-search.fxml"));
     this.loader.setController(controller);
   }
 }

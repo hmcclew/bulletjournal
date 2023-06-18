@@ -15,7 +15,7 @@ public class TaskPopUpView extends AbstractView {
    */
   public TaskPopUpView(Controller controller) {
     this.loader = new FXMLLoader();
-    this.loader.setLocation(getClass().getClassLoader().getResource("taskPopUp.fxml"));
+    this.loader.setLocation(getClass().getClassLoader().getResource("task-popup.fxml"));
     this.loader.setController(controller);
   }
 }
