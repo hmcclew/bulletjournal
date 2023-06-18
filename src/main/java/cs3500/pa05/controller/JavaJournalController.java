@@ -292,6 +292,7 @@ public class JavaJournalController implements Controller {
     saveName.setOnAction(event -> {
       week.setName(weekName.getText());
       newWeek.setText(weekName.getText());
+      primaryStage.setTitle(weekName.getText());
       weekName.setText("");
     });
   }
@@ -304,6 +305,7 @@ public class JavaJournalController implements Controller {
   public void openWeek(Week w) {
     this.week = w;
     clearContents();
+    primaryStage.setTitle(week.getName());
     newWeek.setText(week.getName());
     for (Task task : week.getAllTasks()) {
       updateAssignmentDisplay(task);
