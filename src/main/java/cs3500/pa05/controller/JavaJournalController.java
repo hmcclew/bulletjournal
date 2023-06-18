@@ -190,26 +190,19 @@ public class JavaJournalController implements Controller {
         +
         "transparent; -fx-underline: true;");
     if (day.equals(Days.MONDAY)) {
-      mondayContent.getChildren().add(button);
-      initAssignmentDisplayData(mondayContent, assignment);
+      initAssignmentDisplayData(button, mondayContent, assignment);
     } else if (day.equals(Days.TUESDAY)) {
-      tuesdayContent.getChildren().add(button);
-      initAssignmentDisplayData(tuesdayContent, assignment);
+      initAssignmentDisplayData(button, tuesdayContent, assignment);
     } else if (day.equals(Days.WEDNESDAY)) {
-      wednesdayContent.getChildren().add(button);
-      initAssignmentDisplayData(wednesdayContent, assignment);
+      initAssignmentDisplayData(button, wednesdayContent, assignment);
     } else if (day.equals(Days.THURSDAY)) {
-      thursdayContent.getChildren().add(button);
-      initAssignmentDisplayData(thursdayContent, assignment);
+      initAssignmentDisplayData(button, thursdayContent, assignment);
     } else if (day.equals(Days.FRIDAY)) {
-      fridayContent.getChildren().add(button);
-      initAssignmentDisplayData(fridayContent, assignment);
+      initAssignmentDisplayData(button, fridayContent, assignment);
     } else if (day.equals(Days.SATURDAY)) {
-      saturdayContent.getChildren().add(button);
-      initAssignmentDisplayData(saturdayContent, assignment);
+      initAssignmentDisplayData(button, saturdayContent, assignment);
     } else if (day.equals(Days.SUNDAY)) {
-      sundayContent.getChildren().add(button);
-      initAssignmentDisplayData(sundayContent, assignment);
+      initAssignmentDisplayData(button, sundayContent, assignment);
     }
     if (assignment instanceof Event) {
       initEventDisplay(button, (Event) assignment);
@@ -224,32 +217,35 @@ public class JavaJournalController implements Controller {
    * @param content the vbox the data will be added to
    * @param a the assignment whose data will be added
    */
-  private void initAssignmentDisplayData(VBox content, Assignment a) {
+  private void initAssignmentDisplayData(Button button, VBox content, Assignment a) {
+    VBox assignmentBox = new VBox();
+    assignmentBox.getChildren().add(button);
     if (a.getDescription() != "No Description Available.") {
       Label description = new Label("Description: " + a.getDescription());
       description.setWrapText(true);
-      content.getChildren().add(description);
+      assignmentBox.getChildren().add(description);
     }
     if (a.getCategory() != "No Category Available.") {
       Label category = new Label("Category: " + a.getCategory());
       category.setWrapText(true);
-      content.getChildren().add(category);
+      assignmentBox.getChildren().add(category);
     }
+    content.getChildren().add(assignmentBox);
     if (a instanceof Event) {
-      initEventData(content, (Event) a);
+      initEventData(assignmentBox, (Event) a);
     }
   }
 
   /**
    * initializes the data to be displayed in a week with an event
    *
-   * @param content the vbox the data will be added to
+   * @param assignmentBox the vbox the data will be added to
    * @param event the event whose data will be added
    */
-  private void initEventData(VBox content, Event event) {
+  private void initEventData(VBox assignmentBox, Event event) {
     Label startTime = new Label("StartTime: " + event.getStartTime());
     Label duration = new Label("Duration: " + event.getDuration());
-    content.getChildren().addAll(startTime, duration);
+    assignmentBox.getChildren().addAll(startTime, duration);
   }
 
   /**

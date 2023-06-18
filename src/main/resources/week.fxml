@@ -47,8 +47,8 @@
                                     <children>
                                         <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
                                             <content>
-                                                <VBox fx:id="mondayContent" layoutX="0.0" prefHeight="170.0"
-                                                      prefWidth="180.0"/>
+                                                <VBox fx:id="mondayContent" layoutX="0.0" prefHeight="2000.0"
+                                                      prefWidth="175.0"/>
                                             </content>
                                         </ScrollPane>
                                     </children>
@@ -62,8 +62,8 @@
                                     <children>
                                         <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
                                             <content>
-                                                <VBox fx:id="tuesdayContent" layoutX="0.0" prefHeight="170.0"
-                                                      prefWidth="180.0"/>
+                                                <VBox fx:id="tuesdayContent" layoutX="0.0" prefHeight="2000.0"
+                                                      prefWidth="175.0"/>
                                             </content>
                                         </ScrollPane>
                                     </children>
@@ -78,7 +78,7 @@
                                         <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
                                             <content>
                                                 <VBox fx:id="wednesdayContent" layoutX="0.0" layoutY="-1.0"
-                                                      prefHeight="170.0" prefWidth="180.0"/>
+                                                      prefHeight="2000.0" prefWidth="175.0"/>
                                             </content>
                                         </ScrollPane>
                                     </children>
@@ -93,8 +93,8 @@
                                         <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
                                             <content>
                                                 <VBox fx:id="thursdayContent" layoutX="0.0" layoutY="-1.0"
-                                                      prefHeight="170.0"
-                                                      prefWidth="180.0"/>
+                                                      prefHeight="2000.0"
+                                                      prefWidth="175.0"/>
                                             </content>
                                         </ScrollPane>
                                     </children>
@@ -108,8 +108,8 @@
                                     <children>
                                         <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
                                             <content>
-                                                <VBox fx:id="fridayContent" layoutX="0.0" prefHeight="170.0"
-                                                      prefWidth="180.0"/>
+                                                <VBox fx:id="fridayContent" layoutX="0.0" prefHeight="2000.0"
+                                                      prefWidth="175.0"/>
                                             </content>
                                         </ScrollPane>
                                     </children>
@@ -123,8 +123,8 @@
                                     <children>
                                         <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
                                             <content>
-                                                <VBox fx:id="saturdayContent" layoutX="0.0" prefHeight="170.0"
-                                                      prefWidth="180.0"/>
+                                                <VBox fx:id="saturdayContent" layoutX="0.0" prefHeight="2000.0"
+                                                      prefWidth="175.0"/>
                                             </content>
                                         </ScrollPane>
                                     </children>
@@ -138,8 +138,8 @@
                                     <children>
                                         <ScrollPane prefViewportHeight="150.0" prefViewportWidth="180.0">
                                             <content>
-                                                <VBox fx:id="sundayContent" layoutX="0.0" prefHeight="170.0"
-                                                      prefWidth="180.0"/>
+                                                <VBox fx:id="sundayContent" layoutX="0.0" prefHeight="2000.0"
+                                                      prefWidth="175.0"/>
                                             </content>
                                         </ScrollPane>
                                     </children>
