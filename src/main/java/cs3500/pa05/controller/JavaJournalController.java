@@ -540,7 +540,7 @@ public class JavaJournalController implements Controller {
   private void saveFile() {
     FileChooser fileChooser = new FileChooser();
     fileChooser.setTitle("Save File");
-
+    fileChooser.setInitialFileName(week.getName() + ".bujo");
     FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Bujo (*.bujo)",
         "*.bujo");
     fileChooser.getExtensionFilters().add(extensionFilter);
