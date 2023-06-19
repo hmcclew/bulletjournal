@@ -118,6 +118,7 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
         determineNewCategory();
         determineNewStatus();
         controller.updateAssignmentDisplay(task);
+        controller.updateStatistics();
         stage.close();
       } catch (IllegalStateException exc) {
         System.err.println("An error occurred. Task Could not be Edited");
