@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/EditTaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EditTaskView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/AbstractNewAssignmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/AbstractNewAssignmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/AbstractAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/AbstractAssignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/Assignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/EditTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/EditTaskController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,8 +280,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
       </list>
@@ -313,7 +307,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="14664000" />
+      <workItem from="1687118348683" duration="15679000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -630,7 +624,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687125784002</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="edit task">
+      <created>1687133976994</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1687133976994</updated>
+    </task>
+    <task id="LOCAL-00047" summary="style">
+      <created>1687134428945</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1687134428945</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,6 +696,7 @@
     <MESSAGE value="updated uml" />
     <MESSAGE value="scroll view" />
     <MESSAGE value="task search" />
+    <MESSAGE value="edit task" />
     <MESSAGE value="style" />
     <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>

@@ -149,10 +149,12 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
    * sets the category of the task
    */
   private void determineNewCategory() {
-    if (category.equals("No Category")) {
-      task.setCategory("");
-    } else if (category != null) {
-      task.setCategory(category);
+    if (category != null) {
+      if (category.equals("No Category")) {
+        task.setCategory("");
+      } else {
+        task.setCategory(category);
+      }
     }
   }
 
