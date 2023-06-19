@@ -43,12 +43,12 @@
                <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#cb1fff" height="37.0" layoutX="151.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="130.0" />
                <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="397.0" fitWidth="219.0" layoutX="0.0" mouseTransparent="true" opacity="0.48" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@importedImages/25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+                     <Image url="@images/edit-task-background.jpg" />
                   </image>
                </ImageView>
                <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="397.0" fitWidth="219.0" layoutX="219.0" mouseTransparent="true" opacity="0.48" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@importedImages/25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+                     <Image url="@images/edit-task-background.jpg" />
                   </image>
                </ImageView>
             </children>
