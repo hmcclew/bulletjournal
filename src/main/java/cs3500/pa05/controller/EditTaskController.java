@@ -4,6 +4,7 @@ import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -163,7 +164,7 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
    * determines the new name and description of the task
    */
   private void determineNewNameAndDescription() {
-    if (newName.getText() != "") {
+    if (!newName.getText().equals("")) {
       name = newName.getText();
     } else {
       name = task.getName();

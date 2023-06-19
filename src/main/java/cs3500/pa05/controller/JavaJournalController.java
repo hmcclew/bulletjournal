@@ -9,6 +9,7 @@ import cs3500.pa05.model.reader.BujoFileReader;
 import cs3500.pa05.model.reader.FileReader;
 import cs3500.pa05.model.writer.BujoFileWriter;
 import cs3500.pa05.view.CreateCategoryView;
+import cs3500.pa05.view.EditEventView;
 import cs3500.pa05.view.EditTaskView;
 import cs3500.pa05.view.EventPopUpView;
 import cs3500.pa05.view.NewEventView;
@@ -178,6 +179,11 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  /**
+   * Formats a button to be only underlined with no background
+   *
+   * @param button the button to be formatted
+   */
   private void formatButton(Button button) {
     button.setPrefWidth(300);
     button.setStyle("-fx-background-color: transparent; -fx-border-color: "
@@ -234,9 +240,33 @@ public class JavaJournalController implements Controller {
     content.getChildren().add(assignmentBox);
     if (a instanceof Event) {
       initEventData(assignmentBox, (Event) a);
+      initEditEventDisplay(editButton, (Event) a, assignmentBox);
     } else if (a instanceof Task) {
       initEditTaskDisplay(editButton, (Task) a, assignmentBox);
     }
+  }
+
+  /**
+   * initializes the edit button for an event
+   *
+   * @param button the edit button
+   * @param e the event associated with the button
+   * @param eventBox the week view of the event
+   */
+  private void initEditEventDisplay(Button button, Event e, VBox eventBox) {
+    button.setOnAction(event -> {
+      try {
+        Stage stage = new Stage();
+        EditEventController controller = new EditEventController(e, stage, eventBox, week, this);
+        EditEventView view = new EditEventView(controller);
+        stage.setTitle("Edit Event");
+        stage.setScene(view.load());
+        controller.run();
+        stage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI.");
+      }
+    });
   }
 
   /**

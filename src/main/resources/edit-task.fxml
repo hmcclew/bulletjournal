@@ -14,7 +14,7 @@
       <children>
          <AnchorPane layoutX="-3.0" layoutY="-1.0" prefHeight="387.0" prefWidth="429.0">
             <children>
-               <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="8.0" prefHeight="17.0" prefWidth="130.0" text="Edit Task">
+               <Label fx:id="editTask" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="8.0" prefHeight="17.0" prefWidth="130.0" text="Edit Task">
                   <font>
                      <Font name="Al Nile" size="23.0" />
                   </font>

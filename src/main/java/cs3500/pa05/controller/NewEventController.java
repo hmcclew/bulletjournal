@@ -14,7 +14,7 @@ import javafx.util.converter.IntegerStringConverter;
 /**
  * Controller for creating a new event
  */
-public class NewEventController extends AbstractNewAssignmentController implements Controller {
+public class NewEventController extends AbstractEventController implements Controller {
 
   private Stage stage;
   @FXML
@@ -25,14 +25,6 @@ public class NewEventController extends AbstractNewAssignmentController implemen
   private TextField nameContent;
   @FXML
   private TextField descriptionContent;
-  @FXML
-  private TextField durationHoursContent;
-  @FXML
-  private TextField durationMinutesContent;
-  @FXML
-  private TextField startTimeHoursContent;
-  @FXML
-  private TextField startTimeMinutesContent;
   private String description;
   private String startTime;
   private String duration;
@@ -65,20 +57,6 @@ public class NewEventController extends AbstractNewAssignmentController implemen
     initFinishButton();
     initCategory();
     initTextFields();
-  }
-
-  /**
-   * initializes the text fields to only take integer inputs up to two digits
-   */
-  private void initTextFields() {
-    startTimeHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
-    startTimeMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
-    durationMinutesContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
-    durationHoursContent.setTextFormatter(new TextFormatter<>(new IntegerStringConverter(), 0,
-        c -> c.getControlNewText().matches("\\d{0,2}") ? c : null));
   }
 
   /**

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style">
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="error handling">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/AbstractEventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/EditEventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EditEventView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/EditTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/EditTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/NewEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/NewEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/assignments/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EditTaskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/EditTaskView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edit-task.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edit-task.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +157,7 @@
       <recent name="cs3500.pa05.view" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [run]">
+  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [checkstyleMain]">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -279,9 +287,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
       </list>
@@ -307,7 +315,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="15679000" />
+      <workItem from="1687118348683" duration="19686000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1686938467501</created>
@@ -638,7 +646,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687134428945</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="error handling">
+      <created>1687134807226</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1687134807226</updated>
+    </task>
+    <task id="LOCAL-00049" summary="error handling">
+      <created>1687134948609</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1687134948609</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,6 +720,7 @@
     <MESSAGE value="task search" />
     <MESSAGE value="edit task" />
     <MESSAGE value="style" />
-    <option name="LAST_COMMIT_MESSAGE" value="style" />
+    <MESSAGE value="error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="error handling" />
   </component>
 </project>
