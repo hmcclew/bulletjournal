@@ -112,14 +112,17 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
   public void initSaveButton() {
     saveTask.setOnAction(event -> {
       try {
+        week.removeTask(task);
         VBox parent = (VBox) currentWeekViewDescription.getParent();
         parent.getChildren().remove(currentWeekViewDescription);
         determineNewNameAndDescription();
         determineNewDay();
         determineNewCategory();
         determineNewStatus();
+        week.addTask(task);
         controller.updateAssignmentDisplay(task);
         controller.updateStatistics();
+        controller.displayMaxTasksWarning();
         stage.close();
       } catch (IllegalStateException exc) {
         System.err.println("An error occurred. Task Could not be Edited");

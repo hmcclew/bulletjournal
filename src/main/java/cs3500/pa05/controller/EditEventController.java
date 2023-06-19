@@ -76,6 +76,7 @@ public class EditEventController extends AbstractEventController implements Cont
   public void initSaveButton() {
     saveEvent.setOnAction(event -> {
       try {
+        week.removeEvent(editedEvent);
         VBox parent = (VBox) currentWeekViewDescription.getParent();
         parent.getChildren().remove(currentWeekViewDescription);
         determineNewNameAndDescription();
@@ -83,7 +84,9 @@ public class EditEventController extends AbstractEventController implements Cont
         determineNewCategory();
         determineNewStartTime();
         determineNewDuration();
+        week.addEvent(editedEvent);
         controller.updateAssignmentDisplay(editedEvent);
+        controller.displayMaxEventsWarning();
         stage.close();
       } catch (IllegalStateException exc) {
         System.err.println("An error occurred. Task Could not be Edited");
@@ -114,7 +117,7 @@ public class EditEventController extends AbstractEventController implements Cont
     if (!durationHoursContent.getText().equals("0")
         ||
         !durationMinutesContent.getText().equals("0")) {
-      duration = startTimeHoursContent.getText() + " hours and " + startTimeMinutesContent.getText()
+      duration = durationHoursContent.getText() + " hours and " + durationMinutesContent.getText()
           + " minutes";
       editedEvent.setDuration(duration);
     }

@@ -148,6 +148,54 @@ public class Week {
     updateDayWithEvent(e);
   }
 
+  public void removeEvent(Event event) {
+    allEvents.remove(event);
+    removeEventFromDay(event);
+  }
+
+  public void removeTask(Task task) {
+    allTasks.remove(task);
+    removeTaskFromDay(task);
+  }
+
+  private void removeEventFromDay(Event event) {
+    Days day = determineDay(event);
+    if (day.equals(Days.MONDAY)) {
+      monday.removeEvent(event);
+    } else if (day.equals(Days.TUESDAY)) {
+      tuesday.removeEvent(event);
+    } else if (day.equals(Days.WEDNESDAY)) {
+      wednesday.removeEvent(event);
+    } else if (day.equals(Days.THURSDAY)) {
+      thursday.removeEvent(event);
+    } else if (day.equals(Days.FRIDAY)) {
+      friday.removeEvent(event);
+    } else if (day.equals(Days.SATURDAY)) {
+      saturday.removeEvent(event);
+    } else if (day.equals(Days.SUNDAY)) {
+      sunday.removeEvent(event);
+    }
+  }
+
+  private void removeTaskFromDay(Task task) {
+    Days day = determineDay(task);
+    if (day.equals(Days.MONDAY)) {
+      monday.removeTask(task);
+    } else if (day.equals(Days.TUESDAY)) {
+      tuesday.removeTask(task);
+    } else if (day.equals(Days.WEDNESDAY)) {
+      wednesday.removeTask(task);
+    } else if (day.equals(Days.THURSDAY)) {
+      thursday.removeTask(task);
+    } else if (day.equals(Days.FRIDAY)) {
+      friday.removeTask(task);
+    } else if (day.equals(Days.SATURDAY)) {
+      saturday.removeTask(task);
+    } else if (day.equals(Days.SUNDAY)) {
+      sunday.removeTask(task);
+    }
+  }
+
   /**
    * adds a task to this week's tasks
    *

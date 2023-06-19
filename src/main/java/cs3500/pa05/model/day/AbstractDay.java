@@ -64,4 +64,22 @@ public abstract class AbstractDay implements Day {
     tasks.add(t);
   }
 
+  /**
+   * removes an event from this day's events
+   *
+   * @param e the event to be removed
+   */
+  public void removeEvent(Event e) {
+    events.remove(e);
+  }
+
+  /**
+   * removed a task from this day's tasks
+   *
+   * @param t the task to be removed
+   */
+  public void removeTask(Task t) {
+    tasks.remove(t);
+  }
+
 }

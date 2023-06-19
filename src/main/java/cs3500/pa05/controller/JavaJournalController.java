@@ -327,6 +327,7 @@ public class JavaJournalController implements Controller {
   private void initEventData(VBox assignmentBox, Event event) {
     Label startTime = new Label("StartTime: " + event.getStartTime());
     Label duration = new Label("Duration: " + event.getDuration());
+    duration.setWrapText(true);
     assignmentBox.getChildren().addAll(startTime, duration);
   }
 
@@ -437,6 +438,7 @@ public class JavaJournalController implements Controller {
     fridayContent.getChildren().clear();
     saturdayContent.getChildren().clear();
     sundayContent.getChildren().clear();
+    notesContent.getChildren().clear();
   }
 
   /**
@@ -512,7 +514,6 @@ public class JavaJournalController implements Controller {
   private void initSaveFile() {
     saveFile.setOnAction(event -> {
       if (week.getPassword() != null) {
-        System.out.println(week.getPassword());
         saveFile();
       } else {
         showSetPasswordAlert();
