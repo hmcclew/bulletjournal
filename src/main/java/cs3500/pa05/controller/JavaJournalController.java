@@ -141,7 +141,12 @@ public class JavaJournalController implements Controller {
    */
   @Override
   public void run() throws IllegalStateException {
+    displaySplashScreen();
     initButtons();
+  }
+
+  private void displaySplashScreen() {
+
   }
 
   /**

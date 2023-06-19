@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="726.0" prefWidth="1450.0">
+        <children>
+            <Label layoutX="575.0" layoutY="250.0" prefHeight="200.0" prefWidth="1000.0" text="Welcome to Java Journal">
+                <font>
+                    <Font name="Al Nile" size="23.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+</Scene>

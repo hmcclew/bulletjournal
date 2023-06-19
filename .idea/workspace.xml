@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="edit event">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/WelcomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/WelcomeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/welcome.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/week.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/week.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +87,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -306,14 +313,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="20161000" />
-    </task>
-    <task id="LOCAL-00003" summary="tasks.fxml">
-      <created>1686943932403</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1686943932403</updated>
+      <workItem from="1687118348683" duration="22258000" />
     </task>
     <task id="LOCAL-00004" summary="week.fxml">
       <created>1686946336742</created>
@@ -651,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687138882108</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="edit event">
+      <created>1687139462217</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1687139462217</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
