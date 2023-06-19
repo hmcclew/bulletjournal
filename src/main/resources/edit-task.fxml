@@ -6,7 +6,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -14,17 +17,17 @@
       <children>
          <AnchorPane layoutX="-3.0" layoutY="-1.0" prefHeight="387.0" prefWidth="429.0">
             <children>
-               <Label fx:id="editTask" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="8.0" prefHeight="17.0" prefWidth="130.0" text="Edit Task">
+               <Label fx:id="editTask" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="8.0" prefHeight="17.0" prefWidth="130.0" text="Edit Task" textFill="#0b2f57">
                   <font>
                      <Font name="Al Nile" size="23.0" />
                   </font>
                </Label>
                <Label layoutX="123.0" layoutY="318.0" prefHeight="17.0" prefWidth="200.0" text="You do not have to edit all fields" />
-               <Label layoutX="15.0" layoutY="62.0" text="Update Name:" />
+               <Label layoutX="15.0" layoutY="62.0" text="Update Name:" textFill="#7615c2" />
                <Button fx:id="saveTask" layoutX="192.0" layoutY="347.0" mnemonicParsing="false" text="Save" />
-               <Label layoutX="14.0" layoutY="108.0" text="Update Description:" />
-               <Label layoutX="14.0" layoutY="154.0" text="Update Category:" />
-               <Label layoutX="14.0" layoutY="194.0" text="Update Status:" />
+               <Label layoutX="14.0" layoutY="108.0" text="Update Description:" textFill="#962aeb" />
+               <Label layoutX="14.0" layoutY="154.0" text="Update Category:" textFill="#811fb5" />
+               <Label layoutX="14.0" layoutY="194.0" text="Update Status:" textFill="#8f30c6" />
                <Button fx:id="newStatus" layoutX="150.0" layoutY="189.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="259.0" text="Mark as Complete" />
                <TextField fx:id="newDescription" layoutX="150.0" layoutY="103.0" prefHeight="26.0" prefWidth="259.0" />
                <TextField fx:id="newName" layoutX="150.0" layoutY="57.0" prefHeight="26.0" prefWidth="259.0" />
@@ -36,7 +39,18 @@
                <RadioButton fx:id="saturday" layoutX="321.0" layoutY="260.0" mnemonicParsing="false" text="Saturday" />
                <RadioButton fx:id="friday" layoutX="239.0" layoutY="260.0" mnemonicParsing="false" text="Friday" />
                <RadioButton fx:id="sunday" layoutX="235.0" layoutY="286.0" mnemonicParsing="false" text="Sunday" />
-               <Label layoutX="14.0" layoutY="233.0" text="Update Day:" />
+               <Label layoutX="14.0" layoutY="233.0" text="Update Day:" textFill="#7153f5" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#cb1fff" height="37.0" layoutX="151.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+               <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="389.0" fitWidth="428.0" layoutX="2.0" layoutY="-1.0" mouseTransparent="true" opacity="0.47" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+                  </image>
+               </ImageView>
+               <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="397.0" fitWidth="219.0" layoutX="211.0" mouseTransparent="true" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+                  </image>
+               </ImageView>
             </children>
          </AnchorPane>
       </children></AnchorPane>
