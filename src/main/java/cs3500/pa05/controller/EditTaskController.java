@@ -4,11 +4,13 @@ import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Controller for editing a task
+ */
 public class EditTaskController extends AbstractNewAssignmentController implements Controller {
 
   private Task task;
@@ -23,7 +25,6 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
 
   private JavaJournalController controller;
 
-
   @FXML
   private Button saveTask;
 
@@ -36,8 +37,17 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
   @FXML
   private Button newStatus;
 
+  /**
+   * Constructor for an edit task controller
+   *
+   * @param task the task being edited
+   * @param stage the stage for the editing window
+   * @param vbox the week display of the task
+   * @param week the week containing this task
+   * @param controller the main controller
+   */
   public EditTaskController(Task task, Stage stage, VBox vbox, Week week,
-                            JavaJournalController controller)  {
+                            JavaJournalController controller) {
     this.task = task;
     this.stage = stage;
     this.currentWeekViewDescription = vbox;
@@ -60,6 +70,9 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
     initSetInitialChangeStatusText();
   }
 
+  /**
+   * sets the initial text for changing the status of the task
+   */
   public void initSetInitialChangeStatusText() {
     if (task.isComplete()) {
       newStatus.setText("Mark as Incomplete");
@@ -68,6 +81,9 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
     }
   }
 
+  /**
+   * updates the text for changing the status button
+   */
   private void updateChangeStatusButtonText() {
     if (newStatus.getText().equals("Mark as Complete")) {
       newStatus.setText("Mark as Incomplete");
@@ -75,6 +91,10 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
       newStatus.setText("Mark as Complete");
     }
   }
+
+  /**
+   * initializes the change status button
+   */
   private void initChangeStatus() {
     newStatus.setOnAction(event -> {
       try {
@@ -85,6 +105,9 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
     });
   }
 
+  /**
+   * initializes the save button
+   */
   public void initSaveButton() {
     saveTask.setOnAction(event -> {
       try {
@@ -102,6 +125,9 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
     });
   }
 
+  /**
+   * determines the new status of the task
+   */
   private void determineNewStatus() {
     if (newStatus.getText().equals("Mark as Incomplete")) {
       task.markAsComplete();
@@ -110,6 +136,9 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
     }
   }
 
+  /**
+   * determines the new day of the task
+   */
   private void determineNewDay() {
     if (day != null) {
       task.setDay(day.toUpperCase());
@@ -122,12 +151,14 @@ public class EditTaskController extends AbstractNewAssignmentController implemen
   private void determineNewCategory() {
     if (category.equals("No Category")) {
       task.setCategory("");
-    }
-    else if (category != null) {
+    } else if (category != null) {
       task.setCategory(category);
     }
   }
 
+  /**
+   * determines the new name and description of the task
+   */
   private void determineNewNameAndDescription() {
     if (newName.getText() != "") {
       name = newName.getText();

@@ -8,10 +8,16 @@ import cs3500.pa05.model.day.Days;
 import cs3500.pa05.model.reader.BujoFileReader;
 import cs3500.pa05.model.reader.FileReader;
 import cs3500.pa05.model.writer.BujoFileWriter;
-import cs3500.pa05.view.*;
-
+import cs3500.pa05.view.CreateCategoryView;
+import cs3500.pa05.view.EditTaskView;
+import cs3500.pa05.view.EventPopUpView;
+import cs3500.pa05.view.NewEventView;
+import cs3500.pa05.view.NewNoteQuoteView;
+import cs3500.pa05.view.NewTaskView;
+import cs3500.pa05.view.SetMaximumView;
+import cs3500.pa05.view.TaskPopUpView;
+import cs3500.pa05.view.TaskSearchView;
 import java.io.File;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -217,23 +223,29 @@ public class JavaJournalController implements Controller {
    * @param a       the assignment whose data will be added
    */
   private void initAssignmentDisplayData(Button button, VBox content, Assignment a) {
-    VBox assignmentBox = new VBox();
     Button editButton = new Button("Edit");
     formatButton(editButton);
     Label description = new Label("Description: " + a.getDescription());
     description.setWrapText(true);
+    VBox assignmentBox = new VBox();
     Label category = new Label("Category: " + a.getCategory());
     category.setWrapText(true);
     assignmentBox.getChildren().addAll(button, editButton, description, category);
     content.getChildren().add(assignmentBox);
     if (a instanceof Event) {
       initEventData(assignmentBox, (Event) a);
-    }
-    else if (a instanceof Task) {
+    } else if (a instanceof Task) {
       initEditTaskDisplay(editButton, (Task) a, assignmentBox);
     }
   }
 
+  /**
+   * initializes the edit button for a task
+   *
+   * @param button the edit button
+   * @param task the task associated with the button
+   * @param taskBox the week view of the task
+   */
   private void initEditTaskDisplay(Button button, Task task, VBox taskBox) {
     button.setOnAction(event -> {
       try {
