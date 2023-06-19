@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="weekly starter">
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importedImages/25bc5b65efbcc01d0aff1481db1d88c4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/importedImages/25bc5b65efbcc01d0aff1481db1d88c4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edit-task.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edit-task.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,13 +310,7 @@
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
       <workItem from="1687118348683" duration="36001000" />
-    </task>
-    <task id="LOCAL-00014" summary="task queue">
-      <created>1687001592015</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1687001592015</updated>
+      <workItem from="1687194359785" duration="615000" />
     </task>
     <task id="LOCAL-00015" summary="week view appearance">
       <created>1687004755847</created>
@@ -652,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687194134254</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="style">
+      <created>1687194628928</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1687194628929</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +714,6 @@
     <MESSAGE value="scroll view" />
     <MESSAGE value="task search" />
     <MESSAGE value="edit task" />
-    <MESSAGE value="style" />
     <MESSAGE value="error handling" />
     <MESSAGE value="edit event" />
     <MESSAGE value="splash screen" />
@@ -722,6 +724,7 @@
     <MESSAGE value="open template" />
     <MESSAGE value="updated xml" />
     <MESSAGE value="weekly starter" />
-    <option name="LAST_COMMIT_MESSAGE" value="weekly starter" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
 </project>

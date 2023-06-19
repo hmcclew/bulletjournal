@@ -41,14 +41,9 @@
                <RadioButton fx:id="sunday" layoutX="235.0" layoutY="286.0" mnemonicParsing="false" text="Sunday" />
                <Label layoutX="14.0" layoutY="233.0" text="Update Day:" textFill="#7153f5" />
                <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#cb1fff" height="37.0" layoutX="151.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="130.0" />
-               <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="389.0" fitWidth="428.0" layoutX="2.0" layoutY="-1.0" mouseTransparent="true" opacity="0.47" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                  </image>
-               </ImageView>
                <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="397.0" fitWidth="219.0" layoutX="211.0" mouseTransparent="true" opacity="0.48" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+                     <Image url="@importedImages/25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
                   </image>
                </ImageView>
             </children>
