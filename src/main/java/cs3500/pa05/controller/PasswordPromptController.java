@@ -1,6 +1,7 @@
 package cs3500.pa05.controller;
 
 import cs3500.pa05.model.Week;
+import cs3500.pa05.view.OpenTemplateView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -58,8 +59,11 @@ public class PasswordPromptController implements Controller {
     enter.setOnAction(event -> {
       try {
         if (passwordEntered.getText().equals(week.getPassword())) {
-          controller.openWeek(week);
-          stage.close();
+          OpenTemplateController openTemplateController = new OpenTemplateController(stage, week, controller);
+          OpenTemplateView openTemplateView = new OpenTemplateView(openTemplateController);
+          stage.setScene(openTemplateView.load());
+          stage.setTitle("Open File");
+          openTemplateController.run();
         } else {
           invalidPassword.setText("The password you have entered is incorrect. Please Try Again.");
         }
