@@ -146,6 +146,20 @@
                                 </AnchorPane>
                             </content>
                         </TitledPane>
+                        <TitledPane fx:id="notesAndQuotes" animated="false" layoutX="10.0" layoutY="300.0" prefHeight="160.0"
+                                    prefWidth="1200.0" text="Notes and Quotes">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="1200.0">
+                                    <children>
+                                        <ScrollPane prefViewportHeight="120.0" prefViewportWidth="1180.0">
+                                            <content>
+                                                <VBox fx:id="notesContent" layoutX="40.0" layoutY="354.0" prefHeight="2000.0" prefWidth="1170.0"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
                         <Button fx:id="saveName" layoutX="320.0" layoutY="30.0" mnemonicParsing="false"
                                 text="save week name"/>
                         <Button fx:id="openFile" layoutX="1000.0" layoutY="21.0" mnemonicParsing="false"
@@ -165,14 +179,8 @@
                                 text="new note"/>
                         <Button fx:id="taskSearch" layoutX="695.0" layoutY="507.0" mnemonicParsing="false"
                                 text="search for a task"/>
-                        <Label fx:id="notesAndQuotes" layoutX="40.0" layoutY="308.0" text="Notes &amp; Quotes">
-                            <font>
-                                <Font size="20.0"/>
-                            </font>
-                        </Label>
                         <Label fx:id="taskWarning" layoutX="500.0" layoutY="600.0" text=""/>
                         <Label fx:id="eventWarning" layoutX="500.0" layoutY="625.0" text=""/>
-                        <VBox fx:id="notesContent" layoutX="40.0" layoutY="354.0" prefHeight="100.0" prefWidth="890.0"/>
                         <Label fx:id="totalEvents" layoutX="40.0" layoutY="578.0" text="Total Events: 0"/>
                         <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0"/>
                         <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0"
