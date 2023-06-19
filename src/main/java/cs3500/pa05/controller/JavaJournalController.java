@@ -15,11 +15,13 @@ import cs3500.pa05.view.EventPopUpView;
 import cs3500.pa05.view.NewEventView;
 import cs3500.pa05.view.NewNoteQuoteView;
 import cs3500.pa05.view.NewTaskView;
+import cs3500.pa05.view.PasswordPromptView;
 import cs3500.pa05.view.SetMaximumView;
 import cs3500.pa05.view.TaskPopUpView;
 import cs3500.pa05.view.TaskSearchView;
 import java.io.File;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
@@ -119,6 +121,12 @@ public class JavaJournalController implements Controller {
   @FXML
   private Button taskSearch;
 
+  @FXML
+  private Button savePassword;
+
+  @FXML
+  private TextField password;
+
   private Stage primaryStage;
 
 
@@ -141,12 +149,7 @@ public class JavaJournalController implements Controller {
    */
   @Override
   public void run() throws IllegalStateException {
-    displaySplashScreen();
     initButtons();
-  }
-
-  private void displaySplashScreen() {
-
   }
 
   /**
@@ -163,6 +166,24 @@ public class JavaJournalController implements Controller {
     initOpenFile();
     initSaveName();
     initTaskSearch();
+    initSavePassword();
+  }
+
+  /**
+   * initializes the save password button
+   */
+  private void initSavePassword() {
+    savePassword.setOnAction(event -> {
+      try {
+        String weekPassword = password.getText();
+        if (!weekPassword.equals("") && weekPassword != null) {
+          week.setPassword(weekPassword);
+          password.clear();
+        }
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to Save Password.");
+      }
+    });
   }
 
   /**
@@ -228,7 +249,7 @@ public class JavaJournalController implements Controller {
   }
 
   /**
-   * initializes the data to be displayed in a week with an assignemnt
+   * initializes the data to be displayed in a week with an assignment
    *
    * @param content the vbox the data will be added to
    * @param a       the assignment whose data will be added
@@ -437,8 +458,26 @@ public class JavaJournalController implements Controller {
         String filePath = selectedFile.getAbsolutePath();
         FileReader bujoFileReader = new BujoFileReader(this);
         bujoFileReader.read(filePath);
+
+        Stage stage = new Stage();
+        PasswordPromptController controller = new PasswordPromptController(
+            week, this, stage);
+        PasswordPromptView view = new PasswordPromptView(controller);
+        stage.setTitle("Enter Password");
+        stage.setScene(view.load());
+        controller.run();
+        stage.show();
       }
     });
+  }
+
+  /**
+   * Sets the week of the controller
+   *
+   * @param week the week to be set
+   */
+  public void setWeek(Week week) {
+    this.week = week;
   }
 
   /**
@@ -472,8 +511,26 @@ public class JavaJournalController implements Controller {
    */
   private void initSaveFile() {
     saveFile.setOnAction(event -> {
-      saveFile();
+      if (week.getPassword() != null) {
+        System.out.println(week.getPassword());
+        saveFile();
+      } else {
+        showSetPasswordAlert();
+      }
     });
+  }
+
+  /**
+   * displays an alert if the week has no password and therefore can't be saved
+   */
+  private void showSetPasswordAlert() {
+    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    alert.setTitle("Missing Password");
+    alert.setHeaderText(null);
+    alert.setContentText("This week cannot be saved because you have not"
+        +
+        " set a password for the week. Please create a password and try again.");
+    alert.showAndWait();
   }
 
   /**

@@ -41,7 +41,7 @@ public class BujoFileReader implements FileReader {
       this.fileContent = Files.readString(this.path);
 
       week = objectMapper.readValue(this.fileContent, Week.class);
-      controller.openWeek(week);
+      controller.setWeek(week);
     } catch (IOException e) {
       System.err.println("Could Not Read File");
     }

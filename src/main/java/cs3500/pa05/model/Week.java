@@ -37,8 +37,8 @@ public class Week {
   private List<String> quotesAndNotes;
   private int maximumEvents;
   private int maximumTasks;
-
   private double percentTasksCompleted;
+  private String password;
 
   /**
    * Constructor for a week
@@ -248,6 +248,15 @@ public class Week {
   }
 
   /**
+   * sets the password of this week
+   *
+   * @param password the password to be used
+   */
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  /**
    * determines if the maximum tasks for any day this week have been exceeded
    *
    * @return whether the maximum tasks for any day this week have been exceeded
@@ -340,6 +349,15 @@ public class Week {
    */
   public String getName() {
     return this.name;
+  }
+
+  /**
+   * getter method for the password of this week
+   *
+   * @return the password of this week
+   */
+  public String getPassword() {
+    return password;
   }
 
   /**
