@@ -4,24 +4,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="285.0" prefWidth="399.0">
+    <AnchorPane prefHeight="306.0" prefWidth="314.0">
       <children>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="SRC_ATOP" fill="#97ffff" height="40.0" layoutX="123.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
          <VBox layoutX="0.0" prefHeight="294.0" prefWidth="400.0">
             <children>
-               <Label fx:id="name" alignment="TOP_CENTER" prefHeight="34.0" prefWidth="400.0" text="Name" textAlignment="RIGHT">
+               <Label fx:id="name" alignment="TOP_CENTER" blendMode="MULTIPLY" prefHeight="34.0" prefWidth="400.0" text="Name" textAlignment="RIGHT">
                   <font>
-                     <Font size="28.0" />
+                     <Font name="Khmer MN" size="21.0" />
                   </font>
                </Label>
-               <Label fx:id="day" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Day" />
-               <Label fx:id="description" wrapText="true" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="360.0" text="Description" />
-               <Label fx:id="startTime" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Start Time" />
-               <Label fx:id="duration" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Duration" />
-               <Label fx:id="category" wrapText="true" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Category" />
+               <Label fx:id="day" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Day" textFill="#643bdb" />
+               <Label fx:id="description" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="135.0" prefWidth="438.0" text="Description" textFill="#6a38f5" wrapText="true" />
+               <Label fx:id="startTime" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Start Time" textFill="#5142da" />
+               <Label fx:id="duration" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="400.0" text="Duration" textFill="#4d33e1" />
+               <Label fx:id="category" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="405.0" text="Category" textFill="#531fff" wrapText="true" />
             </children>
          </VBox>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="DARKEN" fill="#c5ccff" height="307.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
       </children></AnchorPane>
 </Scene>
