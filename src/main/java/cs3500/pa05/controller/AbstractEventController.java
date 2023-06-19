@@ -10,12 +10,27 @@ import javafx.util.converter.IntegerStringConverter;
  */
 public class AbstractEventController extends AbstractNewAssignmentController {
 
+  /**
+   * text field for event duration hours
+   */
   @FXML
   protected TextField durationHoursContent;
+
+  /**
+   * text field for event duration minutes
+   */
   @FXML
   protected TextField durationMinutesContent;
+
+  /**
+   * text field for start time hours
+   */
   @FXML
   protected TextField startTimeHoursContent;
+
+  /**
+   * text field for start time minutes
+   */
   @FXML
   protected TextField startTimeMinutesContent;
 

@@ -56,10 +56,20 @@ public class Event extends AbstractAssignment {
     return this.startTime;
   }
 
+  /**
+   * sets the start time of the event
+   *
+   * @param startTime the start time of the event
+   */
   public void setStartTime(String startTime) {
     this.startTime = startTime;
   }
 
+  /**
+   * sets the duration of the event
+   *
+   * @param duration the duration to be set
+   */
   public void setDuration(String duration) {
     this.duration = duration;
   }
