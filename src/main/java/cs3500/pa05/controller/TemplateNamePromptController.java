@@ -1,12 +1,14 @@
 package cs3500.pa05.controller;
 
 import cs3500.pa05.model.Week;
-import cs3500.pa05.view.TemplateNamePromptView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * controller for opening and naming a template
+ */
 public class TemplateNamePromptController implements Controller {
 
   private Week week;
@@ -22,6 +24,13 @@ public class TemplateNamePromptController implements Controller {
   @FXML
   private Button saveAndOpen;
 
+  /**
+   * constructor for a template name prompt controller
+   *
+   * @param controller the main controller
+   * @param stage the stage being displayed
+   * @param week the template week
+   */
   public TemplateNamePromptController(JavaJournalController controller, Stage stage, Week week) {
     this.controller = controller;
     this.stage = stage;
@@ -38,6 +47,9 @@ public class TemplateNamePromptController implements Controller {
     initSaveAndOpen();
   }
 
+  /**
+   * initializes the save and open button
+   */
   public void initSaveAndOpen() {
     saveAndOpen.setOnAction(event -> {
       try {
@@ -51,6 +63,11 @@ public class TemplateNamePromptController implements Controller {
     });
   }
 
+  /**
+   * initializes the template week name
+   *
+   * @param week the template week
+   */
   private void initTemplateName(Week week) {
     String newName = weekName.getText();
     week.setName(newName);

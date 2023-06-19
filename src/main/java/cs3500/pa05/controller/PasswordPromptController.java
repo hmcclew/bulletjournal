@@ -59,7 +59,8 @@ public class PasswordPromptController implements Controller {
     enter.setOnAction(event -> {
       try {
         if (passwordEntered.getText().equals(week.getPassword())) {
-          OpenTemplateController openTemplateController = new OpenTemplateController(stage, week, controller);
+          OpenTemplateController openTemplateController = new OpenTemplateController(
+              stage, week, controller);
           OpenTemplateView openTemplateView = new OpenTemplateView(openTemplateController);
           stage.setScene(openTemplateView.load());
           stage.setTitle("Open File");
