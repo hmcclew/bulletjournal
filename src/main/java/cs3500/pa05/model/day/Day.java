@@ -36,4 +36,18 @@ public interface Day {
    * @param t the task to be added
    */
   void addTask(Task t);
+
+  /**
+   * removes an event from this day's events
+   *
+   * @param e the event to be removed
+   */
+  void removeEvent(Event e);
+
+  /**
+   * removed a task from this day's tasks
+   *
+   * @param t the task to be removed
+   */
+  void removeTask(Task t);
 }

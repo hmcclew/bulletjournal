@@ -19,6 +19,7 @@
 
 
 ## Section 5: Extra Credit
+- Visual Flourish
 - Splash Screen
 - Privacy Lock
 - Weekly Starters

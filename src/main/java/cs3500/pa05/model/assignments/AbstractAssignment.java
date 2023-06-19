@@ -42,11 +42,21 @@ public abstract class AbstractAssignment implements Assignment {
     return this.name;
   }
 
+  /**
+   * setter method for the name of the assignment
+   *
+   * @param name the name to be set
+   */
   @Override
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * setter method for the day of the assignment
+   *
+   * @param day the day to be set
+   */
   @Override
   public void setDay(String day) {
     this.day = day;

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="weekly starter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/OpenTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/OpenTemplateController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,12 @@
                 <item name="pa05-template" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pa05-template" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -275,9 +280,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
       </list>
     </recent_temporary>
@@ -302,14 +307,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="35317000" />
-    </task>
-    <task id="LOCAL-00013" summary="newEvent.fxml">
-      <created>1686951312419</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1686951312419</updated>
+      <workItem from="1687118348683" duration="36001000" />
     </task>
     <task id="LOCAL-00014" summary="task queue">
       <created>1687001592015</created>
@@ -647,7 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687193101293</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="weekly starter">
+      <created>1687194134254</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1687194134254</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

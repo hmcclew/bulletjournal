@@ -148,16 +148,31 @@ public class Week {
     updateDayWithEvent(e);
   }
 
+  /**
+   * removes an event to this week's events
+   *
+   * @param event the event to be removed
+   */
   public void removeEvent(Event event) {
     allEvents.remove(event);
     removeEventFromDay(event);
   }
 
+  /**
+   * removes a task to this week's tasks
+   *
+   * @param task the task to be removed
+   */
   public void removeTask(Task task) {
     allTasks.remove(task);
     removeTaskFromDay(task);
   }
 
+  /**
+   * removes the event from its day of the week
+   *
+   * @param event the event removed from the week
+   */
   private void removeEventFromDay(Event event) {
     Days day = determineDay(event);
     if (day.equals(Days.MONDAY)) {
@@ -177,6 +192,11 @@ public class Week {
     }
   }
 
+  /**
+   * removes the task from its day of the week
+   *
+   * @param task the task removed from the week
+   */
   private void removeTaskFromDay(Task task) {
     Days day = determineDay(task);
     if (day.equals(Days.MONDAY)) {
