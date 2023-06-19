@@ -6,17 +6,23 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="510.0" prefWidth="538.0">
+   <AnchorPane prefHeight="510.0" prefWidth="538.0">
       <children>
-         <AnchorPane layoutX="-1.0" prefHeight="510.0" prefWidth="555.0">
+         <AnchorPane layoutX="-1.0" prefHeight="506.0" prefWidth="566.0">
             <children>
-               <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="14.0" prefHeight="17.0" prefWidth="130.0" text="Edit Event">
+               <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="-5.0" prefHeight="51.0" prefWidth="134.0" text="Edit Event" textFill="#6326fc">
                   <font>
-                     <Font name="Al Nile" size="23.0" />
+                     <Font name="Khmer MN" size="23.0" />
                   </font>
                </Label>
                <Label layoutX="205.0" layoutY="418.0" prefHeight="17.0" prefWidth="176.0" text="You do not have to edit all fields" />
@@ -45,7 +51,37 @@
                <TextField fx:id="durationHoursContent" layoutX="186.0" layoutY="308.0" prefHeight="26.0" prefWidth="88.0" />
                <Label layoutX="335.0" layoutY="311.0" text="Minutes" />
                <TextField fx:id="durationMinutesContent" layoutX="389.0" layoutY="307.0" prefHeight="26.0" prefWidth="88.0" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#e6dcff" height="524.0" layoutX="-1.0" layoutY="-5.0" stroke="BLACK" strokeType="OUTSIDE" width="566.0" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="DIFFERENCE" fill="#10390e" height="41.0" layoutX="212.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="137.0" />
+               <Text layoutX="31.0" layoutY="428.0" rotate="-32.2" strokeType="OUTSIDE" strokeWidth="0.0" text="Never give up!" wrappingWidth="124.13134765625">
+                  <font>
+                     <Font name="Khmer MN" size="19.0" />
+                  </font>
+               </Text>
+               <Ellipse fill="DODGERBLUE" layoutX="205.0" layoutY="22.0" radiusX="4.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" />
+               <Ellipse fill="DODGERBLUE" layoutX="186.0" layoutY="22.0" radiusX="4.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" />
+               <Ellipse fill="DODGERBLUE" layoutX="357.0" layoutY="22.0" radiusX="4.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" />
+               <Ellipse fill="DODGERBLUE" layoutX="376.0" layoutY="22.0" radiusX="4.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" />
+               <Ellipse blendMode="COLOR_DODGE" fill="DODGERBLUE" layoutX="94.0" layoutY="423.0" radiusX="86.0" radiusY="25.0" rotate="148.2" stroke="BLACK" strokeType="INSIDE" />
+               <ImageView fitHeight="123.0" fitWidth="175.0" layoutX="390.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../th-1.jpg" />
+                  </image>
+               </ImageView>
+               <ImageView blendMode="BLUE" fitHeight="522.0" fitWidth="295.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+                  </image>
+               </ImageView>
+               <ImageView blendMode="BLUE" fitHeight="525.0" fitWidth="290.0" layoutX="274.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+                  </image>
+               </ImageView>
             </children>
+            <effect>
+               <Blend mode="LIGHTEN" />
+            </effect>
          </AnchorPane>
       </children></AnchorPane>
 </Scene>

@@ -1,8 +1,10 @@
 package cs3500.pa05.controller;
 
 import cs3500.pa05.model.Week;
+import cs3500.pa05.view.TemplateNamePromptView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class OpenTemplateController implements Controller {
@@ -51,26 +53,35 @@ public class OpenTemplateController implements Controller {
     openTemplate.setOnAction(event -> {
       try {
         Week templateWeek = new Week();
-        controller.setWeek(templateWeek);
         initTemplateCategories(templateWeek);
         initTemplateMaximums(templateWeek);
-        controller.setWeek(templateWeek);
-        controller.openWeek(templateWeek);
-        stage.close();
+        initTemplateNotes(templateWeek);
+        TemplateNamePromptController templateNamePromptController = new TemplateNamePromptController(controller,
+            stage, templateWeek);
+        TemplateNamePromptView view = new TemplateNamePromptView(templateNamePromptController);
+        stage.setScene(view.load());
+        templateNamePromptController.run();
       } catch (IllegalStateException exc) {
         System.err.println("Unable to open Template." + exc.getMessage());
       }
     });
   }
 
-  public void initTemplateMaximums(Week templateWeek) {
+
+  private void initTemplateNotes(Week templateWeek) {
+    for (String note : week.getQuotesAndNotes()) {
+      templateWeek.addNoteOrQuote(note);
+    }
+  }
+
+  private void initTemplateMaximums(Week templateWeek) {
     int maxEvents = week.getMaximumEvents();
     int maxTasks = week.getMaximumTasks();
     templateWeek.setMaximumEvents(maxEvents);
     templateWeek.setMaximumTasks(maxTasks);
   }
 
-  public void initTemplateCategories(Week templateWeek) {
+  private void initTemplateCategories(Week templateWeek) {
     for (String category : week.getCategories()) {
       templateWeek.addCategory(category);
     }

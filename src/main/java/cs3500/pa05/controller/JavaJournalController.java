@@ -638,7 +638,6 @@ public class JavaJournalController implements Controller {
         System.err.println("Unable to load GUI." + exc.getMessage());
       }
     });
-
   }
 
   /**

@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="debugging">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/OpenTemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/OpenTemplateView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/open-template-prompt.fxml" afterDir="false" />
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="open template">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/TemplateNamePromptController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/TemplateNamePromptView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/template-name-prompt.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/PasswordPromptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/PasswordPromptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FEATURES.md" beforeDir="false" afterPath="$PROJECT_DIR$/FEATURES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/OpenTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/OpenTemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edit-event.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edit-event.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edit-task.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edit-task.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +83,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -305,14 +309,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="31736000" />
-    </task>
-    <task id="LOCAL-00009" summary="newTask.fxml">
-      <created>1686949532912</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1686949532912</updated>
+      <workItem from="1687118348683" duration="34258000" />
     </task>
     <task id="LOCAL-00010" summary="setMaxEventsTasks.fxml">
       <created>1686950854341</created>
@@ -650,7 +647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687188041254</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="open template">
+      <created>1687189159045</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1687189159045</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,6 +721,7 @@
     <MESSAGE value="password prompt" />
     <MESSAGE value="updated tests" />
     <MESSAGE value="debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugging" />
+    <MESSAGE value="open template" />
+    <option name="LAST_COMMIT_MESSAGE" value="open template" />
   </component>
 </project>

@@ -21,3 +21,4 @@
 ## Section 5: Extra Credit
 - Splash Screen
 - Privacy Lock
+- Weekly Starters
