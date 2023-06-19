@@ -1,6 +1,7 @@
 package cs3500.pa05.model;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -30,7 +31,7 @@ public class WeekTest {
   private String sampleCategory = "Sample Category";
 
   @BeforeEach
-  void setUp() {
+  public void setUp() {
     week = new Week();
     mockTask = mock(Task.class);
     mockEvent = mock(Event.class);
@@ -38,81 +39,157 @@ public class WeekTest {
   }
 
   @Test
-  void testSetMaximumEvents() {
+  public void testSetMaximumEvents() {
     week.setMaximumEvents(5);
     assertEquals(5, week.getMaximumEvents());
   }
 
   @Test
-  void testSetMaximumTasks() {
+  public void testSetMaximumTasks() {
     week.setMaximumTasks(3);
     assertEquals(3, week.getMaximumTasks());
   }
 
   @Test
-  void testAddNoteOrQuote() {
+  public void testAddNoteOrQuote() {
     week.addNoteOrQuote("test note");
     assertEquals(List.of("test note"), week.getQuotesAndNotes());
   }
 
   @Test
-  void testAddEvent() {
+  public void testAddEvent() {
     when(mockEvent.getDay()).thenReturn("MONDAY");
     week.addEvent(mockEvent);
     assertEquals(Collections.singletonList(mockEvent), week.getAllEvents());
   }
 
   @Test
-  void testAddTask() {
+  public void testRemoveEvent() {
+    week.getAllEvents().add(mockEvent);
+    when(mockEvent.getDay()).thenReturn("MONDAY");
+    week.removeEvent(mockEvent);
+    assertFalse(week.getAllEvents().contains(mockEvent));
+
+    week.getAllEvents().add(mockEvent);
+    when(mockEvent.getDay()).thenReturn("TUESDAY");
+    week.removeEvent(mockEvent);
+    assertFalse(week.getAllEvents().contains(mockEvent));
+
+    week.getAllEvents().add(mockEvent);
+    when(mockEvent.getDay()).thenReturn("WEDNESDAY");
+    week.removeEvent(mockEvent);
+    assertFalse(week.getAllEvents().contains(mockEvent));
+
+    week.getAllEvents().add(mockEvent);
+    when(mockEvent.getDay()).thenReturn("THURSDAY");
+    week.removeEvent(mockEvent);
+    assertFalse(week.getAllEvents().contains(mockEvent));
+
+    week.getAllEvents().add(mockEvent);
+    when(mockEvent.getDay()).thenReturn("FRIDAY");
+    week.removeEvent(mockEvent);
+    assertFalse(week.getAllEvents().contains(mockEvent));
+
+    week.getAllEvents().add(mockEvent);
+    when(mockEvent.getDay()).thenReturn("SATURDAY");
+    week.removeEvent(mockEvent);
+    assertFalse(week.getAllEvents().contains(mockEvent));
+
+    week.getAllEvents().add(mockEvent);
+    when(mockEvent.getDay()).thenReturn("SUNDAY");
+    week.removeEvent(mockEvent);
+    assertFalse(week.getAllEvents().contains(mockEvent));
+  }
+
+  @Test
+  public void testAddTask() {
     when(mockTask.getDay()).thenReturn("MONDAY");
     week.addTask(mockTask);
     assertEquals(Collections.singletonList(mockTask), week.getAllTasks());
   }
 
   @Test
-  void testDetermineDay() {
+  public void testRemoveTask() {
+    week.getAllTasks().add(mockTask);
+    when(mockTask.getDay()).thenReturn("MONDAY");
+    week.removeTask(mockTask);
+    assertFalse(week.getAllTasks().contains(mockTask));
+
+    week.getAllTasks().add(mockTask);
+    when(mockTask.getDay()).thenReturn("TUESDAY");
+    week.removeTask(mockTask);
+    assertFalse(week.getAllTasks().contains(mockTask));
+
+    week.getAllTasks().add(mockTask);
+    when(mockTask.getDay()).thenReturn("WEDNESDAY");
+    week.removeTask(mockTask);
+    assertFalse(week.getAllTasks().contains(mockTask));
+
+    week.getAllTasks().add(mockTask);
+    when(mockTask.getDay()).thenReturn("THURSDAY");
+    week.removeTask(mockTask);
+    assertFalse(week.getAllTasks().contains(mockTask));
+
+    week.getAllTasks().add(mockTask);
+    when(mockTask.getDay()).thenReturn("FRIDAY");
+    week.removeTask(mockTask);
+    assertFalse(week.getAllTasks().contains(mockTask));
+
+    week.getAllTasks().add(mockTask);
+    when(mockTask.getDay()).thenReturn("SATURDAY");
+    week.removeTask(mockTask);
+    assertFalse(week.getAllTasks().contains(mockTask));
+
+    week.getAllTasks().add(mockTask);
+    when(mockTask.getDay()).thenReturn("SUNDAY");
+    week.removeTask(mockTask);
+    assertFalse(week.getAllTasks().contains(mockTask));
+  }
+
+  @Test
+  public void testDetermineDay() {
     when(mockAssignment.getDay()).thenReturn("MONDAY");
     assertEquals(Days.MONDAY, week.determineDay(mockAssignment));
   }
 
   @Test
-  void testGetMaximumEvents() {
+  public void testGetMaximumEvents() {
     week.setMaximumEvents(5);
     assertEquals(5, week.getMaximumEvents());
   }
 
   @Test
-  void testGetMaximumTasks() {
+  public void testGetMaximumTasks() {
     week.setMaximumTasks(5);
     assertEquals(5, week.getMaximumTasks());
   }
 
   @Test
-  void testGetQuotesAndNotes() {
+  public void testGetQuotesAndNotes() {
     week.addNoteOrQuote(sampleNote);
     assertEquals(Collections.singletonList(sampleNote), week.getQuotesAndNotes());
   }
 
   @Test
-  void testGetCategories() {
+  public void testGetCategories() {
     week.addCategory(sampleCategory);
     assertEquals(Collections.singletonList(sampleCategory), week.getCategories());
   }
 
   @Test
-  void testAddCategory() {
+  public void testAddCategory() {
     week.addCategory(sampleCategory);
     assertTrue(week.getCategories().contains(sampleCategory));
   }
 
   @Test
-  void testSetName() {
+  public void testSetName() {
     week.setName("Week 1");
     assertEquals("Week 1", week.getName());
   }
 
   @Test
-  void testNumTasks() {
+  public void testNumTasks() {
     Task task1 = mock(Task.class);
     Task task2 = mock(Task.class);
     when(task1.getDay()).thenReturn("MONDAY");
@@ -123,7 +200,7 @@ public class WeekTest {
   }
 
   @Test
-  void testNumEvents() {
+  public void testNumEvents() {
     Event event1 = mock(Event.class);
     Event event2 = mock(Event.class);
     when(event1.getDay()).thenReturn("MONDAY");
@@ -134,7 +211,7 @@ public class WeekTest {
   }
 
   @Test
-  void testGetPercentTasksCompleted() {
+  public void testGetPercentTasksCompleted() {
     Task task1 = mock(Task.class);
     Task task2 = mock(Task.class);
     when(task1.getDay()).thenReturn("MONDAY");
@@ -147,7 +224,7 @@ public class WeekTest {
   }
 
   @Test
-  void testMaxTasksExceeded() {
+  public void testMaxTasksExceeded() {
     week.setMaximumTasks(2);
     Task task1 = mock(Task.class);
     Task task2 = mock(Task.class);
@@ -165,7 +242,7 @@ public class WeekTest {
   }
 
   @Test
-  void testMaxEventsExceeded() {
+  public void testMaxEventsExceeded() {
     week.setMaximumEvents(2);
     Event event1 = mock(Event.class);
     Event event2 = mock(Event.class);
@@ -183,7 +260,7 @@ public class WeekTest {
   }
 
   @Test
-  void testToJsonFormat() {
+  public void testToJsonFormat() {
     String json = week.toJsonFormat();
     assertNotNull(json);
     assertTrue(json.contains("maximumTasks"));

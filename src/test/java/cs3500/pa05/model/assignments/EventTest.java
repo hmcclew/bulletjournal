@@ -31,7 +31,7 @@ class EventTest {
 
 
   @Test
-  void testConstructorWithDescription() {
+  public void testConstructorWithDescription() {
     assertEquals("Concert", event2.getName());
     assertEquals("Friday", event2.getDay());
     assertEquals("20:00", event2.getStartTime());
@@ -40,55 +40,68 @@ class EventTest {
   }
 
   @Test
-  void testGetStartTime() {
+  public void testGetStartTime() {
     assertEquals("10:00", event1.getStartTime());
     assertEquals("20:00", event2.getStartTime());
+    event1.setStartTime("2:00");
+    assertEquals("2:00", event1.getStartTime());
   }
 
   @Test
-  void testGetDuration() {
+  public void testGetDuration() {
     assertEquals("2h", event1.getDuration());
     assertEquals("3h", event2.getDuration());
+    event2.setDuration("4h");
+    assertEquals("4h", event2.getDuration());
   }
 
   @Test
-  void testGetCategoryWithExistingCategory() {
+  public void testGetCategoryWithExistingCategory() {
     Event event = new Event();
     event.setCategory("Sports");
     assertEquals("Sports", event.getCategory());
   }
 
   @Test
-  void testGetCategoryWithoutCategory() {
+  public void testGetCategoryWithoutCategory() {
     Event event = new Event();
     assertEquals("No Category Available.", event.getCategory());
   }
 
   @Test
-  void testGetDescriptionWithExistingDescription() {
+  public void testGetDescriptionWithExistingDescription() {
     Event event = new Event();
     event.setDescription("Football match");
     assertEquals("Football match", event.getDescription());
   }
 
   @Test
-  void testGetDescriptionWithoutDescription() {
+  public void testGetDescriptionWithoutDescription() {
     Event event = new Event();
     assertEquals("No Description Available.", event.getDescription());
   }
 
   @Test
-  void testGetCategoryWithEmptyCategory() {
+  public void testGetCategoryWithEmptyCategory() {
     Event event = new Event();
     event.setCategory("");
     assertEquals("No Category Available.", event.getCategory());
   }
 
   @Test
-  void testGetDescriptionWithEmptyDescription() {
+  public void testGetDescriptionWithEmptyDescription() {
     Event event = new Event();
     event.setDescription("");
     assertEquals("No Description Available.", event.getDescription());
+  }
+
+  @Test
+  public void testSetNameAndDay() {
+    Event event = new Event();
+    event.setName("TestName");
+    assertEquals("TestName", event.getName());
+    event.setDay("Thursday");
+    assertEquals("Thursday", event.getDay());
   }
 }
 

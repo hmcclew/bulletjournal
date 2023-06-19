@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style" />
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="style">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/WeekTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/WeekTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/assignments/EventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/assignments/EventTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/assignments/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cs3500/pa05/model/assignments/TaskTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +153,7 @@
       <recent name="cs3500.pa05.view" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [run]">
+  <component name="RunManager" selected="Gradle.pa05-robert-hope-nour [test]">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -278,10 +283,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
       </list>
     </recent_temporary>
@@ -307,14 +312,7 @@
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
       <workItem from="1687118348683" duration="36001000" />
-      <workItem from="1687194359785" duration="964000" />
-    </task>
-    <task id="LOCAL-00017" summary="code cleaning">
-      <created>1687007148604</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1687007148604</updated>
+      <workItem from="1687194359785" duration="2667000" />
     </task>
     <task id="LOCAL-00018" summary="code cleaning">
       <created>1687007312696</created>
@@ -652,7 +650,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687195321413</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="style">
+      <created>1687195372850</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1687195372850</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

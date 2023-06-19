@@ -22,16 +22,14 @@ class TaskTest {
 
   @Test
   public void testTaskConstructor() {
-    // Create a new instance of Task using the no-args constructor
     Task task = new Task();
 
-    // Assert that the 'complete' field is false as expected
-    assertFalse(task.isComplete(), "Newly created task should not be complete.");
+    assertFalse(task.isComplete());
   }
 
 
   @Test
-  void testConstructorWithAllFields() {
+  public void testConstructorWithAllFields() {
     assertEquals("Study", task2.getName());
     assertEquals("Monday", task2.getDay());
     assertEquals("Finish chapter 5", task2.getDescription());
@@ -40,7 +38,7 @@ class TaskTest {
   }
 
   @Test
-  void testMarkAsComplete() {
+  public void testMarkAsComplete() {
     assertFalse(task1.isComplete());
     task1.markAsComplete();
     assertTrue(task1.isComplete());
@@ -55,43 +53,62 @@ class TaskTest {
   }
 
   @Test
-  void testGetCategoryWithExistingCategory() {
+  public void testMarkAsIncomplete() {
+    assertFalse(task1.isComplete());
+    task1.markAsComplete();
+    assertTrue(task1.isComplete());
+
+    task1.markAsIncomplete();
+    assertFalse(task1.isComplete());
+  }
+
+  @Test
+  public void testGetCategoryWithExistingCategory() {
     Task task = new Task();
     task.setCategory("Work");
     assertEquals("Work", task.getCategory());
   }
 
   @Test
-  void testGetCategoryWithoutCategory() {
+  public void testGetCategoryWithoutCategory() {
     Task task = new Task();
     assertEquals("No Category Available.", task.getCategory());
   }
 
   @Test
-  void testGetDescriptionWithExistingDescription() {
+  public void testGetDescriptionWithExistingDescription() {
     Task task = new Task();
     task.setDescription("Write report");
     assertEquals("Write report", task.getDescription());
   }
 
   @Test
-  void testGetDescriptionWithoutDescription() {
+  public void testGetDescriptionWithoutDescription() {
     Task task = new Task();
     assertEquals("No Description Available.", task.getDescription());
   }
 
   @Test
-  void testGetCategoryWithEmptyCategory() {
+  public void testGetCategoryWithEmptyCategory() {
     Task task = new Task();
     task.setCategory("");
     assertEquals("No Category Available.", task.getCategory());
   }
 
   @Test
-  void testGetDescriptionWithEmptyDescription() {
+  public void testGetDescriptionWithEmptyDescription() {
     Task task = new Task();
     task.setDescription("");
     assertEquals("No Description Available.", task.getDescription());
+  }
+
+  @Test
+  public void testSetNameAndDay() {
+    Task task = new Task();
+    task.setName("TestName2");
+    assertEquals("TestName2", task.getName());
+    task.setDay("Wednesday");
+    assertEquals("Wednesday", task.getDay());
   }
 }
 

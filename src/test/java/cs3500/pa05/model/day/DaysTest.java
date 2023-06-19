@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class DaysTest {
 
   @Test
-  void testDaysEnum() {
+  public void testDaysEnum() {
     for (Days day : Days.values()) {
       assertNotNull(day);
       assertTrue(true);

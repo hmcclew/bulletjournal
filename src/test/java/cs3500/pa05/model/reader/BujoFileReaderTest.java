@@ -28,13 +28,13 @@ public class BujoFileReaderTest {
   private JavaJournalController mockController;
 
   @BeforeEach
-  void setUp() {
+  public void setUp() {
     mockController = mock(JavaJournalController.class);
     fileReader = new BujoFileReader(mockController);
   }
 
   @Test
-  void testRead() {
+  public void testRead() {
     Week week = new Week();
     week.setName("Week 1");
 
@@ -72,7 +72,7 @@ public class BujoFileReaderTest {
   }
 
   @Test
-  void testException() {
+  public void testException() {
     assertDoesNotThrow(() -> fileReader.read("invalid/path/to/file"));
 
     verify(mockController, never()).setWeek(any(Week.class));
