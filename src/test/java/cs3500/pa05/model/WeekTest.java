@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import cs3500.pa05.model.Week;
 import cs3500.pa05.model.assignments.Assignment;
 import cs3500.pa05.model.assignments.Event;
 import cs3500.pa05.model.assignments.Task;
