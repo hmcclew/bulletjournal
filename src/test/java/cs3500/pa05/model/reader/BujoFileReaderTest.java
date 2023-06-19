@@ -58,7 +58,7 @@ public class BujoFileReaderTest {
     fileReader.read(tempFile.toString());
 
     ArgumentCaptor<Week> argumentCaptor = ArgumentCaptor.forClass(Week.class);
-    verify(mockController).openWeek(argumentCaptor.capture());
+    verify(mockController).setWeek(argumentCaptor.capture());
 
     Week capturedWeek = argumentCaptor.getValue();
     assertEquals("Week 1", capturedWeek.getName());
@@ -75,7 +75,7 @@ public class BujoFileReaderTest {
   void testException() {
     assertDoesNotThrow(() -> fileReader.read("invalid/path/to/file"));
 
-    verify(mockController, never()).openWeek(any(Week.class));
+    verify(mockController, never()).setWeek(any(Week.class));
   }
 }
 

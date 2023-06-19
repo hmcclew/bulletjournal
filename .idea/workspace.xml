@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="updated notes style">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/PasswordPromptController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/view/PasswordPromptView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/controller/JavaJournalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/Week.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs3500/pa05/model/reader/BujoFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/week.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/week.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="password prompt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,12 +50,6 @@
                 <item name="pa05-template" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="documentation" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pa05-template" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -286,8 +272,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.pa05-robert-hope-nour [run]" />
-        <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleMain]" />
+        <item itemvalue="Gradle.pa05-robert-hope-nour [clean]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [checkstyleTest]" />
         <item itemvalue="Gradle.pa05-robert-hope-nour [test]" />
       </list>
@@ -313,14 +299,7 @@
       <workItem from="1687025398012" duration="4573000" />
       <workItem from="1687034863298" duration="4060000" />
       <workItem from="1687118020437" duration="311000" />
-      <workItem from="1687118348683" duration="27465000" />
-    </task>
-    <task id="LOCAL-00006" summary="newTask.fxml">
-      <created>1686948265682</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1686948265682</updated>
+      <workItem from="1687118348683" duration="28111000" />
     </task>
     <task id="LOCAL-00007" summary="newEvent.fxml">
       <created>1686948897343</created>
@@ -658,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687148818898</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="password prompt">
+      <created>1687152664259</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1687152664260</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,6 +708,7 @@
     <MESSAGE value="edit event" />
     <MESSAGE value="splash screen" />
     <MESSAGE value="updated notes style" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated notes style" />
+    <MESSAGE value="password prompt" />
+    <option name="LAST_COMMIT_MESSAGE" value="password prompt" />
   </component>
 </project>

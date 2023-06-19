@@ -60,6 +60,7 @@ public class NewNoteQuoteController implements Controller {
         noteText = newNoteContent.getText();
         week.addNoteOrQuote(noteText);
         Label label = new Label(noteText);
+        label.setWrapText(true);
         noteBox.getChildren().add(label);
       }
       stage.close();
