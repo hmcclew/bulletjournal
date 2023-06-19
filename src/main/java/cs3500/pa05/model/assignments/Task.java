@@ -64,6 +64,14 @@ public class Task extends AbstractAssignment {
   }
 
   /**
+   * marks the task as incomplete
+   */
+  public void markAsIncomplete() {
+    this.complete = false;
+  }
+
+
+  /**
    * determines if the task is complete
    *
    * @return whether the task is complete

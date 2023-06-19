@@ -81,6 +81,7 @@ public abstract class AbstractNewAssignmentController {
     for (String category : week.getCategories()) {
       categoryChoices.getItems().add(category);
     }
+    categoryChoices.getItems().add("No Category");
     categoryChoices.setDisable(false);
   }
 

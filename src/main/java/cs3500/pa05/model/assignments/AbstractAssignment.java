@@ -42,6 +42,16 @@ public abstract class AbstractAssignment implements Assignment {
     return this.name;
   }
 
+  @Override
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  @Override
+  public void setDay(String day) {
+    this.day = day;
+  }
+
   /**
    * gets the category for this assignment
    *
@@ -75,6 +85,7 @@ public abstract class AbstractAssignment implements Assignment {
    *
    * @param category the category to be set
    */
+  @Override
   public void setCategory(String category) {
     this.category = category;
   }
@@ -84,6 +95,7 @@ public abstract class AbstractAssignment implements Assignment {
    *
    * @param description the assignment description to be set
    */
+  @Override
   public void setDescription(String description) {
     this.description = description;
   }

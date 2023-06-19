@@ -8,15 +8,10 @@ import cs3500.pa05.model.day.Days;
 import cs3500.pa05.model.reader.BujoFileReader;
 import cs3500.pa05.model.reader.FileReader;
 import cs3500.pa05.model.writer.BujoFileWriter;
-import cs3500.pa05.view.CreateCategoryView;
-import cs3500.pa05.view.EventPopUpView;
-import cs3500.pa05.view.NewEventView;
-import cs3500.pa05.view.NewNoteQuoteView;
-import cs3500.pa05.view.NewTaskView;
-import cs3500.pa05.view.SetMaximumView;
-import cs3500.pa05.view.TaskPopUpView;
-import cs3500.pa05.view.TaskSearchView;
+import cs3500.pa05.view.*;
+
 import java.io.File;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -123,7 +118,7 @@ public class JavaJournalController implements Controller {
   /**
    * Constructor for a java journal controller
    *
-   * @param w the week currently being displayed and edited
+   * @param w     the week currently being displayed and edited
    * @param stage the main stage of the application
    */
   public JavaJournalController(Week w, Stage stage) {
@@ -177,6 +172,13 @@ public class JavaJournalController implements Controller {
     });
   }
 
+  private void formatButton(Button button) {
+    button.setPrefWidth(300);
+    button.setStyle("-fx-background-color: transparent; -fx-border-color: "
+        +
+        "transparent; -fx-underline: true;");
+  }
+
   /**
    * updates the week display based on the new assignment
    *
@@ -185,10 +187,7 @@ public class JavaJournalController implements Controller {
   public void updateAssignmentDisplay(Assignment assignment) {
     Days day = week.determineDay(assignment);
     Button button = new Button(assignment.getName());
-    button.setPrefWidth(300);
-    button.setStyle("-fx-background-color: transparent; -fx-border-color: "
-        +
-        "transparent; -fx-underline: true;");
+    formatButton(button);
     if (day.equals(Days.MONDAY)) {
       initAssignmentDisplayData(button, mondayContent, assignment);
     } else if (day.equals(Days.TUESDAY)) {
@@ -215,32 +214,47 @@ public class JavaJournalController implements Controller {
    * initializes the data to be displayed in a week with an assignemnt
    *
    * @param content the vbox the data will be added to
-   * @param a the assignment whose data will be added
+   * @param a       the assignment whose data will be added
    */
   private void initAssignmentDisplayData(Button button, VBox content, Assignment a) {
     VBox assignmentBox = new VBox();
-    assignmentBox.getChildren().add(button);
-    if (a.getDescription() != "No Description Available.") {
-      Label description = new Label("Description: " + a.getDescription());
-      description.setWrapText(true);
-      assignmentBox.getChildren().add(description);
-    }
-    if (a.getCategory() != "No Category Available.") {
-      Label category = new Label("Category: " + a.getCategory());
-      category.setWrapText(true);
-      assignmentBox.getChildren().add(category);
-    }
+    Button editButton = new Button("Edit");
+    formatButton(editButton);
+    Label description = new Label("Description: " + a.getDescription());
+    description.setWrapText(true);
+    Label category = new Label("Category: " + a.getCategory());
+    category.setWrapText(true);
+    assignmentBox.getChildren().addAll(button, editButton, description, category);
     content.getChildren().add(assignmentBox);
     if (a instanceof Event) {
       initEventData(assignmentBox, (Event) a);
     }
+    else if (a instanceof Task) {
+      initEditTaskDisplay(editButton, (Task) a, assignmentBox);
+    }
+  }
+
+  private void initEditTaskDisplay(Button button, Task task, VBox taskBox) {
+    button.setOnAction(event -> {
+      try {
+        Stage stage = new Stage();
+        EditTaskController controller = new EditTaskController(task, stage, taskBox, week, this);
+        EditTaskView view = new EditTaskView(controller);
+        stage.setTitle("Edit Task");
+        stage.setScene(view.load());
+        controller.run();
+        stage.show();
+      } catch (IllegalStateException exc) {
+        System.err.println("Unable to load GUI.");
+      }
+    });
   }
 
   /**
    * initializes the data to be displayed in a week with an event
    *
    * @param assignmentBox the vbox the data will be added to
-   * @param event the event whose data will be added
+   * @param event         the event whose data will be added
    */
   private void initEventData(VBox assignmentBox, Event event) {
     Label startTime = new Label("StartTime: " + event.getStartTime());
@@ -249,10 +263,10 @@ public class JavaJournalController implements Controller {
   }
 
   /**
-   *  initializes the task pop up windows button for each task
+   * initializes the task pop up windows button for each task
    *
    * @param button the button attached to the task title
-   * @param task the task used to format the popup
+   * @param task   the task used to format the popup
    */
   public void initTaskDisplay(Button button, Task task) {
     if (task.isComplete()) {
@@ -279,17 +293,17 @@ public class JavaJournalController implements Controller {
    * updates the display of a task's button for a popup view to show its now complete
    *
    * @param button the associated button for the popup for the task
-   * @param task the task whose title is being updated
+   * @param task   the task whose title is being updated
    */
   public void updateButtonTitleAsComplete(Button button, Task task) {
     button.setText(task.getName() + ": Complete");
   }
 
   /**
-   *  initializes the event pop up windows button for each event
+   * initializes the event pop up windows button for each event
    *
    * @param button the button attached to the event title
-   * @param e the event used to format the popup
+   * @param e      the event used to format the popup
    */
   private void initEventDisplay(Button button, Event e) {
     button.setOnAction(event -> {

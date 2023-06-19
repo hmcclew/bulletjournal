@@ -6,6 +6,27 @@ package cs3500.pa05.model.assignments;
 public interface Assignment {
 
   /**
+   * sets the day of this assignment
+   *
+   * @param day the day to be set
+   */
+  void setDay(String day);
+
+  /**
+   * sets the name of this assignment
+   *
+   * @param name the name to be set
+   */
+  void setName(String name);
+
+  /**
+   * sets the description of this assignment
+   *
+   * @param description the description to be set
+   */
+  void setDescription(String description);
+
+  /**
    * getter method for the assignment day
    *
    * @return the assignment day
