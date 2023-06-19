@@ -30,7 +30,8 @@ EditTaskController, NewTaskController, and AbstractEventController all extend th
 specifications for the text fields in start time and duration to only allow numerical input up to two digits. 
 These abstract classes define no additional abstract methods that all other extending classes must implement. Since 
 Task and Event have the same required fields in terms of what’s defined for the abstract classes, replacing the 
-superclass would not break the system.
+superclass would not break the system. Abstract classes contain no implemented methods that are overridden in any 
+subclass, only methods marked as abstract to be implemented.
 
 Interface Segregation Principle: Our program uses several interfaces that are kept short and sweet. Our controller 
 interface only features the run() method, even though each controller contains several additional helper methods 
