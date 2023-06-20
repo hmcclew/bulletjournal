@@ -133,3 +133,6 @@ skipping the step of adding a new assignment. Another way our program could be e
 Our program already tracks the percentage of completed tasks for a week, and this could easily be extended to calculate 
 for days. The progress bar could also show completed tasks for a week. Each time the week’s statistics are updated in 
 the program, functionality could simply be added to update the fill of the progress bar. 
+
+Image used for background visuals:
+![25bc5b65efbcc01d0aff1481db1d88c4.jpg](..%2F..%2F25bc5b65efbcc01d0aff1481db1d88c4.jpg)

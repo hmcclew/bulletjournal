@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="read me" />
+    <list default="true" id="955dfaf2-2e04-4074-bc87-779dab48bccd" name="Changes" comment="visuals">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -311,13 +313,7 @@
       <workItem from="1687224810480" duration="2210000" />
       <workItem from="1687279281964" duration="2643000" />
       <workItem from="1687283216946" duration="387000" />
-    </task>
-    <task id="LOCAL-00025" summary="style">
-      <created>1687044193637</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1687044193637</updated>
+      <workItem from="1687290321112" duration="279000" />
     </task>
     <task id="LOCAL-00026" summary="style">
       <created>1687103440548</created>
@@ -655,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687283246019</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="visuals">
+      <created>1687290435994</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1687290435994</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,8 +726,8 @@
     <MESSAGE value="updated xml" />
     <MESSAGE value="weekly starter" />
     <MESSAGE value="style" />
-    <MESSAGE value="visuals" />
     <MESSAGE value="read me" />
-    <option name="LAST_COMMIT_MESSAGE" value="read me" />
+    <MESSAGE value="visuals" />
+    <option name="LAST_COMMIT_MESSAGE" value="visuals" />
   </component>
 </project>
