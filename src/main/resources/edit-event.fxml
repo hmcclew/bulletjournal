@@ -48,17 +48,17 @@
                <TextField fx:id="durationHoursContent" layoutX="186.0" layoutY="308.0" prefHeight="26.0" prefWidth="88.0" />
                <Label layoutX="335.0" layoutY="311.0" text="Minutes" />
                <TextField fx:id="durationMinutesContent" layoutX="389.0" layoutY="307.0" prefHeight="26.0" prefWidth="88.0" />
-               <ImageView blendMode="GREEN" fitHeight="510.0" fitWidth="554.0" layoutY="-2.0" opacity="0.27" pickOnBounds="true" mouseTransparent="true" preserveRatio="true">
+               <ImageView blendMode="GREEN" fitHeight="510.0" fitWidth="554.0" layoutY="-2.0" opacity="0.27" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@images/edit-assignment-background.jpg" />
+                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
                   </image>
                </ImageView>
                <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="510.0" fitWidth="554.0" layoutX="267.0" layoutY="-2.0" mouseTransparent="true" opacity="0.29" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@images/edit-assignment-background.jpg" />
+                     <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
                   </image>
                </ImageView>
-               <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="BLUE" fill="#ff1f1f" height="30.0" layoutX="215.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="124.0" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#cb1fff" height="37.0" layoutX="213.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="130.0" />
             </children>
          </AnchorPane>
       </children></AnchorPane>

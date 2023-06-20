@@ -6,7 +6,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -76,6 +79,22 @@
             </font>
          </Label>
          <ChoiceBox fx:id="categoryChoices" layoutX="61.0" layoutY="617.0" prefWidth="150.0" />
+         <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="755.0" fitWidth="461.0" layoutX="-4.0" layoutY="-2.0" mouseTransparent="true" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+            </image>
+         </ImageView>
+         <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="770.0" fitWidth="425.0" layoutX="25.0" mouseTransparent="true" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+            </image>
+         </ImageView>
+         <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="770.0" fitWidth="425.0" layoutX="452.0" layoutY="2.0" mouseTransparent="true" opacity="0.14" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+            </image>
+         </ImageView>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#21ff2a" height="57.0" layoutX="336.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="193.0" />
       </children>
     </AnchorPane>
 </Scene>

@@ -38,7 +38,7 @@
                <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
             </image>
          </ImageView>
-         <ImageView blendMode="GREEN" fitHeight="301.0" fitWidth="170.0" layoutX="231.0" layoutY="5.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="301.0" fitWidth="170.0" layoutX="231.0" layoutY="5.0" mouseTransparent="true" opacity="0.54" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
             </image>
