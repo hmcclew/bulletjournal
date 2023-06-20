@@ -19,11 +19,6 @@
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <AnchorPane prefHeight="726.0" prefWidth="1450.0">
         <children>
-         <ImageView fitHeight="727.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
             <SplitPane fx:id="sideBar" dividerPositions="0.0" layoutX="0.0" layoutY="0.0" prefHeight="726.0" prefWidth="1450.0">
                 <items>
                     <VBox maxWidth="200.0" prefHeight="729.0" prefWidth="200.0">
@@ -71,9 +66,9 @@
                                     </children>
                                 </AnchorPane>
                             </content>
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
                         </TitledPane>
                         <TitledPane fx:id="wednesday" animated="false" layoutX="410.0" layoutY="87.0" prefHeight="195.0" prefWidth="200.0" text="Wednesday">
                             <content>
@@ -172,131 +167,171 @@
                         <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0" />
                         <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0" text="Percent Tasks Completed: 0.0%" />
                         <TextField fx:id="weekName" layoutX="150.0" layoutY="30.0" />
-                  <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="852.0" fitWidth="506.0" layoutX="966.0" layoutY="-9.0" mouseTransparent="true" opacity="0.15" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="1089.0" fitWidth="613.0" layoutX="350.0" layoutY="-286.0" mouseTransparent="true" opacity="0.15" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="469.0" layoutY="29.0" text="Welcome to your journal! What's on today's agenda?" textFill="#9f0fff">
-                     <font>
-                        <Font name="AppleMyungjo Regular" size="23.0" />
-                     </font>
-                  </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#ffcf21" height="45.0" layoutX="457.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="583.0" />
-                  <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="92.0" layoutX="412.0" layoutY="114.0" mouseTransparent="true" opacity="0.76" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="94.0" layoutX="502.0" layoutY="109.0" mouseTransparent="true" opacity="0.75" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="610.0" layoutY="113.0" mouseTransparent="true" opacity="0.34" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="702.0" layoutY="110.0" mouseTransparent="true" opacity="0.32" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="812.0" layoutY="113.0" mouseTransparent="true" opacity="0.7" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="894.0" layoutY="108.0" mouseTransparent="true" opacity="0.78" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="1014.0" layoutY="109.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="1108.0" layoutY="108.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="1212.0" layoutY="110.0" mouseTransparent="true" opacity="0.27" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="1298.0" layoutY="108.0" mouseTransparent="true" opacity="0.31" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="77.0" layoutX="416.0" layoutY="324.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-                     </image>
-                  </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="852.0" fitWidth="506.0" layoutX="966.0" layoutY="-9.0" mouseTransparent="true" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="1089.0" fitWidth="613.0" layoutX="350.0" layoutY="-286.0" mouseTransparent="true" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="469.0" layoutY="29.0" text="Welcome to your journal! What's on today's agenda?" textFill="#9f0fff">
+                            <font>
+                                <Font name="AppleMyungjo Regular" size="23.0" />
+                            </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#ffcf21" height="45.0" layoutX="457.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="583.0" />
+                        <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="92.0" layoutX="412.0" layoutY="114.0" mouseTransparent="true" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="94.0" layoutX="502.0" layoutY="109.0" mouseTransparent="true" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="610.0" layoutY="113.0" mouseTransparent="true" opacity="0.34" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="702.0" layoutY="110.0" mouseTransparent="true" opacity="0.32" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="812.0" layoutY="113.0" mouseTransparent="true" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="894.0" layoutY="108.0" mouseTransparent="true" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="1014.0" layoutY="109.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="1108.0" layoutY="108.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="1212.0" layoutY="110.0" mouseTransparent="true" opacity="0.27" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="169.0" fitWidth="192.0" layoutX="1298.0" layoutY="108.0" mouseTransparent="true" opacity="0.31" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="77.0" layoutX="416.0" layoutY="324.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="726.0" fitWidth="606.0" mouseTransparent="true" opacity="0.19" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#2139ff" height="37.0" layoutX="17.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="125.0" />
+                        <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="20.0" layoutY="113.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="118.0" layoutY="112.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="222.0" layoutY="113.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="308.0" layoutY="112.0" mouseTransparent="true" opacity="0.58" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="133.0" fitWidth="87.0" layoutX="23.0" layoutY="330.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="98.0" layoutY="323.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="183.0" layoutY="327.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="260.0" layoutY="329.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="343.0" layoutY="328.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="509.0" layoutY="329.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="592.0" layoutY="328.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="675.0" layoutY="329.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="758.0" layoutY="328.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="841.0" layoutY="329.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="924.0" layoutY="328.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="1007.0" layoutY="329.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="1090.0" layoutY="328.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/background.jpg" />
+                            </image>
+                        </ImageView>
                     </Pane>
                 </items>
             </SplitPane>
-         <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="726.0" fitWidth="606.0" mouseTransparent="true" opacity="0.19" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#2139ff" height="37.0" layoutX="17.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="125.0" />
-         <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="20.0" layoutY="113.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="BLUE" fitHeight="169.0" fitWidth="192.0" layoutX="118.0" layoutY="112.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="222.0" layoutY="113.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="169.0" fitWidth="192.0" layoutX="308.0" layoutY="112.0" mouseTransparent="true" opacity="0.58" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="133.0" fitWidth="87.0" layoutX="23.0" layoutY="330.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="98.0" layoutY="323.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="183.0" layoutY="327.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="260.0" layoutY="329.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="142.0" fitWidth="88.0" layoutX="343.0" layoutY="328.0" mouseTransparent="true" opacity="0.52" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
-            </image>
-         </ImageView>
         </children>
     </AnchorPane>
 </Scene>
