@@ -14,7 +14,7 @@
             <Button fx:id="saveAndOpen" layoutX="200.0" layoutY="86.0" mnemonicParsing="false" text="Save Name and Open Template" />
          <ImageView accessibleRole="BUTTON" fitHeight="199.0" fitWidth="222.0" layoutX="-2.0" mouseTransparent="true" opacity="0.23" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView mouseTransparent="true" fitHeight="199.0" fitWidth="222.0" layoutX="184.0" pickOnBounds="true" preserveRatio="true" />
