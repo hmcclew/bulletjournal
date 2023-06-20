@@ -19,6 +19,7 @@
 
 
 ## Section 5: Extra Credit
+- Deployable Application
 - Visual Flourish
 - Splash Screen
 - Privacy Lock

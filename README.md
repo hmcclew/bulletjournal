@@ -74,7 +74,8 @@ User features include:
 
 - Weekly Starters
   This feature allows users to open a .bujo file as a template. Users are then be prompted to give the new week a
-  name and it overrides the name in the template if one exists.
+  name, and it overrides the name in the template if one exists. Features carried over include categories,
+  weekly maximums, and the week's notes. 
   
 
 [PA Write Up](https://markefontenot.notion.site/PA-05-8263d28a81a7473d8372c6579abd6481)
