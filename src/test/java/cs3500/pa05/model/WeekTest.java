@@ -29,6 +29,9 @@ public class WeekTest {
   private String sampleNote = "Sample Note";
   private String sampleCategory = "Sample Category";
 
+  /**
+   * sets up all fields used for testing
+   */
   @BeforeEach
   public void setUp() {
     week = new Week();
