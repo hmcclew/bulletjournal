@@ -11,14 +11,14 @@
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="297.0" prefWidth="356.0">
+    <AnchorPane prefHeight="295.0" prefWidth="350.0">
       <children>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="300.0" fitWidth="172.0" layoutX="186.0" mouseTransparent="true" opacity="0.32" pickOnBounds="true" preserveRatio="true">
+         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="300.0" fitWidth="175.0" layoutX="186.0" mouseTransparent="true" opacity="0.32" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="301.0" fitWidth="171.0" layoutX="168.0" layoutY="-1.0" mouseTransparent="true" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+         <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="300.0" fitWidth="175.0" layoutX="168.0" layoutY="-1.0" mouseTransparent="true" opacity="0.41" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@images/background.jpg" />
             </image>
@@ -28,7 +28,7 @@
                <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <VBox prefHeight="299.0" prefWidth="357.0">
+         <VBox prefHeight="290.0" prefWidth="340.0">
             <children>
                <Label fx:id="name" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="357.0" text="Name">
                   <font>
@@ -38,7 +38,7 @@
                <Label fx:id="day" alignment="CENTER" prefHeight="10.0" prefWidth="357.0" text="Day" />
                <Label fx:id="description" alignment="CENTER" prefHeight="200.0" prefWidth="357.0" text="Description" wrapText="true" />
                <Label fx:id="category" alignment="CENTER" prefHeight="40.0" prefWidth="357.0" text="Category" />
-               <HBox alignment="CENTER" prefHeight="50.0" prefWidth="357.0">
+               <HBox alignment="CENTER" prefHeight="50.0" prefWidth="350.0">
                   <children>
                      <Button fx:id="markAsComplete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="186.0" text="Mark Task As Complete" />
                   </children>
