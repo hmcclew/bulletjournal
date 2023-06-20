@@ -30,17 +30,17 @@
                <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView blendMode="BLUE" fitHeight="300.0" fitWidth="205.0" layoutX="158.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" blendMode="BLUE" fitHeight="300.0" fitWidth="205.0" layoutX="158.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView blendMode="BLUE" fitHeight="300.0" fitWidth="205.0" layoutX="327.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" blendMode="BLUE" fitHeight="300.0" fitWidth="205.0" layoutX="327.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView blendMode="BLUE" fitHeight="309.0" fitWidth="173.0" layoutX="458.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" blendMode="BLUE" fitHeight="309.0" fitWidth="173.0" layoutX="458.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@images/background.jpg" />
             </image>
