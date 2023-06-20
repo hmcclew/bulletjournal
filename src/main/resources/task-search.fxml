@@ -34,17 +34,17 @@
          </AnchorPane>
          <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="330.0" fitWidth="239.0" mouseTransparent="true" opacity="0.13" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="330.0" fitWidth="239.0" layoutX="93.0" mouseTransparent="true" opacity="0.11" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="334.0" fitWidth="191.0" layoutX="223.0" layoutY="-2.0" mouseTransparent="true" opacity="0.14" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
       </children></AnchorPane>
