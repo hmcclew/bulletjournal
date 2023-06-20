@@ -13,22 +13,22 @@
             <Button fx:id="openTemplate" layoutX="200.0" layoutY="86.0" mnemonicParsing="false" text="Open File as Template" />
          <ImageView accessibleRole="BUTTON" fitHeight="202.0" fitWidth="226.0" mouseTransparent="true" opacity="0.21" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView accessibleRole="BUTTON" fitHeight="202.0" fitWidth="226.0" layoutX="114.0" mouseTransparent="true" opacity="0.19" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView fitHeight="202.0" fitWidth="226.0" layoutX="228.0" opacity="0.18" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" fitHeight="202.0" fitWidth="226.0" layoutX="228.0" opacity="0.18" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView accessibleRole="BUTTON" fitHeight="202.0" fitWidth="226.0" layoutX="292.0" mouseTransparent="true" opacity="0.28" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
         </children></AnchorPane>

@@ -71,17 +71,17 @@
          <ChoiceBox fx:id="categoryChoices" layoutX="32.0" layoutY="600.0" prefWidth="150.0" />
          <ImageView accessibleRole="BUTTON" blendMode="RED" fitHeight="753.0" fitWidth="541.0" layoutX="-6.0" layoutY="-4.0" mouseTransparent="true" opacity="0.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="819.0" fitWidth="428.0" layoutX="28.0" layoutY="-9.0" mouseTransparent="true" opacity="0.16" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="753.0" fitWidth="541.0" layoutX="456.0" mouseTransparent="true" opacity="0.13" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#cb1fff" height="41.0" layoutX="368.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="138.0" />

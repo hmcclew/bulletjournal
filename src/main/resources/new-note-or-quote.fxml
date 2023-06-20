@@ -25,29 +25,29 @@
          </Label>
          <Button fx:id="finish" layoutX="343.0" layoutY="215.0" mnemonicParsing="false" text="Finish" />
          <TextField fx:id="newNoteContent" layoutX="40.0" layoutY="135.0" prefHeight="55.0" prefWidth="680.0" />
-         <ImageView blendMode="DIFFERENCE" fitHeight="270.0" fitWidth="203.0" opacity="0.22" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" blendMode="DIFFERENCE" fitHeight="270.0" fitWidth="203.0" opacity="0.22" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView blendMode="EXCLUSION" fitHeight="270.0" fitWidth="203.0" layoutX="152.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" blendMode="EXCLUSION" fitHeight="270.0" fitWidth="203.0" layoutX="152.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView accessibleRole="BUTTON" blendMode="DIFFERENCE" fitHeight="270.0" fitWidth="203.0" layoutX="304.0" mouseTransparent="true" opacity="0.18" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView blendMode="DIFFERENCE" fitHeight="270.0" fitWidth="203.0" layoutX="456.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" blendMode="DIFFERENCE" fitHeight="270.0" fitWidth="203.0" layoutX="456.0" opacity="0.17" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
-         <ImageView blendMode="DIFFERENCE" fitHeight="270.0" fitWidth="153.0" layoutX="608.0" opacity="0.14" pickOnBounds="true" preserveRatio="true">
+         <ImageView mouseTransparent="true" blendMode="DIFFERENCE" fitHeight="270.0" fitWidth="153.0" layoutX="608.0" opacity="0.14" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" fill="#21b8ff" height="38.0" layoutX="223.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="271.0" />
