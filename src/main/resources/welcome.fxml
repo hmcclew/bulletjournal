@@ -18,23 +18,23 @@
             </Label>
          <ImageView blendMode="GREEN" fitHeight="658.0" fitWidth="789.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView blendMode="RED" fitHeight="658.0" fitWidth="789.0" layoutX="363.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <ImageView blendMode="RED" fitHeight="658.0" fitWidth="789.0" layoutX="723.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="RED" fill="#c2c2c2" height="180.0" layoutX="496.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="488.0" />
          <ImageView blendMode="GREEN" fitHeight="658.0" fitWidth="789.0" layoutX="1097.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../25bc5b65efbcc01d0aff1481db1d88c4.jpg" />
+               <Image url="@images/background.jpg" />
             </image>
          </ImageView>
          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="SCREEN" fill="#ff1f1f" height="103.0" layoutX="524.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="427.0" />
