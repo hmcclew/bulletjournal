@@ -1,59 +1,79 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/x6ckGcN8)
 # 3500 PA05 Project Repo
 
-Pitch: 
+Pitch:
 
 This app is a weekly journal that allows the user to view and edit their tasks, event for the week.
 The features include:
 
 - Week View
-  The Week View displays a clear and concise overview of tasks and events for each day of the week. 
-  Users can effortlessly navigate through their schedule and plan their activities accordingly. 
-  The week view is designed to provide a visually appealing and easy-to-read representation of the entire 
+  The Week View displays a clear and concise overview of tasks and events for each day of the week.
+  Users can effortlessly navigate through their schedule and plan their activities accordingly.
+  The week view is designed to provide a visually appealing and easy-to-read representation of the entire
   week's schedule.
 
 - Event and Task Creation
-  Users can easily create new tasks and events directly within the Week View. The interface includes intuitive 
-  buttons for adding new tasks and events, allowing users to quickly input important information such as title, 
-  date, time, duration, and any additional notes. Users can also set maximum limits for tasks and events to ensure 
+  Users can easily create new tasks and events directly within the Week View. The interface includes intuitive
+  buttons for adding new tasks and events, allowing users to quickly input important information such as title,
+  date, time, duration, and any additional notes. Users can also set maximum limits for tasks and events to ensure
   they maintain a manageable workload.
 
 - Open File and Save File
-  Users can open and save files associated with their weekly schedules. This feature allows users to store or retrieve 
-  their schedules from a .bujo file, ensuring easy access across devices. Users can save their weekly view as a file, 
-  allowing them to share or import it into other applications as needed. The file management functionality enhances 
+  Users can open and save files associated with their weekly schedules. This feature allows users to store or retrieve
+  their schedules from a .bujo file, ensuring easy access across devices. Users can save their weekly view as a file,
+  allowing them to share or import it into other applications as needed. The file management functionality enhances
   the portability and flexibility of the Week View feature.
 
 - Commitment Warnings
-  Users receive a notification when their tasks or events added exceed the maximum number of events and tasks 
-  they set for themselves, to ensure that the student is not overworked. Those maximums and being kept track of 
+  Users receive a notification when their tasks or events added exceed the maximum number of events and tasks
+  they set for themselves, to ensure that the student is not overworked. Those maximums and being kept track of
   in the .bujo file.
 
-- Sidebar and Task Queue 
-  To further enhance task management, the Week View feature includes a task queue sidebar. This sidebar provides a 
+- Sidebar and Task Queue
+  To further enhance task management, the Week View feature includes a task queue sidebar. This sidebar provides a
   convenient and easily accessible list of all tasks. Users can easily view and access their tasks to make sure they
   don't fall behind!
 
 - Categories
-  Users can create categories for tasks and events to facilitate organization and categorize their schedule 
-  based on different projects, areas of focus, or personal preferences. The feature allows users to assign a category 
+  Users can create categories for tasks and events to facilitate organization and categorize their schedule
+  based on different projects, areas of focus, or personal preferences. The feature allows users to assign a category
   to each task or event, making it easier to understand their schedule based on specific categories.
 
 - Quotes and Notes
-  Users can write any quotes and notes of their preference to their Week View and they could see it anytime on their 
+  Users can write any quotes and notes of their preference to their Week View and they could see it anytime on their
   schedule.
 
 - Mini-viewer
-  The user can open any single Event or Task in a new window which displays all details of the Event or Task 
+  The user can open any single Event or Task in a new window which displays all details of the Event or Task
   including its day of the week.
 
-- Weekly Overview 
-  The weekly overview feature provides users with valuable insights into their progress and productivity. 
-  Users can view statistics on the total number of events and tasks scheduled, as well as the percentage of completed 
-  tasks. The feature calculates the completion percentage based on marked tasks, giving users a visual representation 
+- Weekly Overview
+  The weekly overview feature provides users with valuable insights into their progress and productivity.
+  Users can view statistics on the total number of events and tasks scheduled, as well as the percentage of completed
+  tasks. The feature calculates the completion percentage based on marked tasks, giving users a visual representation
   of their accomplishments and motivating them to stay on track.
 
-- 
+- Edit Event or Task
+  This feature allows the user to edit the content of an event or task anytime and it will update
+  in their week view. They can edit the name, description, and category.
+
+- Task Search
+  This feature allows the user to type to search for any Task. Only Tasks relevant to the search are shown.
+  Search results are updated on each key press.
+
+- Deployable Application and Visual Flourish
+  Created an easily deployable application with extensive visuals and graphics.
+
+- Splash Screen
+  Created a splash screen effect where the welcome screen pauses for 2 seconds then
+  shows the week view.
+
+- Privacy Lock
+  Ability for user to add a password which is required before showing the contents of any journal.
+
+- Weekly Starters
+  This feature allows users to open a .bujo file as a template. Users are then be prompted to give the new week a
+  name and it overrides the name in the template if one exists.
   
 
 [PA Write Up](https://markefontenot.notion.site/PA-05-8263d28a81a7473d8372c6579abd6481)
