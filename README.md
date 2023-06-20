@@ -3,8 +3,9 @@
 
 Pitch:
 
-This app is a weekly journal that allows the user to view and edit their tasks, event for the week.
-The features include:
+This application is a weekly journal that allows the user to neatly organize their tasks, events, and other relevant information 
+for their week. Developed using java and javafx.
+User features include:
 
 - Week View
   The Week View displays a clear and concise overview of tasks and events for each day of the week.
@@ -62,7 +63,7 @@ The features include:
   Search results are updated on each key press.
 
 - Deployable Application and Visual Flourish
-  Created an easily deployable application with extensive visuals and graphics.
+  Easily deployable application with extensive visuals and graphics for user ease.
 
 - Splash Screen
   Created a splash screen effect where the welcome screen pauses for 2 seconds then

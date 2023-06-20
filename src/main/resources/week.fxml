@@ -23,7 +23,7 @@
                 <items>
                     <VBox maxWidth="200.0" prefHeight="729.0" prefWidth="200.0">
                         <children>
-                            <Label fx:id="weeksTasks" text="">
+                            <Label fx:id="weeksTasks" text="" textFill="#9f0fff">
                                 <font>
                                     <Font size="20.0" />
                                 </font>
@@ -148,24 +148,24 @@
                                 </AnchorPane>
                             </content>
                         </TitledPane>
-                        <Button fx:id="saveName" layoutX="320.0" layoutY="30.0" mnemonicParsing="false" text="save week name" />
-                        <Button fx:id="openFile" layoutX="1086.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="open file" />
-                        <Button fx:id="saveFile" layoutX="1199.0" layoutY="21.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="92.0" text="save file" />
-                        <Button fx:id="newTask" layoutX="40.0" layoutY="507.0" mnemonicParsing="false" text="new task" />
-                        <Button fx:id="newEvent" layoutX="120.0" layoutY="507.0" mnemonicParsing="false" text="new event" />
-                        <Button fx:id="setMaxEventsTasks" layoutX="200.0" layoutY="507.0" mnemonicParsing="false" text="set maximum events and tasks" />
-                        <Button fx:id="showTaskQueue" layoutX="390.0" layoutY="507.0" mnemonicParsing="false" text="show task queue" />
-                        <Button fx:id="createCategory" layoutX="510.0" layoutY="507.0" mnemonicParsing="false" text="create category " />
-                        <Button fx:id="newNote" layoutX="620.0" layoutY="507.0" mnemonicParsing="false" text="new note" />
-                        <Button fx:id="taskSearch" layoutX="695.0" layoutY="507.0" mnemonicParsing="false" text="search for a task" />
-                        <Label layoutX="835.0" layoutY="512.0" text="Set a Password for the Week: " />
+                        <Button fx:id="saveName" layoutX="320.0" layoutY="30.0" mnemonicParsing="false" text="save week name" textFill="#9f0fff" />
+                        <Button fx:id="openFile" layoutX="1086.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="open file" textFill="#9f0fff" />
+                        <Button fx:id="saveFile" layoutX="1199.0" layoutY="21.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="92.0" text="save file" textFill="#9f0fff" />
+                        <Button fx:id="newTask" layoutX="40.0" layoutY="507.0" mnemonicParsing="false" text="new task" textFill="#9f0fff"  />
+                        <Button fx:id="newEvent" layoutX="120.0" layoutY="507.0" mnemonicParsing="false" text="new event" textFill="#9f0fff" />
+                        <Button fx:id="setMaxEventsTasks" layoutX="200.0" layoutY="507.0" mnemonicParsing="false" text="set maximum events and tasks" textFill="#9f0fff" />
+                        <Button fx:id="showTaskQueue" layoutX="390.0" layoutY="507.0" mnemonicParsing="false" text="show task queue" textFill="#9f0fff" />
+                        <Button fx:id="createCategory" layoutX="510.0" layoutY="507.0" mnemonicParsing="false" text="create category " textFill="#9f0fff" />
+                        <Button fx:id="newNote" layoutX="620.0" layoutY="507.0" mnemonicParsing="false" text="new note" textFill="#9f0fff" />
+                        <Button fx:id="taskSearch" layoutX="695.0" layoutY="507.0" mnemonicParsing="false" text="search for a task" textFill="#9f0fff" />
+                        <Label layoutX="835.0" layoutY="512.0" text="Set a Password for the Week: " textFill="#9f0fff" />
                         <TextField fx:id="password" layoutX="1000.0" layoutY="507.0" />
-                        <Button fx:id="savePassword" layoutX="1170.0" layoutY="507.0" mnemonicParsing="false" text="save password" />
-                        <Label fx:id="taskWarning" layoutX="500.0" layoutY="600.0" text="" />
-                        <Label fx:id="eventWarning" layoutX="500.0" layoutY="625.0" text="" />
-                        <Label fx:id="totalEvents" layoutX="40.0" layoutY="578.0" prefHeight="15.0" prefWidth="97.0" text="Total Events: 0" />
-                        <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0" />
-                        <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0" text="Percent Tasks Completed: 0.0%" />
+                        <Button fx:id="savePassword" layoutX="1170.0" layoutY="507.0" mnemonicParsing="false" text="save password" textFill="#9f0fff" />
+                        <Label fx:id="taskWarning" layoutX="500.0" layoutY="600.0" text="" textFill="#9f0fff" />
+                        <Label fx:id="eventWarning" layoutX="500.0" layoutY="625.0" text="" textFill="#9f0fff" />
+                        <Label fx:id="totalEvents" layoutX="40.0" layoutY="578.0" prefHeight="15.0" prefWidth="97.0" text="Total Events: 0" textFill="#9f0fff" />
+                        <Label fx:id="totalTasks" layoutX="40.0" layoutY="610.0" text="Total Tasks: 0" textFill="#9f0fff" />
+                        <Label fx:id="tasksCompleted" layoutX="40.0" layoutY="639.0" text="Percent Tasks Completed: 0.0%" textFill="#9f0fff" />
                         <TextField fx:id="weekName" layoutX="150.0" layoutY="30.0" />
                         <ImageView accessibleRole="BUTTON" blendMode="GREEN" fitHeight="852.0" fitWidth="506.0" layoutX="966.0" layoutY="-9.0" mouseTransparent="true" opacity="0.15" pickOnBounds="true" preserveRatio="true">
                             <image>
