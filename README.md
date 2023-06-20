@@ -62,9 +62,6 @@ User features include:
   This feature allows the user to type to search for any Task. Only Tasks relevant to the search are shown.
   Search results are updated on each key press.
 
-- Deployable Application and Visual Flourish
-  Easily deployable application with extensive visuals and graphics for user ease.
-
 - Splash Screen
   Created a splash screen effect where the welcome screen pauses for 2 seconds then
   shows the week view.
